@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на прием - Švytintys Dantys</title>
+    <meta name="description"
+        content="Запишитесь на прием в клинику Švytintys Dantys онлайн. Выберите удобное время и услугу, получите подтверждение по электронной почте. Быстрый и удобный процесс записи.">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .form-input {
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+
+        .time-slot {
+            transition: all 0.2s ease;
+        }
+
+        .time-slot:hover {
+            transform: scale(1.05);
+        }
+
+        .time-slot.selected {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("7bdA9YoKvT6_Df2b1"); // Replace YOUR_PUBLIC_KEY with your actual Эл. почтаJS public key
+        })();
+    </script>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/booking.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/booking.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/booking.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/zapis.html" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Главная</a>
+                    <a href="uslugi.html" class="text-gray-700 hover:text-blue-500 transition">Услуги</a>
+                    <a href="vrachi.html" class="text-gray-700 hover:text-blue-500 transition">Врачи</a>
+                    <a href="seminary.html" class="text-gray-700 hover:text-blue-500 transition">Семинары</a>
+                    <a href="zapis.html" class="text-blue-500 font-semibold">Записаться</a>
+                    <a href="kontakty.html" class="text-gray-700 hover:text-blue-500 transition">Contact</a>
+
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <a href="../booking.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                        <a href="../en/booking.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">RU</span>
+                    </div>
+                    <a href="kontakty.html"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        Свяжитесь с нами
+                    </a>
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Позвонить</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Главная</a>
+                <a href="uslugi.html" class="block py-2 text-gray-700 hover:text-blue-500">Услуги</a>
+                <a href="vrachi.html" class="block py-2 text-gray-700 hover:text-blue-500">Врачи</a>
+                <a href="seminary.html" class="block py-2 text-gray-700 hover:text-blue-500">Семинары</a>
+                <a href="zapis.html" class="block py-2 text-blue-500 font-semibold">Записаться</a>
+                <a href="kontakty.html" class="block py-2 text-gray-700 hover:text-blue-500">Contact</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <a href="../booking.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                    <a href="../en/booking.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">RU</span>
+                </div>
+                <a href="kontakty.html"
+                    class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 block text-center">
+                    Свяжитесь с нами
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Запись на прием</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Запланируйте визит к стоматологу удобно. Выберите желаемую дату, время и услугу.
+            </p>
+        </div>
+    </section>
+
+    <!-- Запись Form Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid lg:grid-cols-3">
+                    <!-- Form Section (2/3 width) -->
+                    <div class="lg:col-span-2 p-8 border-r border-gray-200">
+                        <form id="bookingForm">
+                            <!-- Personal Information -->
+                            <div class="mb-8">
+                                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                    <i class="fas fa-user-circle text-blue-500 mr-3"></i>
+                                    Личная информация
+                                </h2>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Имя *</label>
+                                        <input type="text" id="firstName" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                            placeholder="Иван">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Фамилия *</label>
+                                        <input type="text" id="lastName" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                            placeholder="Иванов">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Эл. почта *</label>
+                                        <input type="email" id="email" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                            placeholder="ivan@example.com">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Номер телефона *</label>
+                                        <input type="tel" id="phone" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                            placeholder="+370 123 45678">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Appointment Details -->
+                            <div class="mb-8">
+                                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                    <i class="fas fa-calendar-alt text-blue-500 mr-3"></i>
+                                    Детали записи
+                                </h2>
+                                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Выберите услугу
+                                            *</label>
+                                        <select id="service" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                            <option value="">Выберите услугу</option>
+                                            <option value="examination">Тщательный осмотр зубов</option>
+                                            <option value="consultation">Консультация специалиста</option>
+                                            <option value="hygiene">Профессиональная гигиена рта</option>
+                                            <option value="alignment-adults">Выравнивание зубов капами (Взрослые)
+                                            </option>
+                                            <option value="alignment-children">Выравнивание зубов капами
+                                                (Дети)</option>
+                                            <option value="orthodontics-adults">Ортодонтическое лечение (Взрослые)
+                                            </option>
+                                            <option value="orthodontics-children">Ортодонтическое лечение (Дети)
+                                            </option>
+                                            <option value="orthognathic">Ортогнатическое лечение</option>
+                                            <option value="implants">Имплантация зубов</option>
+                                            <option value="all-on-4">Восстановление зубов "Всё-на-4"</option>
+                                            <option value="whitening">Отбеливание зубов</option>
+                                            <option value="treatment">Лечение зубов</option>
+                                            <option value="prosthetics">Протезирование зубов</option>
+                                            <option value="pediatric">Детская стоматология</option>
+                                            <option value="esthetic">Эстетическая стоматология</option>
+                                            <option value="other">Другое (мы свяжемся с вами)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Желаемая дата
+                                            *</label>
+                                        <input type="date" id="date" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Выберите время
+                                            *</label>
+                                        <select id="timePeriod" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                            <option value="">Выберите время</option>
+                                            <option value="morning">Утро (08:00 - 12:00)</option>
+                                            <option value="afternoon">День (13:00 - 16:00)</option>
+                                            <option value="evening">Вечер (16:00 - 18:30)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Insurance Information -->
+                            <div class="mb-8">
+                                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                    <i class="fas fa-shield-alt text-blue-500 mr-3"></i>
+                                    Оплата со страховкой
+                                </h2>
+                                <p class="text-gray-700">
+                                    Для вашего удобства мы сотрудничаем с частными страховыми компаниями, поэтому все
+                                    будет быстрее и удобнее. Если у нас нет прямого договора с вашей страховой
+                                    компанией, мы предоставим медицинскую выписку и счет-фактуру
+                                    для компенсации после оказания услуги.
+                                </p>
+                            </div>
+
+                            <!-- Terms and Submit -->
+                            <div class="border-t pt-6">
+                                <div class="mb-6">
+                                    <div class="flex items-start">
+                                        <input type="checkbox" id="terms" required
+                                            class="mr-3 mt-1 w-5 h-5 text-blue-500">
+                                        <label for="terms" class="text-gray-700 text-sm">
+                                            Я согласен с правилами и понимаю, что мой визит не подтвержден, пока я не
+                                            получу подтверждающий звонок или электронное письмо из клиники.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <button type="submit"
+                                        class="flex-1 bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition transform hover:scale-105">
+                                        <i class="fas fa-check-circle mr-2"></i>
+                                        Подтвердить запись
+                                    </button>
+                                    <button type="button" onclick="window.location.href='index.html'"
+                                        class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
+                                        <i class="fas fa-arrow-left mr-2"></i>
+                                        Назад на главную
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information Section (1/3 width) -->
+                    <div class="p-8 bg-gradient-to-br from-blue-50 to-purple-50">
+                        <div class="sticky top-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-info-circle text-blue-500 mr-3"></i>
+                                Помощь при записи
+                            </h3>
+
+                            <div class="bg-white rounded-lg p-6 shadow-sm border border-blue-100">
+                                <div class="mb-4">
+                                    <i class="fas fa-question-circle text-blue-500 text-2xl mb-3"></i>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Если у вас есть вопросы перед записью, мы готовы на них ответить. Свяжитесь
+                                        с нами по телефону.
+                                    </p>
+                                </div>
+
+                                <div class="bg-blue-500 text-white rounded-lg p-4 text-center">
+                                    <i class="fas fa-phone text-2xl mb-2"></i>
+                                    <p class="font-semibold text-lg">+370 699 28622</p>
+                                    <p class="text-sm opacity-90">Время работы: I-V 8:00-20:00</p>
+                                </div>
+
+                                <div class="mt-4 space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-clock text-blue-400 mr-2"></i>
+                                        <span>Быстрый ответ гарантирован</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-user-md text-blue-400 mr-2"></i>
+                                        <span>Профессиональная консультация</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-calendar-check text-blue-400 mr-2"></i>
+                                        <span>Гибкое время записи</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-center">
+                                <a href="tel:+37069928622"
+                                    class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition transform hover:scale-105 w-full">
+                                    <i class="fas fa-phone-alt mr-2"></i>
+                                    Позвонить сейчас
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 text-center">
+            <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check text-green-500 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Запись зарегистрирована!</h3>
+            <p class="text-gray-600 mb-6">
+                Спасибо за регистрацию. Мы отправили вам электронное письмо с подтверждением и вскоре позвоним,
+                чтобы подтвердить детали визита.
+            </p>
+            <button onclick="closeSuccessModal()"
+                class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+                Понятно
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </a>
+                    <p class="text-gray-400">Качественное лечение зубов более 26 лет. Заботимся о вашей улыбке
+                        с 1999 года. Мы создаем улыбки, которые меняют жизнь.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Услуги</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="uslugi/osmotr-zubov.html"
+                                class="hover:text-blue-400">Тщательный осмотр зубов</a></li>
+                        <li><a href="uslugi/diagnostika.html" class="hover:text-blue-400">Анализы и
+                                диагностика</a></li>
+                        <li><a href="uslugi/osmotr-rebenka.html" class="hover:text-blue-400">Комплексный
+                                осмотр зубов
+                                у детей</a></li>
+                        <li><a href="uslugi/gigiena-rta.html" class="hover:text-blue-400">Профессиональная гигиена
+                                рта</a></li>
+                        <li><a href="uslugi/detskaya-stomatologiya.html" class="hover:text-blue-400">Детская
+                                стоматология</a></li>
+                        <li><a href="uslugi/implantaciya-zubov.html" class="hover:text-blue-400">Имплантация
+                                зубов</a></li>
+                        <li><a href="uslugi/mgnovennaya-implantaciya.html" class="hover:text-blue-400">Мгновенная
+                                имплантация</a></li>
+                        <li><a href="uslugi/all-on-4.html" class="hover:text-blue-400">Восстановление зубов
+                                "Всё-на-4"</a></li>
+                        <li><a href="uslugi/protezirovanie-zubov.html" class="hover:text-blue-400">Протезирование
+                                зубов</a></li>
+                        <li><a href="uslugi/viniry.html" class="hover:text-blue-400">Восстановление зубов
+                                винирами</a></li>
+                        <li><a href="uslugi/esteticheskoe-plombirovanie.html" class="hover:text-blue-400">Эстетическое
+                                пломбирование</a></li>
+                        <li><a href="uslugi/vyravnivanie-zubov.html" class="hover:text-blue-400">Выравнивание зубов
+                                капами</a></li>
+                        <li><a href="uslugi/vyravnivanie-zubov-detyam.html"
+                                class="hover:text-blue-400">Выравнивание
+                                зубов капами для детей</a></li>
+                        <li><a href="uslugi/ortodonticheskoe-lechenie.html" class="hover:text-blue-400">Ортодонтическое
+                                лечение</a></li>
+                        <li><a href="uslugi/lazernoe-otbelivanie.html" class="hover:text-blue-400">Лазерное
+                                отбеливание
+                                зубов</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Useful</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">О нас</a></li>
+                        <li><a href="vrachi.html" class="hover:text-blue-400">Команда</a></li>
+                        <li><a href="strahovanie.html" class="hover:text-blue-400">Медицинское страхование</a>
+                        </li>
+                        <li><a href="seminary.html" class="hover:text-blue-400">Семинары</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Прейскурант</a></li>
+                        <li><a href="politika.html" class="hover:text-blue-400">Политика
+                                конфиденциальности</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Регистратура</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Закрыто</li>
+                        <li><strong>Телефон</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Адрес</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> ул. Жирмуну 60, 09100 Вильнюс</li>
+                        <li><strong>Эл. почта</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/A9YSHmbgoKihh6uQ7" target="_blank"
+                            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                            <span class="text-sm">Смотреть на карте</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Time Slot Selection
+        const timeSlots = document.querySelectorAll('.time-slot');
+        const selectedTimeInput = document.getElementById('timePeriod');
+
+        timeSlots.forEach(slot => {
+            slot.addEventListener('click', () => {
+                timeSlots.forEach(s => s.classList.remove('selected'));
+                slot.classList.add('selected');
+                selectedTimeInput.value = slot.dataset.time;
+            });
+        });
+
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        // Form Submission
+        const bookingForm = document.getElementById('bookingForm');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Validate time selection
+            if (!selectedTimeInput.value) {
+                alert('Пожалуйста, выберите время');
+                return;
+            }
+
+            // Collect form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                date: document.getElementById('date').value,
+                time: selectedTimeInput.value,
+                service: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
+            };
+
+            // Send email using Эл. почтаJS
+            emailjs.send('service_7xkq8co', 'template_qnrc6ky', formData)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    // Show success message
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4';
+                    successDiv.innerHTML = `
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Спасибо! Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.</span>
+                        </div>
+                    `;
+
+                    // Insert success message before the form
+                    document.getElementById('bookingForm').parentNode.insertBefore(successDiv, document.getElementById('bookingForm'));
+
+                    // Reset form
+                    document.getElementById('bookingForm').reset();
+
+                    // Remove success message after 5 seconds
+                    setTimeout(() => {
+                        successDiv.remove();
+                    }, 5000);
+                    // Reset form after delay
+                    setTimeout(() => {
+                        bookingForm.reset();
+                        timeSlots.forEach(s => s.classList.remove('selected'));
+                    }, 500);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    alert('Ошибка отправки запроса. Пожалуйста, попробуйте еще раз или свяжитесь с нами по телефону.');
+                });
+        });
+    </script>
+</body>
+
+</html>

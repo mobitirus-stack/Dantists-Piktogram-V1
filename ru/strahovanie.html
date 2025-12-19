@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медицинское страхование | Švytintys Dantys</title>
+    <meta name="description"
+        content="Švytintys Dantys - мы сотрудничаем со всеми основными страховыми компаниями (PZU, ERGO, Compensa, If). Получите качественное стоматологическое лечение по медицинской страховке. Запишитесь сейчас!">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/sveikatos-draudimas.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/sveikatos-draudimas.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/sveikatos-draudimas.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/strahovanie.html" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Главная</a>
+                    <a href="uslugi.html" class="text-gray-700 hover:text-blue-500 transition">Услуги</a>
+                    <a href="vrachi.html" class="text-gray-700 hover:text-blue-500 transition">Врачи</a>
+                    <a href="seminary.html" class="text-gray-700 hover:text-blue-500 transition">Семинары</a>
+                    <a href="zapis.html" class="text-gray-700 hover:text-blue-500 transition">Записаться</a>
+                    <a href="kontakty.html" class="text-gray-700 hover:text-blue-500 transition">Контакты</a>
+
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">LT</span>
+                        <a href="../en/sveikatos-draudimas.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <a href="strahovanie.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Позвонить</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Главная</a>
+                <a href="uslugi.html" class="block py-2 text-gray-700 hover:text-blue-500">Услуги</a>
+                <a href="vrachi.html" class="block py-2 text-gray-700 hover:text-blue-500">Врачи</a>
+                <a href="seminary.html" class="block py-2 text-gray-700 hover:text-blue-500">Семинары</a>
+                <a href="zapis.html" class="block py-2 text-gray-700 hover:text-blue-500">Записаться</a>
+                <a href="kontakty.html" class="block py-2 text-gray-700 hover:text-blue-500">Контакты</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">LT</span>
+                    <a href="../en/sveikatos-draudimas.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <a href="strahovanie.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-20 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Медицинское страхование
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Мы сотрудничаем с основными страховыми компаниями, чтобы сделать стоматологические услуги легко
+                        доступными и покрываемыми страховкой.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="zapis.html?service=insurance"
+                            class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                            <i class="fas fa-calendar-alt mr-2"></i>Записаться на консультацию
+                        </a>
+                        <a href="tel:+37069928622"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                            <i class="fas fa-phone mr-2"></i>Позвонить сейчас
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://picsum.photos/seed/health-insurance/600/450" alt="Медицинское страхование"
+                        class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Insurance Companies -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Наши партнеры - Страховые компании
+                </h2>
+                <p class="text-lg text-gray-600">Мы работаем с ведущими страховыми компаниями Литвы</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+                <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
+                    <img src="../Photos/Draudimas%20logo/Ergo.webp" alt="ERGO" class="h-12 mx-auto mb-3 object-contain">
+                    <h3 class="text-sm font-semibold mb-2">ERGO</h3>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
+                    <img src="../Photos/Draudimas%20logo/PZU.webp" alt="PZU" class="h-12 mx-auto mb-3 object-contain">
+                    <h3 class="text-sm font-semibold mb-2">PZU</h3>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
+                    <img src="../Photos/Draudimas%20logo/Gjensidige_Main-Logo-Alternative_Digital_Blue.webp"
+                        alt="Gjensidige" class="h-12 mx-auto mb-3 object-contain">
+                    <h3 class="text-sm font-semibold mb-2">Gjensidige</h3>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
+                    <img src="../Photos/Draudimas%20logo/BTA%20draudimas.webp" alt="BTA"
+                        class="h-12 mx-auto mb-3 object-contain">
+                    <h3 class="text-sm font-semibold mb-2">BTA</h3>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
+                    <img src="../Photos/Draudimas%20logo/Seesam.webp" alt="Seesam"
+                        class="h-12 mx-auto mb-3 object-contain">
+                    <h3 class="text-sm font-semibold mb-2">Seesam</h3>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
+                    <img src="../Photos/Draudimas%20logo/Lietuvos%20draudimas.webp" alt="Lietuvos draudimas"
+                        class="h-12 mx-auto mb-3 object-contain">
+                    <h3 class="text-sm font-semibold mb-2">Lietuvos draudimas</h3>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
+                    <img src="../Photos/Draudimas%20logo/compen.webp" alt="Compensa"
+                        class="h-12 mx-auto mb-3 object-contain">
+                    <h3 class="text-sm font-semibold mb-2">Compensa</h3>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
+                    <img src="../Photos/Draudimas%20logo/if.webp" alt="If" class="h-12 mx-auto mb-3 object-contain">
+                    <h3 class="text-sm font-semibold mb-2">If</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Covered Услуги -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Услуги, покрываемые страховкой</h2>
+                <p class="text-base text-gray-600">Основные услуги, которые может покрыть ваша страховка</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="service-card bg-white p-4 rounded-lg shadow text-center">
+                    <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-user-md text-gray-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Профилактический осмотр</h3>
+                    <p class="text-xs text-gray-600">Регулярные визиты к стоматологу и профессиональная гигиена полости
+                        рта</p>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-lg shadow text-center">
+                    <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-tooth text-gray-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Терапевтическое лечение</h3>
+                    <p class="text-xs text-gray-600">Лечение зубов, пломбирование и эндодонтическое лечение</p>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-lg shadow text-center">
+                    <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-child text-gray-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Детская стоматология</h3>
+                    <p class="text-xs text-gray-600">Полный уход за зубами и решения для лечения детей</p>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-lg shadow text-center">
+                    <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-x-ray text-gray-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-2">Диагностика</h3>
+                    <p class="text-xs text-gray-600">Рентгенологические исследования и современное диагностическое
+                        оборудование</p>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-lg shadow text-center">
+                    <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-cut text-gray-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Хирургические услуги</h3>
+                    <p class="text-xs text-gray-600">Хирургия зубных травм и другие хирургические процедуры</p>
+                </div>
+
+                <div class="service-card bg-white p-4 rounded-lg shadow text-center">
+                    <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
+                        <i class="fas fa-teeth text-gray-600 text-lg"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-2">Протезирование</h3>
+                    <p class="text-xs text-gray-600">Изготовление и фиксация зубных протезов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Information -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <div class="bg-gray-200 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-info-circle text-gray-700 text-3xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Важная информация об оплате
+                            страховкой
+                        </h2>
+                        <p class="text-lg text-gray-700">Все, что вам нужно знать о медицинском страховании в нашей
+                            клинике</p>
+                    </div>
+
+                    <div class="space-y-6 text-gray-800">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-200 rounded-full p-3 mt-1">
+                                <i class="fas fa-file-contract text-gray-700 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Договор страхования и список услуг
+                                </h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    <strong class="text-gray-900">Вы можете найти список услуг, оплачиваемых страховой
+                                        компанией, в вашем договоре страхования.</strong>
+                                    Каждая страховая компания устанавливает свои лимиты и рамки для платных услуг,
+                                    поэтому необходимо заранее ознакомиться с условиями вашего договора.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-200 rounded-full p-3 mt-1">
+                                <i class="fas fa-briefcase-medical text-gray-700 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Медицинское страхование сотрудников
+                                </h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    <strong class="text-gray-900">Для клиентов со страховкой сотрудников некоторые
+                                        услуги могут предоставляться бесплатно.</strong>
+                                    Это зависит от вашего пакета медицинского страхования. Большинство корпоративных
+                                    планов покрывают профилактические визиты, гигиену и базовое лечение.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-200 rounded-full p-3 mt-1">
+                                <i class="fas fa-wallet text-gray-700 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Самостоятельная оплата</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    <strong class="text-gray-900">Важно отметить, что за медицинские услуги, не
+                                        покрываемые страховкой, ответственность за оплату несет пациент.</strong>
+                                    Мы рекомендуем проконсультироваться с вашим страховым агентом, будут ли конкретные
+                                    услуги оплачены по вашему договору.
+                                    <strong class="text-gray-900">"Švytintys Dantys" не несет ответственности за решения
+                                        страховых компаний не оплачивать предоставленные услуги.</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gray-200 rounded-full p-3 mt-1">
+                                <i class="fas fa-handshake text-gray-700 text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Сотрудничество и документация</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    <strong class="text-gray-900">Для вашего удобства мы сотрудничаем с частными
+                                        страховыми компаниями – так услуги можно получить быстрее и удобнее.</strong>
+                                    Если у нас нет прямого сотрудничества с вашей страховой компанией, после оказания
+                                    услуги мы можем предоставить медицинское заключение и счет, который вы сможете
+                                    передать в страховую.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Часто задаваемые вопросы</h2>
+                <p class="text-lg text-gray-600">Ответы на популярные вопросы о медицинском страховании</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="w-full text-left p-6 focus:outline-none focus:bg-gray-50">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold">Какая страховая компания лучшая?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </div>
+                        </button>
+                        <div class="hidden p-6 pt-0">
+                            <p class="text-gray-600">У каждой страховой компании есть свои преимущества. Мы поможем вам
+                                выбрать наиболее подходящий вариант в соответствии с вашими потребностями и бюджетом.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="w-full text-left p-6 focus:outline-none focus:bg-gray-50">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold">Все ли услуги покрываются страховкой?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </div>
+                        </button>
+                        <div class="hidden p-6 pt-0">
+                            <p class="text-gray-600">Страховка обычно покрывает профилактические и необходимые лечебные
+                                услуги. Эстетические услуги могут оплачиваться из своего кармана.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button class="w-full text-left p-6 focus:outline-none focus:bg-gray-50">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold">Что важно знать?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </div>
+                        </button>
+                        <div class="hidden p-6 pt-0">
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• Прибыв в клинику, имейте при себе удостоверение личности и карту страхования.</li>
+                                <li>• После выполнения запланированного лечения вы получите счет.</li>
+                                <li>• После подачи счета в страховую компанию будет покрыта полная или частичная сумма.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="zapis.html?service=insurance"
+                    class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                    <i class="fas fa-calendar-plus mr-2"></i> Записаться на консультацию
+                </a>
+                <a href="tel:+37069928622"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                    <i class="fas fa-phone mr-2"></i> Позвонить сейчас
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </a>
+                    <p class="text-gray-400">Качественное лечение зубов более 26 лет. Заботимся о вашей улыбке
+                        с 1999 года. Мы создаем улыбки, которые меняют жизнь.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Услуги</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="uslugi/osmotr-zubov.html"
+                                class="hover:text-blue-400">Тщательный осмотр зубов</a></li>
+                        <li><a href="uslugi/diagnostika.html" class="hover:text-blue-400">Анализы и
+                                диагностика</a></li>
+                        <li><a href="uslugi/osmotr-rebenka.html" class="hover:text-blue-400">Комплексный
+                                осмотр зубов
+                                у детей</a></li>
+                        <li><a href="uslugi/gigiena-rta.html" class="hover:text-blue-400">Профессиональная гигиена
+                                рта</a></li>
+                        <li><a href="uslugi/detskaya-stomatologiya.html" class="hover:text-blue-400">Детская
+                                стоматология</a></li>
+                        <li><a href="uslugi/implantaciya-zubov.html" class="hover:text-blue-400">Имплантация
+                                зубов</a></li>
+                        <li><a href="uslugi/mgnovennaya-implantaciya.html" class="hover:text-blue-400">Моментальная
+                                имплантация</a></li>
+                        <li><a href="uslugi/all-on-4.html" class="hover:text-blue-400">Восстановление зубов
+                                "Всё-на-4"</a></li>
+                        <li><a href="uslugi/protezirovanie-zubov.html" class="hover:text-blue-400">Протезирование
+                                зубов</a></li>
+                        <li><a href="uslugi/viniry.html" class="hover:text-blue-400">Восстановление зубов
+                                винирами</a></li>
+                        <li><a href="uslugi/esteticheskoe-plombirovanie.html" class="hover:text-blue-400">Эстетическое
+                                пломбирование</a></li>
+                        <li><a href="uslugi/vyravnivanie-zubov.html" class="hover:text-blue-400">Выравнивание зубов
+                                капами</a></li>
+                        <li><a href="uslugi/vyravnivanie-zubov-detyam.html"
+                                class="hover:text-blue-400">Выравнивание
+                                зубов капами для детей</a></li>
+                        <li><a href="uslugi/ortodonticheskoe-lechenie.html" class="hover:text-blue-400">Ортодонтическое
+                                лечение</a></li>
+                        <li><a href="uslugi/lazernoe-otbelivanie.html" class="hover:text-blue-400">Лазерное
+                                отбеливание
+                                зубов</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Полезное</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">О нас</a></li>
+                        <li><a href="vrachi.html" class="hover:text-blue-400">Команда</a></li>
+                        <li><a href="strahovanie.html" class="hover:text-blue-400">Медицинское страхование</a>
+                        </li>
+                        <li><a href="seminary.html" class="hover:text-blue-400">Семинары</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Прейскурант</a></li>
+                        <li><a href="politika.html" class="hover:text-blue-400">Политика
+                                конфиденциальности</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Регистратура</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Закрыто</li>
+                        <li><strong>Телефон</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Адрес</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, 09100 Вильнюс</li>
+                        <li><strong>Эл. почта</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/A9YSHmbgoKihh6uQ7" target="_blank"
+                            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                            <span class="text-sm">Смотреть на карте</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.bg-white.rounded-lg.shadow-md button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+    </script>
+</body>
+
+</html>

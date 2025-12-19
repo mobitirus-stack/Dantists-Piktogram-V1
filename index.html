@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dantų implantacija Vilniuje | Odontologijos klinika Švytintys dantys</title>
+    <meta name="description"
+        content="Profesionali dantų implantacija ir odontologijos paslaugos Vilniuje. Patyrę specialistai, moderni įranga, ilgalaikė garantija. Registruokitės nemokamai konsultacijai!">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://svytintysdantys.lt/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Švytintys Dantys",
+      "image": "https://svytintysdantys.lt/logo.png",
+      "@id": "https://svytintysdantys.lt",
+      "url": "https://svytintysdantys.lt",
+      "telephone": "+37069928622",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Žirmūnų g. 60",
+        "addressLocality": "Vilnius",
+        "postalCode": "09100",
+        "addressCountry": "LT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 54.7075388,
+        "longitude": 25.3040408
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/index.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/index.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/index.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/index.html" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-blue-500 font-semibold">Pradžia</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                    <a href="doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
+                    <a href="seminarai.html" class="text-gray-700 hover:text-blue-500 transition">Seminarai</a>
+                    <a href="booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">LT</span>
+                        <a href="en/index.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <a href="ru/index.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                    </div>
+
+                    <a href="contact.html"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        Susisiekite
+                    </a>
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-blue-500 font-semibold">Pradžia</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
+                <a href="doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Gydytojai</a>
+                <a href="seminarai.html" class="block py-2 text-gray-700 hover:text-blue-500">Seminarai</a>
+                <a href="booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">LT</span>
+                    <a href="en/index.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <a href="ru/index.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                </div>
+
+                <button class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Susisiekite
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-20 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        Profesionali Dantų Implantacija ir Odontologijos Paslaugos Vilniuje
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Sveiki atvykę į kliniką „Švytintys Dantys“, kur jūsų burnos sveikata yra mūsų prioritetas.
+                        Patirkite švelnų, profesionalų odontologijos gydymą patogioje aplinkoje.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="booking.html"
+                            class="inline-block bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105 text-center">
+                            <i class="fas fa-calendar-check mr-2"></i> Registruotis
+                        </a>
+                        <a href="#services"
+                            class="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition text-center">
+                            <i class="fas fa-info-circle mr-2"></i> Sužinoti daugiau
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="Photos/Paslaugos/issami vaiku dantu/dantist for kids.webp" alt="Dental Care"
+                        class="rounded-2xl shadow-2xl float-animation">
+                    <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-green-500 w-12 h-12 rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Tel. Numeris</div>
+                                <div class="text-sm text-gray-600">+37069928622</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-500">26+</div>
+                    <div class="text-gray-600">metų patirtis</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-500">5000+</div>
+                    <div class="text-gray-600">patenkintų pacientų</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-500">50+</div>
+                    <div class="text-gray-600">apdovanojimų / sertifikatų</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Mūsų Paslaugos</h2>
+                <p class="text-lg text-gray-600">Visapusė odontologinė priežiūra visai jūsų šeimai</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Bendroji Odontologija</h3>
+                    <p class="text-gray-600 text-center mb-4">Reguliarūs patikrinimai, valymas ir profilaktinė priežiūra
+                    </p>
+                    <div class="text-center">
+                        <a href="services/dental-treatment.html"
+                            class="text-blue-500 hover:text-blue-600 font-semibold">
+                            Sužinoti daugiau <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-magic text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Estetinė Odontologija</h3>
+                    <p class="text-gray-600 text-center mb-4">Paverskite savo šypsena su mūsų estetiniais gydymais</p>
+                    <div class="text-center">
+                        <a href="services/aesthetic-fillings.html"
+                            class="text-blue-500 hover:text-blue-600 font-semibold">
+                            Sužinoti daugiau <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-xl">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-teeth text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Ortodontija</h3>
+                    <p class="text-gray-600 text-center mb-4">Ištieskite dantis su modernia ortodontija</p>
+                    <div class="text-center">
+                        <a href="services/orthodontic-treatment.html"
+                            class="text-blue-500 hover:text-blue-600 font-semibold">
+                            Sužinoti daugiau <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="services.html"
+                    class="inline-block bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition">
+                    Žiūrėti visas paslaugas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Kodėl Rinktis Mūsų Odontologijos
+                        Kliniką?</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-check text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Patyrę Profesionalai</h3>
+                                <p class="text-gray-600">Mūsų komandą sudaro aukštai kvalifikuoti odontologai su
+                                    daugelio metų patirtimi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-check text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Naujausia Technologija</h3>
+                                <p class="text-gray-600">Moderni įranga tiksliai diagnostikai ir gydymui</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-check text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Pacientams Orientuota Priežiūra</h3>
+                                <p class="text-gray-600">Individualūs gydymo planai, pritaikyti jūsų poreikiams</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-check text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Prieinamos Kainos</h3>
+                                <p class="text-gray-600">Konkurencingos kainos ir lankstūs mokėjimo būdai</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="Photos/Paslaugos/Pagrindinis/Sypsena.webp" alt="Happy Dentist with Patient"
+                        class="rounded-2xl shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ką sako mūsų pacientai</h2>
+                <p class="text-lg text-gray-600">Tikri atsiliepimai iš mūsų vertinamų pacientų</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Puiki paslauga! Personalas labai draugiškas ir profesionalus.
+                        Gydytojas Ąžuolas viską aiškiai paaiškino ir pasirūpino, kad jausčiausi patogiai."</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/seed/patient1/50/50" alt="Patient"
+                            class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <div class="font-semibold">Toma</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Gyvenu Šiaurės miestelyje, šioje klinikoje aš ir mano šeima lankomės
+                        jau daug metų. Puiki paslaugų kokybė bei aptarnavimo kultūra. Rūpestingas požiūris į klientą,
+                        nes visada įspėja telefonu apie artėjantį vizitą, o po procedūros pasidomi sveikata ir būsena.
+                        Einame be baimės, nes pasitikime. Rekomenduoju!"</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/seed/patient2/50/50" alt="Patient"
+                            class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <div class="font-semibold">Lina</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Mūsų vaikui staiga labai suskaudo dantuką, ir mes nežinojome, ką
+                        daryti. Kreipėmės į kliniką Švytintys dantys. Gydytoja Agnė mus priėmė tą pačią dieną. Ji labai
+                        švelniai apžiūrėjo, nuramino vaiką ir greitai padėjo numalšinti skausmą. Esame labai dėkingi už
+                        rūpestį ir profesionalumą."</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/seed/patient3/50/50" alt="Patient"
+                            class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <div class="font-semibold">Monika</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Pasiruošę savo odontologijos vizitui?</h2>
+            <p class="text-xl text-blue-100 mb-8">Prisijunkite prie tūkstančių patenkintų pacientų, kurie patiki mums
+                savo šypsenas</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="booking.html"
+                    class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                    <i class="fas fa-calendar-plus mr-2"></i> Registruotis
+                </a>
+                <a href="tel:+37012345678"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                    <i class="fas fa-phone mr-2"></i> Skambinti dabar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">Švytintys dantys</span>
+                    </a>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia
+                        gyvenimus.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="services/comprehensive-dental-examination.html"
+                                class="hover:text-blue-400">Nuodugnus dantų būklės ištyrimas</a></li>
+                        <li><a href="services/tests-and-diagnostics.html" class="hover:text-blue-400">Tyrimai ir
+                                diagnostika</a></li>
+                        <li><a href="services/comprehensive-child-checkup.html" class="hover:text-blue-400">Išsami vaikų
+                                dantų patikra</a></li>
+                        <li><a href="services/oral-hygiene.html" class="hover:text-blue-400">Profesionali burnos
+                                higiena</a></li>
+                        <li><a href="services/pediatric-dentistry.html" class="hover:text-blue-400">Vaikų
+                                odontologija</a></li>
+                        <li><a href="services/dental-implantation.html" class="hover:text-blue-400">Dantų
+                                implantacija</a></li>
+                        <li><a href="services/immediate-implantation.html" class="hover:text-blue-400">Vienmomentė
+                                implantacija</a></li>
+                        <li><a href="services/all-on-4-implants.html" class="hover:text-blue-400">Dantų
+                                atstatymas „Visi ant 4" metodu</a></li>
+                        <li><a href="services/dental-prosthetics.html" class="hover:text-blue-400">Dantų
+                                protezavimas</a></li>
+                        <li><a href="services/dental-veneers.html" class="hover:text-blue-400">Dantų atkūrimas
+                                laminatėmis</a></li>
+                        <li><a href="services/aesthetic-fillings.html" class="hover:text-blue-400">Estetinis
+                                plombavimas</a></li>
+                        <li><a href="services/teeth-straightening-orthopedics.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis</a></li>
+                        <li><a href="services/teeth-straightening-children.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis vaikams</a></li>
+                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Ortodontinis
+                                gydymas</a></li>
+                        <li><a href="services/laser-teeth-whitening.html" class="hover:text-blue-400">Dantų balinimas
+                                lazeriu</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Apie mus</a></li>
+                        <li><a href="doctors.html" class="hover:text-blue-400">Komanda</a></li>
+                        <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Sveikatos draudimas</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
+                        <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, 09100 Vilnius</li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/A9YSHmbgoKihh6uQ7" target="_blank"
+                            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                            <span class="text-sm">Peržiūrėti žemėlapyje</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="border-t border-gray-800 mt-8 pt-8">
+                <div class="text-center mb-6">
+                    <h4 class="text-lg font-semibold text-white mb-2">Raskite mus žemėlapyje</h4>
+                    <p class="text-gray-400">Žirmūnų g. 60, 09100 Vilnius, Lietuva</p>
+                </div>
+                <div class="w-full h-64 rounded-lg overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5784.053477074483!2d25.304040780255296!3d54.70753875540857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96ba591c4b87%3A0x87f3effc3ce3239d!2s%C5%A0vytintys%20dantys!5e0!3m2!1sen!2slt!4v1762363191641!5m2!1sen!2slt"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

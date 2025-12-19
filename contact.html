@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktai - Švytintys dantys</title>
+    <meta name="description"
+        content="Švytintys dantys - kontaktai. Raskite mus Vilniuje, Žirmūnų g. 60. Skambinkite +370 699 28622 arba +370 5 2761858. El. paštas info@svytintysdantys.lt. Darbo laikas: I-V 8:00-20:00, VI 8:00-14:00.">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/contact.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/contact.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/contact.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/kontakty.html" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                    <a href="doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
+                    <a href="seminarai.html" class="text-gray-700 hover:text-blue-500 transition">Seminarai</a>
+                    <a href="booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
+                    <a href="contact.html" class="text-blue-500 font-semibold">Kontaktai</a>
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">LT</span>
+                        <a href="en/contact.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <a href="ru/kontakty.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                    </div>
+
+                    <a href="contact.html"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        Susisiekite
+                    </a>
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Pradžia</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
+                <a href="doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Gydytojai</a>
+                <a href="seminarai.html" class="block py-2 text-gray-700 hover:text-blue-500">Seminarai</a>
+                <a href="booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
+                <a href="contact.html" class="block py-2 text-blue-500 font-semibold">Kontaktai</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">LT</span>
+                    <a href="en/contact.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <a href="ru/kontakty.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                </div>
+
+                <a href="contact.html"
+                    class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 block text-center">
+                    Susisiekite
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-20 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Susisiekite su mumis
+                </h1>
+                <p class="text-xl mb-8 text-blue-100">
+                    Mes visada pasirengę padėti jums su jūsų odontologijos poreikiais
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+37069928622"
+                        class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                        <i class="fas fa-phone mr-2"></i> Skambinti dabar
+                    </a>
+                    <a href="booking.html"
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                        <i class="fas fa-calendar-check mr-2"></i> Registruotis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Kontaktinė informacija</h2>
+                <p class="text-lg text-gray-600">Įvairūs būdai susisiekti su „Švytinčių Dantų“ komanda</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Phone Contact -->
+                <div class="contact-card bg-blue-50 p-6 rounded-xl border border-blue-200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-phone text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center mb-3">Telefonas</h3>
+                    <div class="space-y-2 text-center">
+                        <a href="tel:+37069928622" class="block text-blue-500 hover:text-blue-600 font-medium">
+                            <i class="fas fa-mobile-alt mr-2"></i> +370 699 28622
+                        </a>
+                        <a href="tel:+37052761858" class="block text-blue-500 hover:text-blue-600 font-medium">
+                            <i class="fas fa-phone mr-2"></i> +370 5 276 1858
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Email Contact -->
+                <div class="contact-card bg-green-50 p-6 rounded-xl border border-green-200">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-envelope text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center mb-3">El. paštas</h3>
+                    <div class="text-center">
+                        <a href="mailto:info@svytintysdantys.lt"
+                            class="text-green-500 hover:text-green-600 font-medium">
+                            <i class="fas fa-paper-plane mr-2"></i> info@svytintysdantys.lt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="contact-card bg-purple-50 p-6 rounded-xl border border-purple-200">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-map-marker-alt text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center mb-3">Adresas</h3>
+                    <div class="text-center text-purple-600">
+                        <p class="font-medium">Žirmūnų g. 60</p>
+                        <p class="font-medium">09100 Vilnius</p>
+                        <p class="font-medium">Lietuva</p>
+                    </div>
+                </div>
+
+                <!-- Working Hours -->
+                <div class="contact-card bg-orange-50 p-6 rounded-xl border border-orange-200">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-clock text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center mb-3">Darbo laikas</h3>
+                    <div class="text-center text-orange-600">
+                        <p class="font-medium">I-V: 8:00 - 20:00</p>
+                        <p class="font-medium">VI: 8:00 - 14:00</p>
+                        <p class="font-medium">VII: Nedirbame</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form and Map -->
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Parašykite mums</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Vardas *</label>
+                                <input type="text" name="first_name" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Jūsų vardas">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Pavardė</label>
+                                <input type="text" name="last_name"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Jūsų pavardė">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Telefonas *</label>
+                                <input type="tel" name="phone" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="+370 6 XXX XXXX">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">El. paštas *</label>
+                                <input type="email" name="email" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="vardas@pastas.lt">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Tema</label>
+                            <select name="subject"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Pasirinkite temą</option>
+                                <option value="konsultacija">Konsultacija</option>
+                                <option value="registracija">Registracija</option>
+                                <option value="kainos">Kainų informacija</option>
+                                <option value="atsiliepimas">Atsiliepimas</option>
+                                <option value="kita">Kita</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Žinutė *</label>
+                            <textarea name="message" required rows="5"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Parašykite savo žinutę..."></textarea>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="privacy" required class="mr-2">
+                            <label for="privacy" class="text-sm text-gray-600">
+                                Sutinku su <a href="#" class="text-blue-500 hover:underline">privatumo politika</a> *
+                            </label>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-blue-500 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-600 transition transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i> Siųsti žinutę
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map Section -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Raskite mus žemėlapyje</h3>
+                    <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                        <div class="w-full h-96">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5784.053477074483!2d25.304040780255296!3d54.70753875540857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96ba591c4b87%3A0x87f3effc3ce3239d!2s%C5%A0vytintys%20dantys!5e0!3m2!1sen!2slt!4v1762363191641!5m2!1sen!2slt"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <div class="flex items-center">
+                            <i class="fas fa-info-circle text-blue-500 mr-3"></i>
+                            <div>
+                                <p class="font-medium text-blue-800">Norėdami atvykti:</p>
+                                <p class="text-sm text-blue-600">Naudokite viešąjį transportą:<br>
+                                    Autobusai: 5, 7, 30, 33, 119 – stoja stotelėje Šiaurės miestelis, kuri yra vos 1–3
+                                    minučių pėsčiomis nuo adreso.<br>
+                                    Troleibusai: 12, 17, 20 – taip pat aptarnauja stotelę Šiaurės miestelis arba jos
+                                    artimą aplinką.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="py-12 bg-red-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-2xl font-bold text-red-600 mb-2">Skubus atvejis?</h3>
+                        <p class="text-gray-600">Turite skausmą arba skubią odontologinę problemą? Skambinkite dabar!
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:+37069928622"
+                            class="bg-red-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-600 transition transform hover:scale-105 text-center">
+                            <i class="fas fa-phone-alt mr-2"></i> Skubus telefonas
+                        </a>
+                        <a href="booking.html?emergency=true"
+                            class="border-2 border-red-500 text-red-500 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition text-center">
+                            <i class="fas fa-calendar-plus mr-2"></i> Skubi registracija
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Sekite mus</h2>
+                <p class="text-lg text-gray-600">Būkite informuoti apie naujienas ir specialius pasiūlymus</p>
+            </div>
+
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                    class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition transform hover:scale-110">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/sveiki_dantys"
+                    class="bg-gradient-to-br from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center text-white hover:opacity-90 transition transform hover:scale-110">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="#"
+                    class="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition transform hover:scale-110">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+                <a href="#"
+                    class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition transform hover:scale-110">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </a>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia
+                        gyvenimus.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Greitos nuorodos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Pradžia</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Paslaugos</a></li>
+                        <li><a href="doctors.html" class="text-gray-400 hover:text-white">Gydytojai</a></li>
+                        <li><a href="booking.html" class="text-gray-400 hover:text-white">Registracija</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Kontaktai</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="services/comprehensive-dental-examination.html"
+                                class="hover:text-blue-400">Nuodugnus dantų būklės ištyrimas</a></li>
+                        <li><a href="services/tests-and-diagnostics.html" class="hover:text-blue-400">Tyrimai ir
+                                diagnostika</a></li>
+                        <li><a href="services/comprehensive-child-checkup.html" class="hover:text-blue-400">Išsami vaikų
+                                dantų patikra</a></li>
+                        <li><a href="services/oral-hygiene.html" class="hover:text-blue-400">Profesionali burnos
+                                higiena</a></li>
+                        <li><a href="services/pediatric-dentistry.html" class="hover:text-blue-400">Vaikų
+                                odontologija</a></li>
+                        <li><a href="services/dental-implantation.html" class="hover:text-blue-400">Dantų
+                                implantacija</a></li>
+                        <li><a href="services/immediate-implantation.html" class="hover:text-blue-400">Vienmomentė
+                                implantacija</a></li>
+                        <li><a href="services/all-on-4-implants.html" class="hover:text-blue-400">Dantų
+                                atstatymas „Visi ant 4" metodu</a></li>
+                        <li><a href="services/dental-prosthetics.html" class="hover:text-blue-400">Dantų
+                                protezavimas</a></li>
+                        <li><a href="services/dental-veneers.html" class="hover:text-blue-400">Dantų atkūrimas
+                                laminatėmis</a></li>
+                        <li><a href="services/aesthetic-fillings.html" class="hover:text-blue-400">Estetinis
+                                plombavimas</a></li>
+                        <li><a href="services/teeth-straightening.html" class="hover:text-blue-400">Dantų tiesinimas
+                                kapomis</a></li>
+                        <li><a href="services/teeth-straightening-children.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis vaikams</a></li>
+                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Ortodontinis
+                                gydymas</a></li>
+                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Ortodontinis
+                                gydymas</a></li>
+                        <li><a href="services/laser-teeth-whitening.html" class="hover:text-blue-400">Dantų balinimas
+                                lazeriu</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Apie mus</a></li>
+                        <li><a href="doctors.html" class="hover:text-blue-400">Komanda</a></li>
+                        <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Sveikatos draudimas</a></li>
+                        <li><a href="seminarai.html" class="hover:text-blue-400">Seminarai</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
+                        <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 276 1858</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, Vilnius</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize EmailJS
+        (function () {
+            emailjs.init("7bdA9YoKvT6_Df2b1"); // Replace with your EmailJS public key
+        })();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form Handling with EmailJS
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Siunčiama...';
+
+            // Prepare form data
+            const formData = {
+                first_name: this.first_name.value,
+                last_name: this.last_name.value,
+                phone: this.phone.value,
+                email: this.email.value,
+                subject: this.subject.value || 'Bendra užklausa',
+                message: this.message.value
+            };
+
+            // Send email using EmailJS
+            console.log('Sending email with data:', formData);
+            emailjs.send('service_7xkq8co', 'template_0715dsp', formData)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+
+                    // Show success message
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4';
+                    successDiv.innerHTML = `
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Ačiū! Jūsų žinutė sėkmingai išsiųsta. Mes su jumis susisieksime artimiausiu metu.</span>
+                        </div>
+                    `;
+
+                    // Insert success message before the form
+                    document.getElementById('contact-form').parentNode.insertBefore(successDiv, document.getElementById('contact-form'));
+
+                    // Reset form
+                    document.getElementById('contact-form').reset();
+
+                    // Remove success message after 5 seconds
+                    setTimeout(() => {
+                        successDiv.remove();
+                    }, 5000);
+                })
+                .catch(function (error) {
+                    console.log('FAILED...', error);
+
+                    // Show error message
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-4';
+                    errorDiv.innerHTML = `
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-circle mr-2"></i>
+                            <span>Atsiprašome, įvyko klaida siunčiant žinutę. Bandykite dar kartą arba skambinkite telefonu.</span>
+                        </div>
+                    `;
+
+                    // Insert error message before the form
+                    document.getElementById('contact-form').parentNode.insertBefore(errorDiv, document.getElementById('contact-form'));
+
+                    // Remove error message after 5 seconds
+                    setTimeout(() => {
+                        errorDiv.remove();
+                    }, 5000);
+                })
+                .finally(function () {
+                    // Restore button state
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+                });
+        });
+
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

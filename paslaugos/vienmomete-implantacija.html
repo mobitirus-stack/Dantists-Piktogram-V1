@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Vienmomentė Implantacija | Dantys per 1 Dieną | Švytintys Dantys</title>
+    <meta name="description"
+        content="Vienmomentė implantacija Vilniuje. Danties šalinimas ir implantavimas per vieną vizitą. Sužinokite kainą ir registruokitės pas Dr. Ąžuolą Danielių.">
+    <meta name="keywords"
+        content="vienmomente implantacija, dantys per viena diena, dantu implantai vilnius, momentinis implantavimas, Dr. Ąžuolas Danielius">
+    <meta name="author" content="Švytintys Dantys">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Lithuanian">
+    <meta name="geo.region" content="LT-VL">
+    <meta name="geo.placename" content="Vilnius">
+    <meta name="geo.position" content="54.7075388;25.3040408">
+    <meta name="ICBM" content="54.7075388,25.3040408">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Vienmomentė Implantacija | Švytintys Dantys">
+    <meta property="og:description" content="Nauji dantys per vieną vizitą. Minimali invazija ir maksimalus komfortas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://svytintysdantys.lt/paslaugos/vienmomete-implantacija">
+    <meta property="og:image" content="https://svytintysdantys.lt/Photos/Paslaugos/venomenine/per%20karta.webp">
+
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+
+        .doctor-quote {
+            border-left: 4px solid #4f46e5;
+            background-color: #f9fafb;
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/paslaugos/vienmomete-implantacija.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/paslaugos/vienmomete-implantacija.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/services/immediate-implantation.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/uslugi/mgnovennaya-implantaciya.html" />
+    </head>
+
+<body class="bg-gray-50 scroll-smooth">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
+                    <a href="../services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                    <a href="../doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
+                    <a href="../booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">LT</span>
+                        <a href="../en/services/immediate-implantation.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <a href="../ru/uslugi/mgnovennaya-implantaciya.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                    </div>
+                    <a href="tel:+37069928622"
+                        class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">
+                        <i class="fas fa-phone mr-2"></i>+370 699 28622
+                    </a>
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="../index.html" class="block py-2 text-gray-700 hover:text-blue-500">Pradžia</a>
+                <a href="../services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
+                <a href="../doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Gydytojai</a>
+                <a href="../booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
+                <a href="../contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">LT</span>
+                    <a href="../en/services/immediate-implantation.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <a href="../ru/uslugi/mgnovennaya-implantaciya.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                </div>
+                <a href="tel:+37069928622"
+                    class="mt-2 w-full bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 text-center">
+                    <i class="fas fa-phone mr-2"></i>+370 699 28622
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="bg-white border-b border-gray-200 pt-20 pb-4">
+        <div class="container mx-auto px-4">
+            <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                <li><a href="../index.html" class="hover:text-blue-500 transition">Pradžia</a></li>
+                <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                <li><a href="../services.html" class="hover:text-blue-500 transition">Paslaugos</a></li>
+                <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                <li><a href="dental-implantation.html" class="hover:text-blue-500 transition">Dantų Implantavimas</a>
+                </li>
+                <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                <li class="font-semibold text-gray-800">Vienmomentė Implantacija</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-white overflow-hidden">
+        <div class="container mx-auto px-4 py-12 md:py-20">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 space-y-6">
+                    <div
+                        class="inline-block bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-semibold">
+                        Dantys Per 1 Dieną
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                        Vienmomentė Implantacija
+                        <span class="block text-indigo-600">Greitas Sprendimas Jūsų Šypsenai</span>
+                    </h1>
+                    <p class="text-xl text-gray-600">
+                        Atstatykite prarastą dantį vieno vizito metu. Minimalus skausmas, maksimali estetika ir jokio
+                        laukimo be dantų.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../booking.html"
+                            class="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition shadow-lg text-center">
+                            Registruotis Konsultacijai
+                        </a>
+                        <a href="tel:+37069928622"
+                            class="bg-white text-gray-800 border-2 border-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-indigo-600 hover:text-indigo-600 transition text-center">
+                            <i class="fas fa-phone mr-2"></i>+370 699 28622
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="../Photos/Paslaugos/venomenine/per%20karta.webp"
+                            alt="Vienmomentė implantacija - dantys per vieną dieną"
+                            class="w-full h-auto object-cover transform hover:scale-105 transition duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                            <div class="text-white">
+                                <p class="font-bold text-lg">Dr. Ąžuolas Danielius</p>
+                                <p class="text-sm opacity-90">Implantuojantis gydytojas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor's Commentary -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto doctor-quote p-8 rounded-r-xl shadow-sm">
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="flex-shrink-0">
+                        <img src="../Photos/Personalas/Azuolas%20Danielius.webp" alt="Dr. Ąžuolas Danielius"
+                            class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gydytojo komentaras</h3>
+                        <p class="text-gray-700 text-lg italic leading-relaxed">
+                            „Vienmomentė implantacija yra tikras proveržis pacientų komforto srityje. Vietoje kelių
+                            chirurginių intervencijų ir mėnesių laukimo be danties, mes viską atliekame vieno vizito
+                            metu.
+                            Pašaliname pažeistą dantį, įsriegiame implantą ir pritvirtiname laikiną karūnėlę. Žmogus
+                            išeina iš klinikos su šypsena, o gijimas vyksta žymiai lengviau, nes audiniai mažiau
+                            traumuojami. Tai idealus sprendimas tiems, kurie vertina laiką ir kokybę.“
+                        </p>
+                        <p class="mt-4 text-indigo-600 font-semibold">— Dr. Ąžuolas Danielius, Odontologas-Implantologas
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is it & Process -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kaip Vyksta Procedūra?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Vienas vizitas – trys etapai. Viskas atliekama maksimaliai greitai ir komfortiškai.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-indigo-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-indigo-100">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold mb-6">
+                            1</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Diagnostika ir Šalinimas</h3>
+                        <p class="text-gray-600">
+                            Atliekame 3D nuotrauką, įvertiname kaulo būklę. Jei reikia, atraumatiškai pašaliname
+                            sugedusį dantį ar jo šaknį, paruošdami vietą implantui.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-indigo-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-indigo-100">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold mb-6">
+                            2</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Implanto Įsriegimas</h3>
+                        <p class="text-gray-600">
+                            Į tą pačią vietą (alveolę) įsriegiame implantą. Tai daroma be jokių papildomų pjūvių, todėl
+                            išvengiama tinimo ir skausmo po operacijos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-indigo-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-indigo-100">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold mb-6">
+                            3</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Laikinas Dantis</h3>
+                        <p class="text-gray-600">
+                            Ant implanto iškart pritvirtiname laikiną dantį. Jūs išeinate su pilna šypsena. Po 3-4
+                            mėnesių jis pakeičiamas nuolatiniu cirkonio vainikėliu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits (Why Choose) -->
+    <section class="bg-indigo-900 py-16 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Kodėl Verta Rinktis Vienmomentę Implantaciją?</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-700 p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-xl text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Sutaupotas Laikas</h3>
+                                <p class="text-indigo-200">Reikia mažiausiai dvigubai mažiau vizitų nei taikant
+                                    tradicinį metodą.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-700 p-3 rounded-lg mr-4">
+                                <i class="fas fa-magic text-xl text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Estetika Iškart</h3>
+                                <p class="text-indigo-200">Nereikia vaikščioti be danties ar su nepatogia plokštele
+                                    gijimo
+                                    metu.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-indigo-700 p-3 rounded-lg mr-4">
+                                <i class="fas fa-bone text-xl text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Kaulo Išsaugojimas</h3>
+                                <p class="text-indigo-200">Implantas natūraliai apkrauna kaulą, todėl jis netirpsta,
+                                    kaip
+                                    atsitinka ilgai laukiant po rovimo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm border border-white/20">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Ar Jums Tinka Šis Metodas?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-indigo-100">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i> Tinka nulūžus dančiui
+                        </li>
+                        <li class="flex items-center text-indigo-100">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i> Tinka, jei dantis negygydomas
+                        </li>
+                        <li class="flex items-center text-indigo-100">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i> Reikalingas pakankamas kaulo kiekis
+                        </li>
+                        <li class="flex items-center text-indigo-100">
+                            <i class="fas fa-exclamation-circle text-yellow-400 mr-3"></i> Nerekomenduojama esant ūmiai
+                            infekcijai
+                        </li>
+                    </ul>
+                    <div class="mt-8 text-center">
+                        <a href="../booking.html"
+                            class="inline-block bg-white text-indigo-900 px-8 py-3 rounded-lg font-bold hover:bg-indigo-50 transition">
+                            Registruotis Patikrinimui
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Dažniausiai Užduodami Klausimai</h2>
+
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-indigo-500 mr-3"></i>
+                        Ar vienmomentė implantacija skausminga?
+                    </h3>
+                    <p class="text-gray-600 ml-8">
+                        Ne. Procedūra atliekama su vietine nejautra. Dažnai ji net mažiau skausminga nei paprastas
+                        danties
+                        rovimas, nes viskas atliekama vienu metu, nepaliekant atviros žaizdos.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-indigo-500 mr-3"></i>
+                        Kiek laiko tarnauja tokie implantai?
+                    </h3>
+                    <p class="text-gray-600 ml-8">
+                        Straumann ir Nobel Biocare implantai, kuriuos naudojame, turi viso gyvenimo garantiją. Tinkamai
+                        prižiūrint, jie tarnauja visą gyvenimą.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-indigo-500 mr-3"></i>
+                        Kokia yra procedūros kaina?
+                    </h3>
+                    <p class="text-gray-600 ml-8">
+                        Kaina priklauso nuo pasirinkto implanto ir situacijos sudėtingumo. Preliminariai implantacija su
+                        laikinu vainikėliu kainuoja apie 600-800 EUR. Tikslią sąmatą sudarome konsultacijos metu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Clinic & Doctor (Trust Signals) -->
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Clinic Info -->
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Apie Švytintys Dantys Kliniką</h2>
+                    <p class="text-gray-600 mb-4">
+                        Esame viena moderniausių klinikų Vilniuje, specializuojamės sudėtingose implantacijų ir kaulo
+                        atstatymo procedūrose. Mūsų tikslas – sugrąžinti pacientams ne tik dantis, bet ir pasitikėjimą
+                        savimi.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-certificate text-indigo-500 mr-3 w-5"></i>
+                            <span>Licencijuota valstybinės akreditavimo tarnybos</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-star text-indigo-500 mr-3 w-5"></i>
+                            <span>Aukščiausi pacientų įvertinimai (Google, Facebook)</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-shield-alt text-indigo-500 mr-3 w-5"></i>
+                            <span>Naudojame tik sertifikuotas medžiagas (Šveicarija, Vokietija)</span>
+                        </li>
+                    </ul>
+                    <a href="../index.html"
+                        class="text-indigo-600 font-semibold hover:text-indigo-700 mt-4 inline-block">
+                        Daugiau apie mus <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Doctor Info Summary -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img src="../Photos/Personalas/Azuolas%20Danielius.webp" alt="Dr. Ąžuolas Danielius"
+                            class="w-16 h-16 rounded-full object-cover">
+                        <div>
+                            <h3 class="font-bold text-gray-900">Dr. Ąžuolas Danielius</h3>
+                            <p class="text-indigo-600 text-sm">Gydytojas Odontologas</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Daugiau nei 26 metų patirtis implantacijoje ir protezavime. Nuolat tobulinasi tarptautiniuose
+                        seminaruose Vokietijoje, Šveicarijoje ir JAV.
+                    </p>
+                    <div class="flex items-center justify-between mt-4 border-t border-gray-100 pt-4">
+                        <div class="text-center">
+                            <p class="font-bold text-xl text-gray-900">2k+</p>
+                            <p class="text-xs text-gray-500">Implantų</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-xl text-gray-900">26+</p>
+                            <p class="text-xs text-gray-500">Metų patirties</p>
+                        </div>
+                        <a href="../doctors.html"
+                            class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-200 transition">
+                            Profilis
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-tooth text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </div>
+                    <p class="text-gray-400">Teikiame kokybišką odontologijos priežiūrą daugiau nei 26 metų. Jūsų
+                        šypsenos priežiūra nuo 1999.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../paslaugos/dantu-gydymas.html" class="hover:text-blue-400">Dantų Gydymas</a></li>
+                        <li><a href="../paslaugos/balinimas-kapomis.html" class="hover:text-blue-400">Balinimas
+                                Kapomis</a></li>
+                        <li><a href="../paslaugos/dantu-implantavimas.html"
+                                class="hover:text-blue-400">Implantavimas</a></li>
+                        <li><a href="../paslaugos/burnos-higiena.html" class="hover:text-blue-400">Burnos higiena</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html" class="hover:text-blue-400">Apie mus</a></li>
+                        <li><a href="../doctors.html" class="hover:text-blue-400">Komanda</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, 09100 Vilnius</li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys dantys. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

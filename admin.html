@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminarų Administravimas - Švytintys dantys</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- Login Section -->
+    <div id="login-section" class="flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md">
+            <div class="text-center mb-8">
+                <i class="fas fa-lock text-4xl text-blue-500 mb-4"></i>
+                <h2 class="text-2xl font-bold text-gray-800">Prisijungimas</h2>
+                <p class="text-gray-500">Seminarų valdymas</p>
+            </div>
+            <form id="login-form" class="space-y-6">
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Slaptažodis
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500"
+                        id="password" type="password" placeholder="Įveskite slaptažodį">
+                </div>
+                <button
+                    class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline transition"
+                    type="submit">
+                    Prisijungti
+                </button>
+                <p id="login-error" class="text-red-500 text-xs italic hidden text-center">Neteisingas slaptažodis.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" class="hidden">
+        <!-- Navbar -->
+        <nav class="bg-white shadow-md mb-8">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Admin panelė</span>
+                </div>
+                <button id="logout-btn" class="text-red-500 hover:text-red-700 font-semibold">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Atsijungti
+                </button>
+            </div>
+        </nav>
+
+        <div class="container mx-auto px-4 pb-12">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Form Column -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-lg p-6 sticky top-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">
+                            <i class="fas fa-plus-circle mr-2 text-green-500"></i>Pridėti / Redaguoti seminarą
+                        </h3>
+                        <form id="seminar-form" class="space-y-4">
+                            <input type="hidden" id="seminar-id">
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Pavadinimas</label>
+                                <input type="text" id="title" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Aprašymas</label>
+                                <textarea id="description" rows="3" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Data</label>
+                                    <input type="text" id="date" placeholder="Pvz: Gruodžio 6 d." required
+                                        class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Laikas</label>
+                                    <input type="text" id="time" placeholder="Pvz: 9:00" required
+                                        class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Vieta</label>
+                                <input type="text" id="location" placeholder="Pvz: Vilnius" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Lektorius</label>
+                                <input type="text" id="lecturer" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Kaina (€)</label>
+                                    <input type="text" id="price" required
+                                        class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Suteikiama
+                                        (val.)</label>
+                                    <input type="text" id="certification" placeholder="Pvz: 8 val." required
+                                        class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Statusas</label>
+                                <select id="status"
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="upcoming">Planuojamas</option>
+                                    <option value="past">Įvykęs</option>
+                                </select>
+                            </div>
+
+                            <div class="flex gap-2 pt-4">
+                                <button type="submit"
+                                    class="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                                    <i class="fas fa-save mr-2"></i>Išsaugoti
+                                </button>
+                                <button type="button" id="reset-btn"
+                                    class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- List Column -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3
+                            class="text-xl font-bold text-gray-800 mb-6 border-b pb-2 flex justify-between items-center">
+                            <span><i class="fas fa-list mr-2 text-blue-500"></i>Seminarų sąrašas</span>
+                            <span class="text-sm font-normal text-gray-500 bg-gray-100 px-3 py-1 rounded-full"
+                                id="seminar-count">0 seminarai</span>
+                        </h3>
+
+                        <div id="seminars-list" class="space-y-4">
+                            <!-- Seminars will be injected here -->
+                            <div class="text-center text-gray-500 py-8">
+                                Nėra pridėtų seminarų.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Auth Logic ---
+        const loginSection = document.getElementById('login-section');
+        const adminDashboard = document.getElementById('admin-dashboard');
+        const loginForm = document.getElementById('login-form');
+        const loginError = document.getElementById('login-error');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        // Simple hardcoded password for demo purposes
+        const ADMIN_PASSWORD = "admin";
+
+        function checkAuth() {
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                loginSection.classList.add('hidden');
+                adminDashboard.classList.remove('hidden');
+                renderSeminars();
+            } else {
+                loginSection.classList.remove('hidden');
+                adminDashboard.classList.add('hidden');
+            }
+        }
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password === ADMIN_PASSWORD) {
+                localStorage.setItem('isLoggedIn', 'true');
+                checkAuth();
+                loginError.classList.add('hidden');
+            } else {
+                loginError.classList.remove('hidden');
+            }
+        });
+
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('isLoggedIn');
+            checkAuth();
+        });
+
+        // --- CRUD Logic ---
+        const seminarForm = document.getElementById('seminar-form');
+        const seminarsList = document.getElementById('seminars-list');
+        const resetBtn = document.getElementById('reset-btn');
+
+        // Load seminars from localStorage or initialize with default data
+        const defaultSeminars = [
+            {
+                title: 'Seminaras „Pirmoji medicinos pagalba"',
+                description: 'Aptariamos visos situacijos, kai žmogui reikalinga pirmoji pagalba. Darbas vyksta pasitelkiant vaidybines, simuliacines situacijas pavieniui ir pogrupiuose. Vykstant mokymams atliekamos praktinės situacijos, vadovaujantis išdėstyta teorine medžiaga.\n\nTeorinės dalies vaizdo įrašo ir testo nuorodas atsiunčiame el. p.',
+                date: 'Gruodžio 6 d.',
+                time: '9:00',
+                location: 'Vilnius',
+                lecturer: 'V. Rastenienė',
+                price: '70€',
+                certification: '8 val. pažymėjimas',
+                status: 'upcoming'
+            },
+            {
+                title: 'Seminaras „Pirmoji medicinos pagalba"',
+                description: 'Aptariamos visos situacijos, kai žmogui reikalinga pirmoji pagalba. Darbas vyksta pasitelkiant vaidybines, simuliacines situacijas pavieniui ir pogrupiuose. Vykstant mokymams atliekamos praktinės situacijos, vadovaujantis išdėstyta teorine medžiaga.\n\nTeorinės dalies vaizdo įrašo ir testo nuorodas atsiunčiame el. p.',
+                date: 'Sausio 24 d.',
+                time: '9:00',
+                location: 'Kaunas',
+                lecturer: 'V. Rastenienė',
+                price: '70€',
+                certification: '8 val. pažymėjimas',
+                status: 'upcoming'
+            },
+            {
+                title: '„Profesinė etika. Infekcijų kontrolė odontologijoje. Burnos ligų profilaktika."',
+                description: '(Registruoti pagal SAM reikalavimus)\n\nLapkričio 20 d., 18:00–20:30 - dr. Rasa Tamulienė „Profesinė etika“\nLapkričio 20 d., 19:30-21:00 - Vaiva Kazlauskaitė „Infekcijų kontrolė odontologijoje“\nLapkričio 21 d., 18:00-19:30 - Daiva Mačiulienė „Burnos ligų profilaktika“',
+                date: 'Lapkričio 20-21 d.',
+                time: '18:00–21:00',
+                location: 'Online',
+                lecturer: 'R. Tamulienė, V. Kazlauskaitė, D. Mačiulienė',
+                price: '60€ / 50€',
+                certification: '6 val.',
+                status: 'past'
+            },
+            {
+                title: '„Socialinė-emocinė kompetencija ir lyderystė sveikatos priežiūroje"',
+                description: '18:00-19:30 - „Personalas odontologinėje organizacijoje..." (Lektorė D. Mačiulienė)\n19:30-21:00 - „Socialinė-emocinė kompetencija..." (Lektorė dr. Rasa Tamulienė)\n18:00-19:30 - „Streso valdymas..." (Lektorė dr. R. Tamulienė)',
+                date: 'Lapkričio mėn.',
+                time: '18:00-21:00',
+                location: 'Online',
+                lecturer: 'D. Mačiulienė, dr. Rasa Tamulienė',
+                price: '60€ / 50€',
+                certification: '6 val.',
+                status: 'past'
+            },
+            {
+                title: '„Racionalus antimikrobininių vaistinių preparatų skyrimas ir vartojimas odontologijoje"',
+                description: 'Kristina Skorupskė:\n18:30-19:00 - Klasifikacija\n19:00-19:30 - Apžvalga\n19:30-20:45 - Atsparumas\n\nProf. Vita Mačiulskienė-Visockienė:\n18:30-19:15 - Parinkimo principai\n19:15-20:00 - Racionalus vartojimas\n20:00-20:45 - Situacijų analizė',
+                date: 'Lapkričio mėn.',
+                time: '18:30-20:45',
+                location: 'Online',
+                lecturer: 'K. Skorupskė, V. Mačiulskienė-Visockienė',
+                price: '60€',
+                certification: '6 val.',
+                status: 'past'
+            }
+        ];
+
+        if (!localStorage.getItem('seminarsData')) {
+            localStorage.setItem('seminarsData', JSON.stringify(defaultSeminars));
+        }
+
+        let seminars = JSON.parse(localStorage.getItem('seminarsData'));
+
+        function saveSeminars() {
+            localStorage.setItem('seminarsData', JSON.stringify(seminars));
+            renderSeminars();
+        }
+
+        function renderSeminars() {
+            const countSpan = document.getElementById('seminar-count');
+            countSpan.textContent = `${seminars.length} seminarai`;
+
+            if (seminars.length === 0) {
+                seminarsList.innerHTML = '<div class="text-center text-gray-500 py-8">Nėra pridėtų seminarų.</div>';
+                return;
+            }
+
+            seminarsList.innerHTML = seminars.map((seminar, index) => `
+                <div class="border rounded-lg p-4 hover:shadow-md transition bg-gray-50 relative group">
+                    <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition">
+                        <button onclick="editSeminar(${index})" class="text-blue-500 hover:text-blue-700 bg-white p-2 rounded-full shadow-sm">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button onclick="deleteSeminar(${index})" class="text-red-500 hover:text-red-700 bg-white p-2 rounded-full shadow-sm">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full ${seminar.status === 'upcoming' ? 'bg-green-100 text-green-800' : 'bg-gray-200 text-gray-600'} mb-2">
+                                ${seminar.status === 'upcoming' ? 'Planuojamas' : 'Įvykęs'}
+                            </span>
+                            <h4 class="text-lg font-bold text-gray-800">${seminar.title}</h4>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3 line-clamp-2">${seminar.description}</p>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-500">
+                        <div><i class="fas fa-calendar mr-1"></i> ${seminar.date}</div>
+                        <div><i class="fas fa-clock mr-1"></i> ${seminar.time}</div>
+                        <div><i class="fas fa-user mr-1"></i> ${seminar.lecturer}</div>
+                        <div><i class="fas fa-euro-sign mr-1"></i> ${seminar.price}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        seminarForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const id = document.getElementById('seminar-id').value;
+            const newSeminar = {
+                title: document.getElementById('title').value,
+                description: document.getElementById('description').value,
+                date: document.getElementById('date').value,
+                time: document.getElementById('time').value,
+                location: document.getElementById('location').value,
+                lecturer: document.getElementById('lecturer').value,
+                price: document.getElementById('price').value,
+                certification: document.getElementById('certification').value,
+                status: document.getElementById('status').value
+            };
+
+            if (id) {
+                // Edit
+                seminars[parseInt(id)] = newSeminar;
+            } else {
+                // Add
+                seminars.unshift(newSeminar); // Add to top
+            }
+
+            saveSeminars();
+            resetForm();
+        });
+
+        window.editSeminar = (index) => {
+            const seminar = seminars[index];
+            document.getElementById('seminar-id').value = index;
+            document.getElementById('title').value = seminar.title;
+            document.getElementById('description').value = seminar.description;
+            document.getElementById('date').value = seminar.date;
+            document.getElementById('time').value = seminar.time;
+            document.getElementById('location').value = seminar.location;
+            document.getElementById('lecturer').value = seminar.lecturer;
+            document.getElementById('price').value = seminar.price;
+            document.getElementById('certification').value = seminar.certification;
+            document.getElementById('status').value = seminar.status;
+
+            // Scroll to form
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        window.deleteSeminar = (index) => {
+            if (confirm('Ar tikrai norite ištrinti šį seminarą?')) {
+                seminars.splice(index, 1);
+                saveSeminars();
+            }
+        };
+
+        function resetForm() {
+            seminarForm.reset();
+            document.getElementById('seminar-id').value = '';
+        }
+
+        resetBtn.addEventListener('click', resetForm);
+
+        // Init
+        checkAuth();
+
+    </script>
+</body>
+
+</html>

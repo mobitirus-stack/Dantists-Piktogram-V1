@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dantų Šalinimas Vilniuje | Be Skausmo Dantų Traukimas | Švytintys Dantys</title>
+    <meta name="description"
+        content="Profesionalus dantų šalinimas Vilniuje. Be skausmo dantų traukimas su anestezija. Patyrusių chirurgų komanda. Modernūs metodai ir greitas atsistatymas.">
+    <meta name="keywords"
+        content="dantu salinimas, dantu traukimas, dantu chirurgija, dantu salinimas be skausmo, dantu ekstrakcija, dantu chirurgas vilnius, wisdom dantu salinimas">
+    <link rel="canonical" href="https://svytintysdantys.lt/paslaugos/dantu-salinimas">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/paslaugos/dantu-salinimas.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/paslaugos/dantu-salinimas.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/services/tooth-extraction.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/uslugi/udalenie-zubov.html" />
+    </head>
+
+<body class="bg-gray-50 scroll-smooth">
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": "Dantų šalinimas",
+        "description": "Profesionalus dantų šalinimas Vilniuje. Be skausmo dantų traukimas su anestezija.",
+        "medicalSpecialty": "OralSurgery",
+        "provider": {
+            "@type": "DentalClinic",
+            "name": "Švytintys Dantys",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Žirmūnų g. 60",
+                "addressLocality": "Vilnius",
+                "postalCode": "09100",
+                "addressCountry": "LT"
+            },
+            "telephone": "+37069928622",
+            "email": "info@svytintysdantys.lt"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Vilnius"
+        }
+    }
+    </script>
+
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
+                    <a href="../services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                    <a href="../doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
+                    <a href="../booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">LT</span>
+                        <a href="../en/services/tooth-extraction.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <a href="../ru/uslugi/udalenie-zubov.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                    </div>
+                    <a href="tel:+37069928622"
+                        class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">
+                        <i class="fas fa-phone mr-2"></i>+370 699 28622
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="../index.html" class="block py-2 text-gray-700 hover:text-blue-500">Pradžia</a>
+                <a href="../services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
+                <a href="../doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Gydytojai</a>
+                <a href="../booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
+                <a href="../contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">LT</span>
+                    <a href="../en/services/tooth-extraction.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <a href="../ru/uslugi/udalenie-zubov.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                </div>
+                <a href="tel:+37069928622"
+                    class="mt-2 w-full bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 text-center">
+                    <i class="fas fa-phone mr-2"></i>+370 699 28622
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="bg-white border-b border-gray-200 pt-20 pb-4">
+        <div class="container mx-auto px-4">
+            <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                <li><a href="../index.html" class="hover:text-blue-500 transition">Pradžia</a></li>
+                <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                <li><a href="../services.html" class="hover:text-blue-500 transition">Paslaugos</a></li>
+                <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                <li class="text-red-600 font-medium">Dantų Šalinimas</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="gradient-bg pt-8 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-bone text-red-300 text-3xl mr-3"></i>
+                        <h1 class="text-4xl md:text-5xl font-bold text-white">Be Skausmo Dantų Šalinimas</h1>
+                    </div>
+                    <p class="text-xl text-red-100 mb-8">
+                        Šiuolaikinė dantų chirurgija užtikrina neskausmingą dantų šalinimą! Patyrusių chirurgų komanda,
+                        moderni anestezija ir greitas atsistatymas. Jūsų saugumas mūsų prioritetas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../booking.html?service=dantu-salinimas"
+                            class="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition">
+                            <i class="fas fa-calendar-plus mr-2"></i> Registruotis Konsultacijai
+                        </a>
+                        <a href="tel:+37069928622"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition">
+                            <i class="fas fa-phone mr-2"></i> Skambinti Skubiai
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-3 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">15m</div>
+                            <div class="text-red-100">Procedūra</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">0</div>
+                            <div class="text-red-100">Skausmas</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white">50€</div>
+                            <div class="text-red-100">Nuo</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://picsum.photos/seed/dantu-salinimas-hero/600/400" alt="Dantų šalinimas"
+                        class="rounded-2xl shadow-2xl">
+                    <div
+                        class="absolute -bottom-4 -right-4 bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold pulse-animation">
+                        <i class="fas fa-clock mr-2"></i>Greitos paslaugos
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Service Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-clock text-blue-500 text-3xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Greitas Dantų Šalinimas</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Reikalingas dantų šalinimas? Teikiame greitas ir
+                    profesionalias paslaugas</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-clock text-red-500 mr-2"></i>Darbo laikas
+                    </h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><strong>Pirmadienis-Penktadienis:</strong> 8:00 - 20:00</li>
+                        <li><strong>Šeštadienis:</strong> 9:00 - 17:00</li>
+                        <li><strong>Sekmadienis:</strong> 10:00 - 16:00</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-phone-alt text-blue-500 mr-2"></i>Kontaktai
+                    </h3>
+                    <p class="text-gray-600 mb-4">Susisiekite su mumis dėl konsultacijos:</p>
+                    <a href="tel:+37069928622"
+                        class="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition text-center">
+                        <i class="fas fa-phone mr-2"></i>+370 699 28622
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Dantų Šalinimo Tipai</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Profesionalūs dantų šalinimo metodai</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tooth text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Paprastas Dantų Šalinimas</h3>
+                    <p class="text-gray-600 mb-4">Vienašaknių dantų šalinimas su anestezija</p>
+                    <ul class="text-gray-600 mb-4 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>15-30 minučių</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Nėštumo metu</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Vaikams ir suaugusiems</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <div class="text-2xl font-bold text-red-600">50-80€</div>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Protinių Dantų Šalinimas</h3>
+                    <p class="text-gray-600 mb-4">Kompleksinis protinių dantų šalinimas</p>
+                    <ul class="text-gray-600 mb-4 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>30-60 minučių</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Chirurginis metodas</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Siūlių sutraukimas</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <div class="text-2xl font-bold text-red-600">80-150€</div>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-procedures text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Sudėtingas Šalinimas</h3>
+                    <p class="text-gray-600 mb-4">Sudėtingi atvejai su komplikacijomis</p>
+                    <ul class="text-gray-600 mb-4 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>60-120 minučių</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Kaulo atkūrimas</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Pilna priežiūra</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <div class="text-2xl font-bold text-red-600">150-300€</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- When to Remove -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Kada Reikalingas Dantų Šalinimas</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Žinokite, kada dantys turi būti pašalinti</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-exclamation text-red-500"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2 text-center">Nepataisomas Pažeidimas</h3>
+                    <p class="text-gray-600 text-sm text-center">Kai dantis negali būti išgelbėtas plombavimu</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-virus text-orange-500"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2 text-center">Infekcija</h3>
+                    <p class="text-gray-600 text-sm text-center">Lėtinės infekcijos ir abscesai</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="bg-yellow-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-compress text-yellow-500"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2 text-center">Susigrūdimas</h3>
+                    <p class="text-gray-600 text-sm text-center">Protinių dantų erdvės stoka</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-braces text-green-500"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2 text-center">Ortodontinis</h3>
+                    <p class="text-gray-600 text-sm text-center">Dantų tiesinimui reikalingas šalinimas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Moderni Technologija</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Naudojame pažangiausią įrangą</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-red-500 to-red-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-x-ray text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">Skaitmeninė Radiografija</h3>
+                    <p class="text-gray-600 text-sm">Minimali spinduliuotės dozė</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-orange-500 to-orange-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-syringe text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">Kompiuterinė Anestezija</h3>
+                    <p class="text-gray-600 text-sm">Be skausmo injekcijos</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="bg-gradient-to-br from-yellow-500 to-yellow-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-microscope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">Mikrochirurgija</h3>
+                    <p class="text-gray-600 text-sm">Tiksli ir minimaliai invazinė</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Dažniausiai Užduodami Klausimai</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-question">
+                            <span class="font-semibold text-gray-800">Ar skausmingas dantų šalinimas?</span>
+                            <i class="fas fa-chevron-down text-red-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 py-4 border-t border-gray-200">
+                            <p class="text-gray-600">Naudojame modernią anesteziją, todėl procedūra yra neskausminga. Po
+                                procedūros gali būti nedidelis jautrumas 2-3 dienas.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-question">
+                            <span class="font-semibold text-gray-800">Kada galiu valgyti po dantų šalinimo?</span>
+                            <i class="fas fa-chevron-down text-red-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 py-4 border-t border-gray-200">
+                            <p class="text-gray-600">Rekomenduojama laukti 2 valandas po procedūros prieš valgant.
+                                Pirmąsias dienas valgykite minkštą, vėsų maistą.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-question">
+                            <span class="font-semibold text-gray-800">Kiek ilgai gyja žaizda po šalinimo?</span>
+                            <i class="fas fa-chevron-down text-red-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 py-4 border-t border-gray-200">
+                            <p class="text-gray-600">Paprastai žaizda pradeda gyti po 7-10 dienų. Pilnas dantenų ir
+                                kaulo gijimas trunka 4-6 savaites.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <button class="w-full px-6 py-4 text-left flex justify-between items-center faq-question">
+                            <span class="font-semibold text-gray-800">Ar galiu dirbti po dantų šalinimo?</span>
+                            <i class="fas fa-chevron-down text-red-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden px-6 py-4 border-t border-gray-200">
+                            <p class="text-gray-600">Paprastai po paprasto šalinimo galite grįžti į darbą kitą dieną. Po
+                                sudėtingų procedūrų rekomenduojamas ilgesnis poilsis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- After Care -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Priežiūra Po Šalinimo</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kaip pasirūpinti burna po procedūros</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-red-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-red-600 mb-4">
+                        <i class="fas fa-check-circle mr-2"></i>Ką Daryti
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Laikykite marlės tamponėlį 30-60 min</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Naudokite ledo kompresus</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Gerkite daug skysčių</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Atsargiai valykite dantis</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Vartokite vaistus pagal nurodymus</li>
+                    </ul>
+                </div>
+                <div class="bg-red-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-red-600 mb-4">
+                        <i class="fas fa-times-circle mr-2"></i>Ko Vengti
+                    </h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Negerkite per šiltų gėrimų</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Nerūkykite 48 val</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Negerkite alkoholio</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Nevalgykite kieto maisto</li>
+                        <li><i class="fas fa-times text-red-500 mr-2"></i>Neskaluokite burnos intensyviai</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Nekenčiate Skausmo? Mes Išsprendžiame Problemą!
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Profesionalus dantų šalinimas be skausmo ir su garantija. Susisiekite su mumis!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../booking.html?service=dantu-salinimas"
+                    class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition">
+                    <i class="fas fa-calendar-check mr-2"></i> Registruotis Konsultacijai
+                </a>
+                <a href="tel:+37069928622"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                    <i class="fas fa-phone-alt mr-2"></i> Skambinti
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Information -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="mt-12 gradient-bg rounded-xl p-8">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-white mb-4">Sveikatos Draudimas</h3>
+                </div>
+                <p class="text-blue-100 text-center mb-6 max-w-3xl mx-auto">
+                    Jūsų patogumui bendradarbiaujame su daugeliu privačių sveikatos draudimo bendrovių – tai leidžia už
+                    paslaugas atsiskaityti greičiau ir paprasčiau. Jei jūsų draudimo bendrovė nėra tarp mūsų partnerių,
+                    po paslaugos suteikimo galime pateikti medicininį išrašą ir sąskaitą faktūrą kompensacijai gauti.
+                </p>
+                <div class="text-center mb-8">
+                    <a href="../sveikatos-draudimas.html"
+                        class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                        <i class="fas fa-info-circle mr-2"></i> Daugiau apie draudimą
+                    </a>
+                </div>
+
+                <!-- Insurance Companies Logos -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-4">
+                    <p class="text-white text-sm mb-4 text-center">Bendradarbiaujame su šiomis draudimo kompanijomis:
+                    </p>
+                    <div class="grid grid-cols-4 md:grid-cols-8 gap-2 items-center justify-items-center">
+                        <img src="../Photos/Draudimas logo/Ergo.webp" alt="ERGO"
+                            class="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition">
+                        <img src="../Photos/Draudimas logo/PZU.webp" alt="PZU"
+                            class="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition">
+                        <img src="../Photos/Draudimas logo/Gjensidige_Main-Logo-Alternative_Digital_Blue.webp" alt="Gjensidige"
+                            class="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition">
+                        <img src="../Photos/Draudimas logo/BTA draudimas.webp" alt="BTA"
+                            class="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition">
+                        <img src="../Photos/Draudimas logo/Seesam.webp" alt="Seesam"
+                            class="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition">
+                        <img src="../Photos/Draudimas logo/Lietuvos draudimas.webp" alt="Lietuvos draudimas"
+                            class="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition">
+                        <img src="../Photos/Draudimas logo/compen.webp" alt="Compensa"
+                            class="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition">
+                        <img src="../Photos/Draudimas logo/if.webp" alt="If"
+                            class="h-6 md:h-8 object-contain opacity-90 hover:opacity-100 transition">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="../index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </a>
+                    <p class="text-gray-400">Profesionalus dantų šalinimas Vilniuje.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="tooth-extraction.html" class="hover:text-red-400">Dantų šalinimas</a></li>
+                        <li><a href="../services.html" class="hover:text-red-400">Visos paslaugos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, Vilnius</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+
+</html>

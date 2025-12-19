@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminarai - Švytintys dantys</title>
+    <meta name="description"
+        content="Švytintys dantys - profesionalūs odontologijos seminarai ir mokymai. Gaukite naujausias žinias, tobulinkite savo įgūdžius ir keiskitės patirtimi su ekspertais.">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/seminarai.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/seminarai.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/seminarai.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/seminary.html" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
+                    <a href="doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
+                    <a href="seminarai.html" class="text-blue-500 font-semibold">Seminarai</a>
+                    <a href="booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">LT</span>
+                        <a href="en/seminarai.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <a href="ru/seminary.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                    </div>
+
+                    <a href="contact.html"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        Susisiekite
+                    </a>
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Pradžia</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
+                <a href="doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Gydytojai</a>
+                <a href="seminarai.html" class="block py-2 text-blue-500 font-semibold">Seminarai</a>
+                <a href="booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">LT</span>
+                    <a href="en/seminarai.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <a href="ru/seminary.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                </div>
+
+                <button class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Susisiekite
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-20 pb-12">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                Seminarai
+            </h1>
+            <p class="text-xl text-blue-100">
+                Profesionalūs odontologijos seminarai ir mokymai
+            </p>
+        </div>
+    </section>
+
+    <!-- Important Information Section -->
+    <section class="py-12 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500">
+                    <h3 class="text-lg font-semibold text-blue-800 mb-3">
+                        <i class="fas fa-info-circle mr-2"></i>Svarbi informacija
+                    </h3>
+                    <div class="text-gray-700 space-y-2">
+                        <p>• Programos registruotos VASPVT Kompetencijų platformoje ir patvirtintos Higienos instituto
+                        </p>
+                        <p>• Duomenis apie įvykdytą profesinės kvalifikacijos tobulinimą sukeliame į VASPVT Kompetencijų
+                            platformą</p>
+                        <p>• <a href="https://kplatforma.vaspvt.gov.lt/" target="_blank"
+                                class="text-blue-600 hover:underline">https://kplatforma.vaspvt.gov.lt/</a> (nauja
+                            tvarka nuo 2025 m. sausio 1 d.)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seminars Section -->
+    <section id="seminarai" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Reguliarūs seminarai ir kursai</h2>
+                <p class="text-lg text-gray-600">Profesinės kvalifikacijos tobulinimo kursai odontologams</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto space-y-10">
+
+                <div id="seminars-container" class="space-y-10">
+                    <!-- Seminars will be loaded here via JavaScript -->
+                </div>
+
+                <!-- Script moved to bottom -->
+            </div>
+
+            <div class="text-center mt-12">
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 max-w-2xl mx-auto">
+                    <h3 class="text-lg font-semibold text-yellow-800 mb-2">
+                        <i class="fas fa-phone mr-2"></i>Registracija
+                    </h3>
+                    <p class="text-yellow-700 mb-4">Registracija el. p., tel. Nr. pasiteiravimui 0 616 09016</p>
+                    <div class="flex items-center justify-center space-x-6">
+                        <a href="mailto:info@svytintysdantys.lt"
+                            class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt
+                        </a>
+                        <a href="tel:+37061609016"
+                            class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition flex items-center">
+                            <i class="fas fa-phone mr-2"></i> 0 616 09016
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Admin Login Modal -->
+    <div id="admin-login-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md relative">
+            <button id="close-login-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="text-center mb-8">
+                <i class="fas fa-lock text-4xl text-blue-500 mb-4"></i>
+                <h2 class="text-2xl font-bold text-gray-800">Prisijungimas</h2>
+                <p class="text-gray-500">Seminarų valdymas</p>
+            </div>
+            <form id="login-form" class="space-y-6">
+                <div>
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Slaptažodis
+                    </label>
+                    <input
+                        class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500"
+                        id="password" type="password" placeholder="Įveskite slaptažodį">
+                </div>
+                <button
+                    class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline transition"
+                    type="submit">
+                    Prisijungti
+                </button>
+                <p id="login-error" class="text-red-500 text-xs italic hidden text-center">Neteisingas slaptažodis.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Section (Hidden by default) -->
+    <section id="admin-dashboard" class="hidden py-12 bg-gray-100 border-t-4 border-blue-500">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800"><i class="fas fa-cogs mr-2"></i>Admin panelė</h2>
+                <button id="logout-btn"
+                    class="text-red-500 hover:text-red-700 font-semibold bg-white px-4 py-2 rounded shadow">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Atsijungti
+                </button>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Form Column -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">
+                            <i class="fas fa-plus-circle mr-2 text-green-500"></i>Pridėti / Redaguoti
+                        </h3>
+                        <form id="seminar-form" class="space-y-4">
+                            <input type="hidden" id="seminar-id">
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Pavadinimas</label>
+                                <input type="text" id="form-title" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Aprašymas</label>
+                                <textarea id="form-description" rows="3" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Data</label>
+                                    <input type="text" id="form-date" placeholder="Pvz: Gruodžio 6 d." required
+                                        class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Laikas</label>
+                                    <input type="text" id="form-time" placeholder="Pvz: 9:00" required
+                                        class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Vieta</label>
+                                <input type="text" id="form-location" placeholder="Pvz: Vilnius" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Lektorius</label>
+                                <input type="text" id="form-lecturer" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Kaina (€)</label>
+                                    <input type="text" id="form-price" required
+                                        class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Suteikiama
+                                        (val.)</label>
+                                    <input type="text" id="form-certification" placeholder="Pvz: 8 val." required
+                                        class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Statusas</label>
+                                <select id="form-status"
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="upcoming">Planuojamas</option>
+                                    <option value="past">Įvykęs</option>
+                                </select>
+                            </div>
+
+                            <div class="flex gap-2 pt-4">
+                                <button type="submit"
+                                    class="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                                    <i class="fas fa-save mr-2"></i>Išsaugoti
+                                </button>
+                                <button type="button" id="reset-btn"
+                                    class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- List Column (Admin View) -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">
+                            <i class="fas fa-list mr-2 text-blue-500"></i>Valdyti seminarus
+                        </h3>
+                        <div id="admin-seminars-list" class="space-y-4">
+                            <!-- Admin list injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </a>
+                    <p class="text-gray-400">Jūsų šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia
+                        gyvenimus.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="services/comprehensive-dental-examination.html"
+                                class="hover:text-blue-400">Nuodugnus dantų būklės ištyrimas</a></li>
+                        <li><a href="services/tests-and-diagnostics.html" class="hover:text-blue-400">Tyrimai ir
+                                diagnostika</a></li>
+                        <li><a href="services/comprehensive-child-checkup.html" class="hover:text-blue-400">Išsami vaikų
+                                dantų patikra</a></li>
+                        <li><a href="services/oral-hygiene.html" class="hover:text-blue-400">Profesionali burnos
+                                higiena</a></li>
+                        <li><a href="services/pediatric-dentistry.html" class="hover:text-blue-400">Vaikų
+                                odontologija</a></li>
+                        <li><a href="services/dental-implantation.html" class="hover:text-blue-400">Dantų
+                                implantacija</a></li>
+                        <li><a href="services/immediate-implantation.html" class="hover:text-blue-400">Vienmomentė
+                                implantacija</a></li>
+                        <li><a href="services/all-on-4-implants.html" class="hover:text-blue-400">Dantų
+                                atstatymas „Visi ant 4" metodu</a></li>
+                        <li><a href="services/dental-prosthetics.html" class="hover:text-blue-400">Dantų
+                                protezavimas</a></li>
+                        <li><a href="services/dental-veneers.html" class="hover:text-blue-400">Dantų atkūrimas
+                                laminatėmis</a></li>
+                        <li><a href="services/aesthetic-fillings.html" class="hover:text-blue-400">Estetinis
+                                plombavimas</a></li>
+                        <li><a href="services/teeth-straightening-orthopedics.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis</a></li>
+                        <li><a href="services/teeth-straightening-children.html" class="hover:text-blue-400">Dantų
+                                tiesinimas kapomis vaikams</a></li>
+                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Ortodontinis
+                                gydymas</a></li>
+                        <li><a href="services/laser-teeth-whitening.html" class="hover:text-blue-400">Dantų balinimas
+                                lazeriu</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Apie mus</a></li>
+                        <li><a href="doctors.html" class="hover:text-blue-400">Komanda</a></li>
+                        <li><a href="seminarai.html" class="text-blue-400 font-semibold">Seminarai</a></li>
+                        <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Sveikatos draudimas</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Kainoraštis</a></li>
+                        <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privatumo politika</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Registratūra</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Nedirbame</li>
+                        <li><strong>Tel. Nr.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Adresas</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, 09100 Vilnius</li>
+                        <li><strong>El. paštas</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/A9YSHmbgoKihh6uQ7" target="_blank"
+                            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                            <span class="text-sm">Peržiūrėti žemėlapyje</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex justify-between items-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. Visos teisės saugomos.</p>
+                <button id="admin-trigger-btn" class="text-gray-800 hover:text-gray-600 text-sm">
+                    <i class="fas fa-lock"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Switcher Function
+        function setLanguage(lang) {
+            // Save language preference
+            localStorage.setItem('selectedLanguage', lang);
+
+            // Update button styles for desktop
+            const ltBtn = document.getElementById('lang-lt');
+            const enBtn = document.getElementById('lang-en');
+
+            // Update button styles for mobile
+            const mobileLtBtn = document.getElementById('mobile-lang-lt');
+            const mobileEnBtn = document.getElementById('mobile-lang-en');
+
+            if (lang === 'lt') {
+                // Desktop buttons
+                ltBtn.classList.add('bg-blue-500', 'text-white');
+                ltBtn.classList.remove('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+                enBtn.classList.remove('bg-blue-500', 'text-white');
+                enBtn.classList.add('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+
+                // Mobile buttons
+                mobileLtBtn.classList.add('bg-blue-500', 'text-white');
+                mobileLtBtn.classList.remove('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+                mobileEnBtn.classList.remove('bg-blue-500', 'text-white');
+                mobileEnBtn.classList.add('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+            } else {
+                // Desktop buttons
+                enBtn.classList.add('bg-blue-500', 'text-white');
+                enBtn.classList.remove('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+                ltBtn.classList.remove('bg-blue-500', 'text-white');
+                ltBtn.classList.add('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+
+                // Mobile buttons
+                mobileEnBtn.classList.add('bg-blue-500', 'text-white');
+                mobileEnBtn.classList.remove('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+                mobileLtBtn.classList.remove('bg-blue-500', 'text-white');
+                mobileLtBtn.classList.add('bg-white', 'text-gray-600', 'hover:bg-gray-100');
+            }
+
+            // TODO: Add your translation logic here
+            // For now, this just updates the visual state
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedLang = localStorage.getItem('selectedLanguage') || 'lt';
+            setLanguage(savedLang);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // --- SEMINAR MANAGEMENT LOGIC ---
+
+        const defaultSeminars = [
+            {
+                title: 'Nuotoliniai kursai „Socialinė-emocinė kompetencija ir lyderystė sveikatos priežiūroje“',
+                description: 'Suteikiamos 6 val. (ne klinikines (ne specialybines)) profesinės kompetencijos).\n\n„Negalintiems prisijungti tiesiogiai – atsiunčiame įrašą“\nDaugiau info: tel. +370 61609016 www.svytintysdantys.lt\nRegistracija: el. p. info@svytintysdantys.lt',
+                date: 'Sausio 15, 16 d.',
+                time: '18:00',
+                location: 'Online',
+                lecturer: '-',
+                price: '-',
+                certification: '6 val.',
+                status: 'upcoming'
+            },
+            {
+                title: 'Nuotoliniai kursai „Infekcijų kontrolė. Profesinė etika. Burnos ligų profilaktika“',
+                description: 'Suteikiamos 6 val.\n\n„Negalintiems prisijungti tiesiogiai – atsiunčiame įrašą“\nDaugiau info: tel. +370 61609016 www.svytintysdantys.lt\nRegistracija: el. p. info@svytintysdantys.lt',
+                date: 'Sausio 22, 23 d.',
+                time: '18:00',
+                location: 'Online',
+                lecturer: '-',
+                price: '-',
+                certification: '6 val.',
+                status: 'upcoming'
+            },
+            {
+                title: 'Seminaras „Pirmoji medicinos pagalba“ praktikiniai mokymai',
+                description: 'Teorinės dalies vaizdo įrašo ir testo nuorodas atsiunčiame el. p.\n\n„Negalintiems prisijungti tiesiogiai – atsiunčiame įrašą“\nDaugiau info: tel. +370 61609016 www.svytintysdantys.lt\nRegistracija: el. p. info@svytintysdantys.lt',
+                date: 'Sausio 24 d. (Kaune), Sausio 31 d. (Vilniuje)',
+                time: '9:00',
+                location: 'Kaunas / Vilnius',
+                lecturer: '-',
+                price: '-',
+                certification: '8 val.',
+                status: 'upcoming'
+            },
+            {
+                title: 'Nuotoliniai kursai „Racionalus antimikrobininių vaistinių preparatų skyrimas ir vartojimas odontologijoje“',
+                description: 'Suteikiamos 6 val.\n\n„Negalintiems prisijungti tiesiogiai – atsiunčiame įrašą“\nDaugiau info: tel. +370 61609016 www.svytintysdantys.lt\nRegistracija: el. p. info@svytintysdantys.lt',
+                date: 'Vasario 5, 6 d.',
+                time: '18:30',
+                location: 'Online',
+                lecturer: '-',
+                price: '-',
+                certification: '6 val.',
+                status: 'upcoming'
+            },
+            {
+                title: 'Seminaras „Pirmoji medicinos pagalba"',
+                description: 'Aptariamos visos situacijos, kai žmogui reikalinga pirmoji pagalba. Darbas vyksta pasitelkiant vaidybines, simuliacines situacijas pavieniui ir pogrupiuose. Vykstant mokymams atliekamos praktinės situacijos, vadovaujantis išdėstyta teorine medžiaga.\n\nTeorinės dalies vaizdo įrašo ir testo nuorodas atsiunčiame el. p.\n\n„Negalintiems prisijungti tiesiogiai – atsiunčiame įrašą“\nDaugiau info: tel. +370 61609016 www.svytintysdantys.lt\nRegistracija: el. p. info@svytintysdantys.lt',
+                date: 'Gruodžio 6 d.',
+                time: '9:00',
+                location: 'Vilnius',
+                lecturer: 'V. Rastenienė',
+                price: '70€',
+                certification: '8 val. pažymėjimas',
+                status: 'past'
+            }
+        ];
+
+        // Version control to force update default seminars
+        const DATA_VERSION = '1.3';
+
+        if (localStorage.getItem('seminarsVersion') !== DATA_VERSION) {
+            localStorage.setItem('seminarsData', JSON.stringify(defaultSeminars));
+            localStorage.setItem('seminarsVersion', DATA_VERSION);
+        }
+
+        let seminars = JSON.parse(localStorage.getItem('seminarsData')) || defaultSeminars;
+
+        // --- AUTO-UPDATE STATUS LOGIC ---
+        function updateSeminarStatuses() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            const currentMonth = now.getMonth(); // 0-11
+
+            const monthMap = {
+                'sausio': 0, 'vasario': 1, 'kovo': 2, 'balandžio': 3, 'gegužės': 4, 'birželio': 5,
+                'liepos': 6, 'rugpjūčio': 7, 'rugsėjo': 8, 'spalio': 9, 'lapkričio': 10, 'gruodžio': 11
+            };
+
+            let updated = false;
+
+            seminars.forEach(seminar => {
+                if (seminar.status === 'past') return; // Already past
+
+                // Extract all month-day pairs
+                // Regex matches: "Sausio 15", "Sausio 15, 16", "Sausio 24 d. Kaune, sausio 31"
+                // Strategy: Find all occurrences of MonthName followed by digits, optionally followed by comma and more digits
+
+                let latestDate = null;
+                // Regex to capture Month, Day1, and optional Day2 (e.g. "Sausio 15, 16")
+                const regex = /(sausio|vasario|kovo|balandžio|gegužės|birželio|liepos|rugpjūčio|rugsėjo|spalio|lapkričio|gruodžio)\W+(\d+)(?:[,\s]+(\d+))?/gi;
+                let match;
+
+                while ((match = regex.exec(seminar.date)) !== null) {
+                    const monthName = match[1].toLowerCase();
+                    const day1 = parseInt(match[2]);
+                    const day2 = match[3] ? parseInt(match[3]) : null;
+                    const monthIndex = monthMap[monthName];
+
+                    if (monthIndex !== undefined && !isNaN(day1)) {
+                        // Determine year
+                        let year = currentYear;
+
+                        // If current month is Dec (11) and seminar month is Jan (0) or Feb (1), it's likely next year
+                        if (currentMonth > 9 && monthIndex < 3) {
+                            year = currentYear + 1;
+                        }
+
+                        // Check Day 1
+                        const date1 = new Date(year, monthIndex, day1, 23, 59, 59);
+                        if (!latestDate || date1 > latestDate) {
+                            latestDate = date1;
+                        }
+
+                        // Check Day 2 if exists
+                        if (day2) {
+                            const date2 = new Date(year, monthIndex, day2, 23, 59, 59);
+                            if (!latestDate || date2 > latestDate) {
+                                latestDate = date2;
+                            }
+                        }
+                    }
+                }
+
+                if (latestDate) {
+                    if (latestDate < now) {
+                        seminar.status = 'past';
+                        updated = true;
+                    }
+                }
+            });
+
+            if (updated) {
+                saveSeminars();
+            }
+        }
+
+        // --- RENDER PUBLIC LIST ---
+        function renderPublicSeminars() {
+            const container = document.getElementById('seminars-container');
+            container.innerHTML = seminars.map(seminar => {
+                const isUpcoming = seminar.status === 'upcoming';
+                const opacityClass = isUpcoming ? '' : 'opacity-75';
+                const badgeClass = isUpcoming ? 'bg-red-500' : 'bg-gray-400';
+                const borderClass = isUpcoming ? 'border-red-500' : 'border-gray-400';
+                const icon = isUpcoming ? 'fa-first-aid' : 'fa-check-circle';
+                const badgeText = isUpcoming ? 'Praktiniai mokymai' : 'Renginys įvykęs';
+
+                let descriptionHtml = seminar.description;
+
+                // Define the footer text to look for
+                const footerText = `„Negalintiems prisijungti tiesiogiai – atsiunčiame įrašą“\nDaugiau info: tel. +370 61609016 www.svytintysdantys.lt\nRegistracija: el. p. info@svytintysdantys.lt`;
+
+                // Styled HTML for the footer
+                const styledFooter = `
+                    <div class="mt-8 pt-6 border-t border-gray-100 -mx-8 -mb-8 p-8 bg-blue-50 rounded-b-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 rounded-full p-2 mr-3 text-blue-600">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div>
+                                <p class="text-blue-800 font-semibold">„Negalintiems prisijungti tiesiogiai – atsiunčiame įrašą“</p>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-blue-100">
+                                <i class="fas fa-info-circle mr-3 text-blue-500 text-lg"></i>
+                                <div>
+                                    <span class="block text-xs text-gray-500 uppercase font-bold">Daugiau info</span>
+                                    <a href="tel:+37061609016" class="hover:text-blue-600 font-medium transition">+370 61609016</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-gray-700 bg-white p-3 rounded-lg shadow-sm border border-blue-100">
+                                <i class="fas fa-envelope mr-3 text-blue-500 text-lg"></i>
+                                <div>
+                                    <span class="block text-xs text-gray-500 uppercase font-bold">Registracija</span>
+                                    <a href="mailto:info@svytintysdantys.lt" class="hover:text-blue-600 font-medium transition">info@svytintysdantys.lt</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Check if description contains the footer text
+                if (descriptionHtml.includes(footerText)) {
+                    // Remove the footer text from the main description
+                    descriptionHtml = descriptionHtml.replace(footerText, '');
+                    // Trim trailing newlines
+                    descriptionHtml = descriptionHtml.trim();
+                    // Convert newlines to <br>
+                    descriptionHtml = descriptionHtml.replace(/\n/g, '<br>');
+                    // Append styled footer
+                    descriptionHtml += styledFooter;
+                } else {
+                    // Fallback if text doesn't match exactly (e.g. user edited it)
+                    descriptionHtml = descriptionHtml.replace(/\n/g, '<br>');
+                }
+
+                return `
+                    <div class="bg-white rounded-xl shadow-lg p-8 ${opacityClass} flex flex-col h-full">
+                        <div class="text-center mb-6">
+                            <span class="${badgeClass} text-white px-4 py-2 rounded-full text-lg font-semibold shadow-md">
+                                <i class="fas ${icon} mr-2"></i>${badgeText}
+                            </span>
+                        </div>
+                        <div class="border-l-4 ${borderClass} pl-6 mb-6">
+                            <h3 class="text-2xl font-bold mb-3 text-gray-800">${seminar.title}</h3>
+                            
+                            <div class="bg-gray-50 rounded-lg p-5 mb-6 border border-gray-100">
+                                <div class="text-sm text-gray-600 grid md:grid-cols-2 gap-y-3 gap-x-6">
+                                    <div class="flex items-center"><i class="fas fa-calendar w-6 text-blue-500 text-center mr-2"></i> <span><strong>Data:</strong> ${seminar.date}</span></div>
+                                    <div class="flex items-center"><i class="fas fa-clock w-6 text-blue-500 text-center mr-2"></i> <span><strong>Laikas:</strong> ${seminar.time}</span></div>
+                                    <div class="flex items-center"><i class="fas fa-map-marker-alt w-6 text-blue-500 text-center mr-2"></i> <span><strong>Vieta:</strong> ${seminar.location}</span></div>
+                                    <div class="flex items-center"><i class="fas fa-user w-6 text-blue-500 text-center mr-2"></i> <span><strong>Lektorė:</strong> ${seminar.lecturer}</span></div>
+                                    <div class="flex items-center"><i class="fas fa-certificate w-6 text-blue-500 text-center mr-2"></i> <span><strong>Suteikiama:</strong> ${seminar.certification}</span></div>
+                                    <div class="flex items-center"><i class="fas fa-euro-sign w-6 text-blue-500 text-center mr-2"></i> <span><strong>Kaina:</strong> ${seminar.price}</span></div>
+                                </div>
+                            </div>
+
+                            <div class="text-gray-600 leading-relaxed">
+                                ${descriptionHtml}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // --- ADMIN LOGIC ---
+        const adminTriggerBtn = document.getElementById('admin-trigger-btn');
+        const adminLoginModal = document.getElementById('admin-login-modal');
+        const closeLoginBtn = document.getElementById('close-login-btn');
+        const loginForm = document.getElementById('login-form');
+        const loginError = document.getElementById('login-error');
+        const adminDashboard = document.getElementById('admin-dashboard');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        const seminarForm = document.getElementById('seminar-form');
+        const adminSeminarsList = document.getElementById('admin-seminars-list');
+        const resetBtn = document.getElementById('reset-btn');
+
+        const ADMIN_PASSWORD = "admin";
+
+        function checkAuth() {
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                adminDashboard.classList.remove('hidden');
+                renderAdminSeminars();
+            } else {
+                adminDashboard.classList.add('hidden');
+            }
+        }
+
+        // Event Listeners for Auth
+        adminTriggerBtn.addEventListener('click', () => {
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                // Already logged in, scroll to dashboard
+                adminDashboard.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                adminLoginModal.classList.remove('hidden');
+                adminLoginModal.classList.add('flex');
+            }
+        });
+
+        closeLoginBtn.addEventListener('click', () => {
+            adminLoginModal.classList.add('hidden');
+            adminLoginModal.classList.remove('flex');
+        });
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            if (password === ADMIN_PASSWORD) {
+                localStorage.setItem('isLoggedIn', 'true');
+                adminLoginModal.classList.add('hidden');
+                adminLoginModal.classList.remove('flex');
+                checkAuth();
+                adminDashboard.scrollIntoView({ behavior: 'smooth' });
+                loginError.classList.add('hidden');
+            } else {
+                loginError.classList.remove('hidden');
+            }
+        });
+
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('isLoggedIn');
+            checkAuth();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // CRUD Functions
+        function saveSeminars() {
+            localStorage.setItem('seminarsData', JSON.stringify(seminars));
+            renderPublicSeminars(); // Update public view immediately
+            renderAdminSeminars(); // Update admin view
+        }
+
+        function renderAdminSeminars() {
+            if (seminars.length === 0) {
+                adminSeminarsList.innerHTML = '<div class="text-center text-gray-500 py-8">Nėra pridėtų seminarų.</div>';
+                return;
+            }
+
+            adminSeminarsList.innerHTML = seminars.map((seminar, index) => `
+                <div class="border rounded-lg p-4 hover:shadow-md transition bg-gray-50 relative group">
+                    <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition">
+                        <button onclick="editSeminar(${index})" class="text-blue-500 hover:text-blue-700 bg-white p-2 rounded-full shadow-sm">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button onclick="deleteSeminar(${index})" class="text-red-500 hover:text-red-700 bg-white p-2 rounded-full shadow-sm">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <span class="inline-block px-2 py-1 text-xs font-semibold rounded-full ${seminar.status === 'upcoming' ? 'bg-green-100 text-green-800' : 'bg-gray-200 text-gray-600'} mb-2">
+                                ${seminar.status === 'upcoming' ? 'Planuojamas' : 'Įvykęs'}
+                            </span>
+                            <h4 class="text-lg font-bold text-gray-800">${seminar.title}</h4>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3 line-clamp-2">${seminar.description}</p>
+                </div>
+            `).join('');
+        }
+
+        seminarForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const id = document.getElementById('seminar-id').value;
+            const newSeminar = {
+                title: document.getElementById('form-title').value,
+                description: document.getElementById('form-description').value,
+                date: document.getElementById('form-date').value,
+                time: document.getElementById('form-time').value,
+                location: document.getElementById('form-location').value,
+                lecturer: document.getElementById('form-lecturer').value,
+                price: document.getElementById('form-price').value,
+                certification: document.getElementById('form-certification').value,
+                status: document.getElementById('form-status').value
+            };
+
+            if (id) {
+                seminars[parseInt(id)] = newSeminar;
+            } else {
+                seminars.unshift(newSeminar);
+            }
+
+            saveSeminars();
+            resetForm();
+        });
+
+        window.editSeminar = (index) => {
+            const seminar = seminars[index];
+            document.getElementById('seminar-id').value = index;
+            document.getElementById('form-title').value = seminar.title;
+            document.getElementById('form-description').value = seminar.description;
+            document.getElementById('form-date').value = seminar.date;
+            document.getElementById('form-time').value = seminar.time;
+            document.getElementById('form-location').value = seminar.location;
+            document.getElementById('form-lecturer').value = seminar.lecturer;
+            document.getElementById('form-price').value = seminar.price;
+            document.getElementById('form-certification').value = seminar.certification;
+            document.getElementById('form-status').value = seminar.status;
+
+            // Scroll to form
+            document.getElementById('seminar-form').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        window.deleteSeminar = (index) => {
+            if (confirm('Ar tikrai norite ištrinti šį seminarą?')) {
+                seminars.splice(index, 1);
+                saveSeminars();
+            }
+        };
+
+        function resetForm() {
+            seminarForm.reset();
+            document.getElementById('seminar-id').value = '';
+        }
+
+        resetBtn.addEventListener('click', resetForm);
+
+        // --- INITIALIZATION ---
+        updateSeminarStatuses(); // Check for expired seminars
+        renderPublicSeminars();
+        checkAuth();
+
+    </script>
+</body>
+
+</html>
+```

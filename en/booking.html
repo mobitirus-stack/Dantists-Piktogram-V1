@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Švytintys Dantys</title>
+    <meta name="description"
+        content="Book your visit at Švytintys Dantys clinic online. Choose a convenient time and service, get confirmation by email. Fast and convenient booking process.">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .form-input {
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+
+        .time-slot {
+            transition: all 0.2s ease;
+        }
+
+        .time-slot:hover {
+            transform: scale(1.05);
+        }
+
+        .time-slot.selected {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("7bdA9YoKvT6_Df2b1"); // Replace YOUR_PUBLIC_KEY with your actual EmailJS public key
+        })();
+    </script>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/booking.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/booking.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/booking.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/zapis.html" />
+    </head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Services</a>
+                    <a href="doctors.html" class="text-gray-700 hover:text-blue-500 transition">Doctors</a>
+                    <a href="seminarai.html" class="text-gray-700 hover:text-blue-500 transition">Seminars</a>
+                    <a href="booking.html" class="text-blue-500 font-semibold">Book Now</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 transition">Contact</a>
+
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <a href="../booking.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">EN</span>
+                        <a href="../ru/zapis.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                    </div>
+                    <a href="contact.html"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Call</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Home</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500">Services</a>
+                <a href="doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Doctors</a>
+                <a href="seminarai.html" class="block py-2 text-gray-700 hover:text-blue-500">Seminars</a>
+                <a href="booking.html" class="block py-2 text-blue-500 font-semibold">Book Now</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Contact</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <a href="../booking.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">EN</span>
+                    <a href="../ru/zapis.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                </div>
+                <a href="contact.html"
+                    class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 block text-center">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Book an Appointment</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Plan your dental visit conveniently. Choose your preferred date, time, and service.
+            </p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid lg:grid-cols-3">
+                    <!-- Form Section (2/3 width) -->
+                    <div class="lg:col-span-2 p-8 border-r border-gray-200">
+                        <form id="bookingForm">
+                            <!-- Personal Information -->
+                            <div class="mb-8">
+                                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                    <i class="fas fa-user-circle text-blue-500 mr-3"></i>
+                                    Personal Information
+                                </h2>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">First Name *</label>
+                                        <input type="text" id="firstName" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                            placeholder="John">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Last Name *</label>
+                                        <input type="text" id="lastName" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                            placeholder="Doe">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Email *</label>
+                                        <input type="email" id="email" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                            placeholder="john@example.com">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
+                                        <input type="tel" id="phone" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                                            placeholder="+370 123 45678">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Appointment Details -->
+                            <div class="mb-8">
+                                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                    <i class="fas fa-calendar-alt text-blue-500 mr-3"></i>
+                                    Appointment Details
+                                </h2>
+                                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Select Service
+                                            *</label>
+                                        <select id="service" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                            <option value="">Select Service</option>
+                                            <option value="examination">Thorough dental examination</option>
+                                            <option value="consultation">Specialist consultation</option>
+                                            <option value="hygiene">Professional oral hygiene</option>
+                                            <option value="alignment-adults">Teeth straightening with aligners (Adults)
+                                            </option>
+                                            <option value="alignment-children">Teeth straightening with aligners
+                                                (Children)</option>
+                                            <option value="orthodontics-adults">Orthodontic treatment (Adults)</option>
+                                            <option value="orthodontics-children">Orthodontic treatment (Children)
+                                            </option>
+                                            <option value="orthognathic">Orthognathic treatment</option>
+                                            <option value="implants">Dental implantation</option>
+                                            <option value="all-on-4">"All-on-4" dental restoration</option>
+                                            <option value="whitening">Teeth whitening</option>
+                                            <option value="treatment">Dental treatment</option>
+                                            <option value="prosthetics">Dental prosthetics</option>
+                                            <option value="pediatric">Pediatric dentistry</option>
+                                            <option value="esthetic">Aesthetic dentistry</option>
+                                            <option value="other">Other (we will contact you)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Preferred Date
+                                            *</label>
+                                        <input type="date" id="date" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Select Time
+                                            *</label>
+                                        <select id="timePeriod" required
+                                            class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                            <option value="">Select Time</option>
+                                            <option value="morning">Morning (08:00 - 12:00)</option>
+                                            <option value="afternoon">Afternoon (13:00 - 16:00)</option>
+                                            <option value="evening">Evening (16:00 - 18:30)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Insurance Information -->
+                            <div class="mb-8">
+                                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                    <i class="fas fa-shield-alt text-blue-500 mr-3"></i>
+                                    Pay with Health Insurance
+                                </h2>
+                                <p class="text-gray-700">
+                                    For your convenience, we cooperate with private health insurance companies, so
+                                    everything will be faster and more convenient. If we do not have direct cooperation
+                                    with your insurance company, we can provide a medical extract and invoice after the
+                                    service.
+                                </p>
+                            </div>
+
+                            <!-- Terms and Submit -->
+                            <div class="border-t pt-6">
+                                <div class="mb-6">
+                                    <div class="flex items-start">
+                                        <input type="checkbox" id="terms" required
+                                            class="mr-3 mt-1 w-5 h-5 text-blue-500">
+                                        <label for="terms" class="text-gray-700 text-sm">
+                                            I agree to the terms and understand that my appointment is not confirmed
+                                            until I receive a confirmation call or email from the clinic.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <button type="submit"
+                                        class="flex-1 bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition transform hover:scale-105">
+                                        <i class="fas fa-check-circle mr-2"></i>
+                                        Confirm Appointment
+                                    </button>
+                                    <button type="button" onclick="window.location.href='index.html'"
+                                        class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
+                                        <i class="fas fa-arrow-left mr-2"></i>
+                                        Back to Home
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information Section (1/3 width) -->
+                    <div class="p-8 bg-gradient-to-br from-blue-50 to-purple-50">
+                        <div class="sticky top-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-info-circle text-blue-500 mr-3"></i>
+                                Help with Booking
+                            </h3>
+
+                            <div class="bg-white rounded-lg p-6 shadow-sm border border-blue-100">
+                                <div class="mb-4">
+                                    <i class="fas fa-question-circle text-blue-500 text-2xl mb-3"></i>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        If you have questions before booking, we are ready to answer them. Contact us by
+                                        phone.
+                                    </p>
+                                </div>
+
+                                <div class="bg-blue-500 text-white rounded-lg p-4 text-center">
+                                    <i class="fas fa-phone text-2xl mb-2"></i>
+                                    <p class="font-semibold text-lg">+370 699 28622</p>
+                                    <p class="text-sm opacity-90">Hours: I-V 8:00-20:00</p>
+                                </div>
+
+                                <div class="mt-4 space-y-2">
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-clock text-blue-400 mr-2"></i>
+                                        <span>Fast response guaranteed</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-user-md text-blue-400 mr-2"></i>
+                                        <span>Professional consultation</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600">
+                                        <i class="fas fa-calendar-check text-blue-400 mr-2"></i>
+                                        <span>Flexible booking time</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-center">
+                                <a href="tel:+37069928622"
+                                    class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition transform hover:scale-105 w-full">
+                                    <i class="fas fa-phone-alt mr-2"></i>
+                                    Call Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal"
+        class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 text-center">
+            <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check text-green-500 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Appointment Registered!</h3>
+            <p class="text-gray-600 mb-6">
+                Thank you for booking with us. We have sent you a confirmation email and will call you shortly to
+                confirm the appointment details.
+            </p>
+            <button onclick="closeSuccessModal()"
+                class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition">
+                Understood
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </a>
+                    <p class="text-gray-400">Providing quality dental care for over 26 years. Taking care of your smile
+                        since 1999. We create smiles that change lives.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="services/comprehensive-dental-examination.html"
+                                class="hover:text-blue-400">Thorough dental examination</a></li>
+                        <li><a href="services/tests-and-diagnostics.html" class="hover:text-blue-400">Tests and
+                                diagnostics</a></li>
+                        <li><a href="services/comprehensive-child-checkup.html"
+                                class="hover:text-blue-400">Comprehensive children's
+                                dental check-up</a></li>
+                        <li><a href="services/oral-hygiene.html" class="hover:text-blue-400">Professional oral
+                                hygiene</a></li>
+                        <li><a href="services/pediatric-dentistry.html" class="hover:text-blue-400">Pediatric
+                                dentistry</a></li>
+                        <li><a href="services/dental-implantation.html" class="hover:text-blue-400">Dental
+                                implantation</a></li>
+                        <li><a href="services/immediate-implantation.html" class="hover:text-blue-400">Immediate
+                                implantation</a></li>
+                        <li><a href="services/all-on-4-implants.html" class="hover:text-blue-400">"All-on-4"
+                                dental
+                                restoration</a></li>
+                        <li><a href="services/dental-prosthetics.html" class="hover:text-blue-400">Dental
+                                prosthetics</a></li>
+                        <li><a href="services/dental-veneers.html" class="hover:text-blue-400">Dental restoration with
+                                veneers</a></li>
+                        <li><a href="services/aesthetic-fillings.html" class="hover:text-blue-400">Aesthetic
+                                filling</a></li>
+                        <li><a href="services/teeth-straightening.html" class="hover:text-blue-400">Teeth straightening
+                                with
+                                aligners</a></li>
+                        <li><a href="services/teeth-straightening-children.html" class="hover:text-blue-400">Teeth
+                                straightening with aligners for children</a></li>
+                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Orthodontic
+                                treatment</a></li>
+                        <li><a href="services/laser-teeth-whitening.html" class="hover:text-blue-400">Laser teeth
+                                whitening</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Useful</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="doctors.html" class="hover:text-blue-400">Team</a></li>
+                        <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Health Insurance</a></li>
+                        <li><a href="seminarai.html" class="hover:text-blue-400">Seminars</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Price List</a></li>
+                        <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacts</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Reception</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Closed</li>
+                        <li><strong>Phone No.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Address</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, 09100 Vilnius</li>
+                        <li><strong>Email</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/A9YSHmbgoKihh6uQ7" target="_blank"
+                            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                            <span class="text-sm">View on map</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Time Slot Selection
+        const timeSlots = document.querySelectorAll('.time-slot');
+        const selectedTimeInput = document.getElementById('timePeriod');
+
+        timeSlots.forEach(slot => {
+            slot.addEventListener('click', () => {
+                timeSlots.forEach(s => s.classList.remove('selected'));
+                slot.classList.add('selected');
+                selectedTimeInput.value = slot.dataset.time;
+            });
+        });
+
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        // Form Submission
+        const bookingForm = document.getElementById('bookingForm');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Validate time selection
+            if (!selectedTimeInput.value) {
+                alert('Please select a time');
+                return;
+            }
+
+            // Collect form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                date: document.getElementById('date').value,
+                time: selectedTimeInput.value,
+                service: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
+            };
+
+            // Send email using EmailJS
+            emailjs.send('service_7xkq8co', 'template_qnrc6ky', formData)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    // Show success message
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-4';
+                    successDiv.innerHTML = `
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Thank you! Your message has been sent successfully. We will contact you shortly.</span>
+                        </div>
+                    `;
+
+                    // Insert success message before the form
+                    document.getElementById('bookingForm').parentNode.insertBefore(successDiv, document.getElementById('bookingForm'));
+
+                    // Reset form
+                    document.getElementById('bookingForm').reset();
+
+                    // Remove success message after 5 seconds
+                    setTimeout(() => {
+                        successDiv.remove();
+                    }, 5000);
+                    // Reset form after delay
+                    setTimeout(() => {
+                        bookingForm.reset();
+                        timeSlots.forEach(s => s.classList.remove('selected'));
+                    }, 500);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    alert('Error sending request. Please try again or contact us by phone.');
+                });
+        });
+    </script>
+</body>
+
+</html>

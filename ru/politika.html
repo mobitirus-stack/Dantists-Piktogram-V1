@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности | Švytintys Dantys</title>
+    <meta name="description"
+        content="Švytintys Dantys - Политика конфиденциальности. Узнайте, как мы собираем, используем и защищаем ваши личные данные. Мы гарантируем безопасность и конфиденциальность ваших данных.">
+    <meta name="keywords" content="политика конфиденциальности, защита персональных данных, GDPR, Švytintys Dantys">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .text-content {
+            line-height: 1.7;
+        }
+
+        .text-content h2 {
+            color: #1e40af;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-content h3 {
+            color: #1e40af;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .text-content p {
+            margin-bottom: 1rem;
+        }
+
+        .text-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/privatumo-politika.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/privatumo-politika.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/privatumo-politika.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/politika.html" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-500">
+                        <i class="fas fa-tooth mr-2"></i>Švytintys dantys
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Главная</a>
+                    <a href="uslugi.html" class="text-gray-700 hover:text-blue-500 transition">Услуги</a>
+                    <a href="vrachi.html" class="text-gray-700 hover:text-blue-500 transition">Врачи</a>
+                    <a href="seminary.html" class="text-gray-700 hover:text-blue-500 transition">Семинары</a>
+                    <a href="zapis.html" class="text-gray-700 hover:text-blue-500 transition">Записаться</a>
+                    <a href="kontakty.html" class="text-gray-700 hover:text-blue-500 transition">Contact</a>
+
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <a href="../privatumo-politika.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                        <a href="../en/privatumo-politika.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">RU</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Позвонить</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Главная</a>
+                <a href="uslugi.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Услуги</a>
+                <a href="vrachi.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Врачи</a>
+                <a href="seminary.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Семинары</a>
+                <a href="zapis.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Записаться</a>
+                <a href="kontakty.html" class="block py-2 text-gray-700 hover:text-blue-500 transition">Contact</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <a href="../privatumo-politika.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                    <a href="../en/privatumo-politika.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">RU</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Политика конфиденциальности</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Здесь вы найдете информацию о том, как мы собираем, используем и храним ваши личные данные.
+                Мы ценим ваше доверие и гарантируем безопасность данных.
+            </p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">
+
+                <!-- I. Общая информация -->
+                <div class="mb-12">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">I</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Общая информация</h2>
+                    </div>
+                    <div class="prose text-gray-600 pl-16">
+                        <p class="mb-4">
+                            Эта Политика конфиденциальности устанавливает основные принципы и процедуры сбора, обработки
+                            и хранения персональных данных, выполняемые клиникой "Švytintys Dantys" (далее -
+                            Контроллер данных).
+                        </p>
+                        <p class="mb-4">
+                            Мы обрабатываем ваши персональные данные в соответствии с Общим регламентом по защите данных
+                            (GDPR), Законом о правовой защите персональных данных Литовской Республики и другими
+                            правовыми актами, регулирующими защиту персональных данных.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Контроллер данных: UAB "Švytintys dantys"</li>
+                            <li>Код компании: 124567890</li>
+                            <li>Адрес: Žirmūnų g. 60, Вильнюс</li>
+                            <li>Эл. почта: info@svytintysdantys.lt</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- II. Какие данные мы собираем? -->
+                <div class="mb-12">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">II</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Какие данные мы собираем?</h2>
+                    </div>
+                    <div class="prose text-gray-600 pl-16">
+                        <p class="mb-4">Для предоставления вам качественных стоматологических услуг мы можем собирать
+                            следующие данные:</p>
+                        <ul class="list-none space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span><strong>Идентификационные данные:</strong> Имя, фамилия, личный код, дата
+                                    рождения.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span><strong>Контактные данные:</strong> Номер телефона, адрес электронной почты,
+                                    домашний адрес.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span><strong>Данные особой категории (здоровье):</strong> Информация о состоянии вашего
+                                    здоровья, диагнозах, планах лечения, рентгеновских снимках, фотографиях, аллергиях и
+                                    используемых медикаментах.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                <span><strong>Данные об оплате:</strong> Информация о платежах за оказанные
+                                    услуги.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- III. Цели сбора данных -->
+                <div class="mb-12">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">III</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Цели сбора данных</h2>
+                    </div>
+                    <div class="prose text-gray-600 pl-16">
+                        <p class="mb-4">Мы используем ваши данные для следующих целей:</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Предоставление услуг</h4>
+                                <p class="text-sm">Для регистрации, диагностики, планирования и выполнения лечения.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Коммуникация</h4>
+                                <p class="text-sm">Для подтверждения визитов, напоминания о запланированных процедурах
+                                    или профилактических осмотрах.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Юридические обязательства</h4>
+                                <p class="text-sm">Для выполнения требований по ведению медицинской документации,
+                                    предусмотренных законами.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Улучшение качества</h4>
+                                <p class="text-sm">Для улучшения качества услуг и управления отзывами пациентов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IV. Сроки хранения данных -->
+                <div class="mb-12">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">IV</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Сроки хранения данных</h2>
+                    </div>
+                    <div class="prose text-gray-600 pl-16">
+                        <p>
+                            Ваши персональные данные и данные о здоровье хранятся в течение сроков, установленных
+                            Министерством здравоохранения Литовской Республики и другими правовыми актами (обычно 15 лет
+                            для медицинской документации).
+                        </p>
+                        <p class="mt-2">
+                            Другие данные (например, запросы) хранятся столько, сколько необходимо для достижения целей
+                            или как установлено внутренними процедурами клиники, но не более 2 лет.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- V. Ваши права -->
+                <div class="mb-12">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">V</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Ваши права</h2>
+                    </div>
+                    <div class="prose text-gray-600 pl-16">
+                        <p class="mb-4">Вы имеете право:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Ознакомиться с вашими персональными данными и тем, как они обрабатываются.</li>
+                            <li>Требовать исправления неверных, неполных или неточных персональных данных.</li>
+                            <li>Требовать удаления данных («право быть забытым»), если это не противоречит юридическим
+                                обязательствам по хранению медицинских данных.</li>
+                            <li>Ограничить действия по обработке данных.</li>
+                            <li>Переносимость данных.</li>
+                            <li>Подать жалобу в Государственную инспекцию по защите данных.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- VI. Cookies and Contact -->
+                <div class="mb-12">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">VI</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">Файлы cookie и изменения</h2>
+                    </div>
+                    <div class="prose text-gray-600 pl-16">
+                        <p class="mb-4">
+                            Мы используем файлы cookie на нашем веб-сайте для обеспечения бесперебойной работы и
+                            улучшения пользовательского опыта. Вы можете управлять настройками cookie в своем браузере.
+                        </p>
+                        <p>
+                            Мы оставляем за собой право изменять эту Политику конфиденциальности. Актуальная версия
+                            всегда публикуется на нашем сайте.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 text-center">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">У вас есть вопросы о защите данных?</h3>
+                    <p class="text-gray-600 mb-6">Свяжитесь с нами по электронной почте или телефону</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="mailto:info@svytintysdantys.lt"
+                            class="flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                            <i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </a>
+                    <p class="text-gray-400">Качественное лечение зубов более 26 лет. Заботимся о вашей улыбке
+                        с 1999 года. Мы создаем улыбки, которые меняют жизнь.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Услуги</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="uslugi/osmotr-zubov.html"
+                                class="hover:text-blue-400">Тщательный осмотр зубов</a></li>
+                        <li><a href="uslugi/diagnostika.html" class="hover:text-blue-400">Анализы и
+                                диагностика</a></li>
+                        <li><a href="uslugi/osmotr-rebenka.html" class="hover:text-blue-400">Комплексный
+                                осмотр зубов
+                                у детей</a></li>
+                        <li><a href="uslugi/gigiena-rta.html" class="hover:text-blue-400">Профессиональная гигиена
+                                рта</a></li>
+                        <li><a href="uslugi/detskaya-stomatologiya.html" class="hover:text-blue-400">Детская
+                                стоматология</a></li>
+                        <li><a href="uslugi/implantaciya-zubov.html" class="hover:text-blue-400">Имплантация
+                                зубов</a></li>
+                        <li><a href="uslugi/mgnovennaya-implantaciya.html" class="hover:text-blue-400">Мгновенная
+                                имплантация</a></li>
+                        <li><a href="uslugi/all-on-4.html" class="hover:text-blue-400">Восстановление зубов
+                                "Всё-на-4"</a></li>
+                        <li><a href="uslugi/protezirovanie-zubov.html" class="hover:text-blue-400">Протезирование
+                                зубов</a></li>
+                        <li><a href="uslugi/viniry.html" class="hover:text-blue-400">Восстановление зубов
+                                винирами</a></li>
+                        <li><a href="uslugi/esteticheskoe-plombirovanie.html" class="hover:text-blue-400">Эстетическое
+                                пломбирование</a></li>
+                        <li><a href="uslugi/vyravnivanie-zubov.html" class="hover:text-blue-400">Выравнивание зубов
+                                капами</a></li>
+                        <li><a href="uslugi/vyravnivanie-zubov-detyam.html"
+                                class="hover:text-blue-400">Выравнивание
+                                зубов капами для детей</a></li>
+                        <li><a href="uslugi/ortodonticheskoe-lechenie.html" class="hover:text-blue-400">Ортодонтическое
+                                лечение</a></li>
+                        <li><a href="uslugi/lazernoe-otbelivanie.html" class="hover:text-blue-400">Лазерное
+                                отбеливание
+                                зубов</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Useful</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">О нас</a></li>
+                        <li><a href="vrachi.html" class="hover:text-blue-400">Команда</a></li>
+                        <li><a href="strahovanie.html" class="hover:text-blue-400">Медицинское страхование</a>
+                        </li>
+                        <li><a href="seminary.html" class="hover:text-blue-400">Семинары</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Прейскурант</a></li>
+                        <li><a href="politika.html" class="hover:text-blue-400">Политика
+                                конфиденциальности</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Регистратура</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Закрыто</li>
+                        <li><strong>Телефон</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Адрес</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, 09100 Вильнюс</li>
+                        <li><strong>Эл. почта</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/A9YSHmbgoKihh6uQ7" target="_blank"
+                            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                            <span class="text-sm">Смотреть на карте</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+
+</html>

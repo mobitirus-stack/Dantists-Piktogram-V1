@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комплексная проверка детских зубов | Švytintys Dantys</title>
+    <meta name="description"
+        content="Комплексная проверка детских зубов в клинике Švytintys Dantys. Современная диагностика, профилактические программы, бережный подход к детям. Обеспечьте здоровую улыбку с первых зубов. Запишитесь сейчас!">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default"
+        href="https://svytintysdantys.lt/paslaugos/issami-vaiku-dantu-patikra.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/paslaugos/issami-vaiku-dantu-patikra.html" />
+    <link rel="alternate" hreflang="en"
+        href="https://svytintysdantys.lt/en/services/comprehensive-child-checkup.html" />
+    <link rel="alternate" hreflang="ru"
+        href="https://svytintysdantys.lt/ru/uslugi/osmotr-rebenka.html" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="text-gray-700 hover:text-blue-500 transition">Главная</a>
+                    <a href="../uslugi.html" class="text-gray-700 hover:text-blue-500 transition">Услуги</a>
+                    <a href="../vrachi.html" class="text-gray-700 hover:text-blue-500 transition">Врачи</a>
+                    <a href="../zapis.html" class="text-gray-700 hover:text-blue-500 transition">Записаться</a>
+                    <a href="../kontakty.html" class="text-gray-700 hover:text-blue-500 transition">Контакты</a>
+
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <a href="../../paslaugos/issami-vaiku-dantu-patikra.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                        <a href="../../en/services/comprehensive-child-checkup.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">RU</span>
+                    </div>
+
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="../index.html" class="block py-2 text-gray-700 hover:text-blue-500">Главная</a>
+                <a href="../uslugi.html" class="block py-2 text-gray-700 hover:text-blue-500">Услуги</a>
+                <a href="../vrachi.html" class="block py-2 text-gray-700 hover:text-blue-500">Врачи</a>
+                <a href="../zapis.html" class="block py-2 text-gray-700 hover:text-blue-500">Записаться</a>
+                <a href="../kontakty.html" class="block py-2 text-gray-700 hover:text-blue-500">Контакты</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <a href="../../paslaugos/issami-vaiku-dantu-patikra.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                    <a href="../../en/services/comprehensive-child-checkup.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">RU</span>
+                </div>
+                <div class="flex items-center space-x-4 py-2 border-t border-gray-100 mt-2 pt-2">
+                    <a href="../../paslaugos/issami-vaiku-dantu-patikra.html"
+                        class="font-medium text-gray-600">LT</a>
+                    <span class="text-gray-300">|</span>
+                    <span class="font-bold text-blue-600">EN</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-20 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        Комплексная проверка детских зубов
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Профессиональный и заботливый уход за детскими зубами обеспечивает здоровую улыбку с раннего
+                        возраста.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../zapis.html?service=children-checkup"
+                            class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                            <i class="fas fa-calendar-plus mr-2"></i> Записать ребенка
+                        </a>
+                        <a href="tel:+37069928622"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                            <i class="fas fa-phone mr-2"></i> Позвонить сейчас
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="../../Photos/Paslaugos/Issami%20vaiku%20dantu%20patikra/issami%20vaiku%20dantu%20patikra%202.webp"
+                        alt="Комплексная проверка детских зубов" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Комментарий врача -->
+    <section class="bg-green-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto doctor-quote p-8 rounded-r-xl shadow-sm bg-white">
+                <div class="flex flex-col md:flex-row items-start gap-6">
+                    <div class="flex-shrink-0">
+                        <img src="../../Photos/Personalas/Agne%20Kalinkaite.webp" alt="Dr. Agnė Kalinkaitė"
+                            class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Комментарий врача</h3>
+                        <p class="text-gray-700 text-lg italic leading-relaxed">
+                            "Регулярные и комплексные осмотры зубов в детстве — это основа здоровой улыбки на всю жизнь.
+                            Заметив проблему вовремя, мы можем решить её с минимальным вмешательством. Наша цель — чтобы
+                            ребенок рос без зубной боли и страха."
+                        </p>
+                        <p class="mt-4 text-green-600 font-semibold">— Dr. Agnė Kalinkaitė, Врач-одонтолог</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Услуги детской стоматологии</h2>
+                <p class="text-lg text-gray-600">Полный спектр детской стоматологии от первых зубов</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-baby text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Первая консультация</h3>
+                    <p class="text-gray-600 text-center mb-4">Комплексные советы для родителей по уходу за первыми
+                        зубами и питанию</p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-search text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Оценка состояния зубов</h3>
+                    <p class="text-gray-600 text-center mb-4">Детальная проверка на кариес, прикус и нарушения роста
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-shield-alt text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Профилактические меры</h3>
+                    <p class="text-gray-600 text-center mb-4">Фторирование, герметизация и профилактические процедуры
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tooth text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Лечение зубов</h3>
+                    <p class="text-gray-600 text-center mb-4">Бережное и дружелюбное к ребенку лечение кариеса</p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-graduation-cap text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Обучение гигиене</h3>
+                    <p class="text-gray-600 text-center mb-4">Обучение детей правильной чистке зубов с элементами игры
+                    </p>
+                </div>
+
+                <div class="service-card bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chart-line text-indigo-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-center">Мониторинг роста</h3>
+                    <p class="text-gray-600 text-center mb-4">Постоянное наблюдение за развитием челюсти и зубов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age-Specific Care -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Уход в зависимости от возраста</h2>
+                <p class="text-lg text-gray-600">Услуги, адаптированные к потребностям каждой возрастной группы</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="bg-pink-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-baby text-pink-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-pink-600">0-3 года</h3>
+                    <p class="text-gray-600 mb-4">Уход за первыми зубами</p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Осмотр полости рта</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Консультирование родителей</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Уход за первыми зубами</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Мониторинг роста</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-child text-blue-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-blue-600">3-12 лет</h3>
+                    <p class="text-gray-600 mb-4">Уход за молочными зубами</p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Регулярные осмотры</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Профилактика кариеса</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Герметизация и фторирование</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Обучение гигиене</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-graduate text-purple-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-600">12-18 лет</h3>
+                    <p class="text-gray-600 mb-4">Подростковая стоматология</p>
+                    <ul class="text-left space-y-2 text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Уход за постоянными зубами</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Ортодонтическое лечение</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Мониторинг зубов мудрости</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Эстетическое лечение</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Tips -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Советы по профилактике для родителей</h2>
+                <p class="text-lg text-gray-600">Как обеспечить здоровье зубов детей дома</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-green-50 rounded-xl">
+                    <i class="fas fa-toothbrush text-green-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Правильная чистка</h3>
+                    <p class="text-gray-600">2 раза в день минимум по 2 минуты</p>
+                </div>
+                <div class="text-center p-6 bg-blue-50 rounded-xl">
+                    <i class="fas fa-apple-alt text-blue-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Здоровое питание</h3>
+                    <p class="text-gray-600">Ограничьте сладости и газированные напитки</p>
+                </div>
+                <div class="text-center p-6 bg-purple-50 rounded-xl">
+                    <i class="fas fa-flask text-purple-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Фтор</h3>
+                    <p class="text-gray-600">Используйте зубную пасту с фтором</p>
+                </div>
+                <div class="text-center p-6 bg-red-50 rounded-xl">
+                    <i class="fas fa-calendar-check text-red-500 text-3xl mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Регулярность</h3>
+                    <p class="text-gray-600">Визиты к врачу каждые 6 месяцев</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Часто задаваемые вопросы</h2>
+                <p class="text-lg text-gray-600">Ответы на самые популярные вопросы о детской стоматологии</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                        <i class="fas fa-question-circle mr-2"></i>Когда нужно первый раз вести ребенка к стоматологу?
+                    </h3>
+                    <p class="text-gray-600">
+                        Рекомендуется привести ребенка к стоматологу первый раз, когда прорежется первый зуб (около 6-12
+                        месяцев) или не позднее 1 года.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                        <i class="fas fa-question-circle mr-2"></i>Как помочь ребенку не волноваться перед визитом?
+                    </h3>
+                    <p class="text-gray-600">
+                        Говорите о стоматологе позитивно, читайте книги об уходе за зубами, играйте в доктора, будьте
+                        спокойны и поддерживайте ребенка.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">
+                        <i class="fas fa-question-circle mr-2"></i>Больно ли лечить молочные зубы?
+                    </h3>
+                    <p class="text-gray-600">
+                        Благодаря современным методам анестезии лечение проходит безболезненно. Мы используем
+                        анестетики, подходящие для детей.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Записаться на детский осмотр</h2>
+            <p class="text-xl text-blue-100 mb-8">Подарите ребенку здоровую и красивую улыбку с раннего возраста</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../zapis.html?service=children-checkup"
+                    class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                    <i class="fas fa-calendar-plus mr-2"></i> Записать ребенка
+                </a>
+                <a href="tel:+37069928622"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                    <i class="fas fa-phone mr-2"></i> Консультация
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- About Doctor -->
+    <section class="py-16 bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/3">
+                    <img src="../../Photos/Personalas/Agne%20Kalinkaite.webp" alt="Dr. Agnė Kalinkaitė"
+                        class="rounded-2xl shadow-xl w-full object-cover">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Agnė Kalinkaitė</h2>
+                    <p class="text-xl text-green-600 font-semibold mb-6">Врач-одонтолог</p>
+
+                    <div class="space-y-6 text-gray-700">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Специализация</h3>
+                            <p>Терапевтическая стоматология, Протезирование, Общая практика, Профилактическая гигиена
+                                рта, Детская стоматология.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Образование и профессиональная деятельность</h3>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>В 2002 году окончила Каунасский медицинский университет, получила профессиональную
+                                    квалификацию врача-одонтолога</li>
+                                <li>2002 - 2003 прошла первичную резидентуру врача-одонтолога</li>
+                                <li>С 2003 года по настоящее время - врач-одонтолог общей практики</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="font-semibold">Лицензия № OPL-02652</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-tooth text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </div>
+                    <p class="text-gray-400">Мы предоставляем качественные стоматологические услуги уже более 26 лет.
+                        Заботимся о вашей улыбке с 1999 года.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Услуги</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="lechenie-zubov.html" class="hover:text-blue-400">Лечение зубов</a>
+                        </li>
+                        <li><a href="otbelivanie-kapami.html" class="hover:text-blue-400">Отбеливание
+                                капами</a></li>
+                        <li><a href="implantaciya-zubov.html" class="hover:text-blue-400">Имплантация</a>
+                        </li>
+                        <li><a href="gigiena-rta.html" class="hover:text-blue-400">Гигиена рта</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Полезно</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html" class="hover:text-blue-400">О нас</a></li>
+                        <li><a href="../vrachi.html" class="hover:text-blue-400">Врачи</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Прейскурант</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Регистратура</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Закрыто</li>
+                        <li><strong>Тел. №</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Адрес</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> ул. Жирмуну 60, 09100 Вильнюс</li>
+                        <li><strong>Эл. почта</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - Švytintys Dantys</title>
+    <meta name="description"
+        content="Meet our experienced and qualified team of dentists. Over 26 years of experience, modern technologies, and an individual approach to every patient.">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/admin-shared.js"></script>
+
+
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .doctor-card {
+            transition: all 0.3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .img-position-custom {
+            object-position: center 15%;
+        }
+    </style>
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/doctors.html" />
+    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/doctors.html" />
+    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/doctors.html" />
+    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/vrachi.html" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Švytintys dantys</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Services</a>
+                    <a href="doctors.html" class="text-blue-500 font-semibold">Doctors</a>
+                    <a href="seminarai.html" class="text-gray-700 hover:text-blue-500 transition">Seminars</a>
+                    <a href="booking.html" class="text-gray-700 hover:text-blue-500 transition">Book Online</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 transition">Contacts</a>
+
+
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
+                        <a href="../doctors.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">EN</span>
+                        <a href="../ru/vrachi.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                    </div>
+                    <a href="contact.html"
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <!-- Mobile Call & Menu Buttons -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37069928622"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Call</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Home</a>
+                <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500">Services</a>
+                <a href="doctors.html" class="block py-2 text-blue-500 font-semibold">Doctors</a>
+                <a href="seminarai.html" class="block py-2 text-gray-700 hover:text-blue-500">Seminars</a>
+                <a href="booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Book Online</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Contacts</a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
+                    <a href="../doctors.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">LT</a>
+                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">EN</span>
+                    <a href="../ru/vrachi.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
+                </div>
+                <button class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Meet Our Expert Team</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                Our highly qualified dental professionals are ready to provide you with exceptional care and create
+                beautiful, healthy smiles.
+            </p>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard Section (Hidden by default) -->
+    <section id="admin-dashboard" class="hidden py-12 bg-gray-100 border-t-4 border-blue-500">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-800"><i class="fas fa-user-md mr-2"></i>Doctors Management</h2>
+                <button onclick="AdminShared.logout()"
+                    class="text-red-500 hover:text-red-700 font-semibold bg-white px-4 py-2 rounded shadow">
+                    <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                </button>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Form Column -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">
+                            <i class="fas fa-plus-circle mr-2 text-green-500"></i>Add / Edit
+                        </h3>
+                        <form id="doctor-form" class="space-y-4">
+                            <input type="hidden" id="doctor-id">
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Name Surname</label>
+                                <input type="text" id="form-name" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Role</label>
+                                <input type="text" id="form-role" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                <textarea id="form-description" rows="3" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Image URL</label>
+                                <input type="text" id="form-image" required
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Education (each item on new
+                                    line)</label>
+                                <textarea id="form-education" rows="3"
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Specialties (comma
+                                    separated)</label>
+                                <input type="text" id="form-specialties"
+                                    class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div class="flex gap-2 pt-4">
+                                <button type="submit"
+                                    class="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                                    <i class="fas fa-save mr-2"></i>Save
+                                </button>
+                                <button type="button" id="reset-btn"
+                                    class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- List Column (Admin View) -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 border-b pb-2">
+                            <i class="fas fa-list mr-2 text-blue-500"></i>Doctors List
+                        </h3>
+                        <div id="admin-doctors-list" class="space-y-4">
+                            <!-- Admin list injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div id="doctors-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Doctors will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose Our Dental Team?</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our team combines professionalism and advanced technologies to ensure exceptional dental care.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-blue-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Highly Qualified</h3>
+                    <p class="text-gray-600">All our dentists have advanced training and certificates in their
+                        respective fields.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-green-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Patient Focused</h3>
+                    <p class="text-gray-600">We take time to understand your needs and create individual treatment
+                        plans.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-microscope text-purple-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Advanced Technology</h3>
+                    <p class="text-gray-600">We use modern equipment for precise diagnostics and efficient treatment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Book a Consultation</h2>
+            <p class="text-xl text-blue-100 mb-8">Meet our team and start your journey towards a healthier smile today
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="booking.html"
+                    class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                    <i class="fas fa-calendar-plus mr-2"></i> Book Online
+                </a>
+                <a href="tel:+37012345678"
+                    class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
+                    <i class="fas fa-phone mr-2"></i> Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
+                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                    </a>
+                    <p class="text-gray-400">Providing quality dental care for over 26 years. Taking care of your smile
+                        since 1999. We create smiles that change lives.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                            class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li><a href="services/comprehensive-dental-examination.html"
+                                class="hover:text-blue-400">Thorough dental examination</a></li>
+                        <li><a href="services/tests-and-diagnostics.html" class="hover:text-blue-400">Tests and
+                                diagnostics</a></li>
+                        <li><a href="services/comprehensive-child-checkup.html"
+                                class="hover:text-blue-400">Comprehensive children's
+                                dental check-up</a></li>
+                        <li><a href="services/oral-hygiene.html" class="hover:text-blue-400">Professional oral
+                                hygiene</a></li>
+                        <li><a href="services/pediatric-dentistry.html" class="hover:text-blue-400">Pediatric
+                                dentistry</a></li>
+                        <li><a href="services/dental-implantation.html" class="hover:text-blue-400">Dental
+                                implantation</a></li>
+                        <li><a href="services/immediate-implantation.html" class="hover:text-blue-400">Immediate
+                                implantation</a></li>
+                        <li><a href="services/all-on-4-implants.html" class="hover:text-blue-400">"All-on-4"
+                                dental
+                                restoration</a></li>
+                        <li><a href="services/dental-prosthetics.html" class="hover:text-blue-400">Dental
+                                prosthetics</a></li>
+                        <li><a href="services/dental-veneers.html" class="hover:text-blue-400">Dental restoration with
+                                veneers</a></li>
+                        <li><a href="services/aesthetic-fillings.html" class="hover:text-blue-400">Aesthetic
+                                filling</a></li>
+                        <li><a href="services/teeth-straightening.html" class="hover:text-blue-400">Teeth straightening
+                                with
+                                aligners</a></li>
+                        <li><a href="services/teeth-straightening-children.html" class="hover:text-blue-400">Teeth
+                                straightening with aligners for children</a></li>
+                        <li><a href="services/orthodontic-treatment.html" class="hover:text-blue-400">Orthodontic
+                                treatment</a></li>
+                        <li><a href="services/laser-teeth-whitening.html" class="hover:text-blue-400">Laser teeth
+                                whitening</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Useful</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">About Us</a></li>
+                        <li><a href="doctors.html" class="hover:text-blue-400">Team</a></li>
+                        <li><a href="sveikatos-draudimas.html" class="hover:text-blue-400">Health Insurance</a></li>
+                        <li><a href="seminarai.html" class="hover:text-blue-400">Seminars</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Price List</a></li>
+                        <li><a href="privatumo-politika.html" class="hover:text-blue-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacts</h4>
+                    <ul class="space-y-2 text-gray-400 mb-4">
+                        <li><strong>Reception</strong></li>
+                        <li>I-V: 8:00 - 20:00</li>
+                        <li>VI: 8:00 - 14:00</li>
+                        <li>VII: Closed</li>
+                        <li><strong>Phone No.</strong></li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
+                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><strong>Address</strong></li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, 09100 Vilnius</li>
+                        <li><strong>Email</strong></li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="https://maps.app.goo.gl/A9YSHmbgoKihh6uQ7" target="_blank"
+                            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                            <i class="fas fa-map-marked-alt mr-2"></i>
+                            <span class="text-sm">View on map</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Švytintys Dantys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- DOCTORS DATA & MANAGEMENT ---
+        const defaultDoctors = [
+            {
+                name: "Dr. Ąžuolas Danielius",
+                role: "Clinic Head",
+                description: "Dentist, Prosthodontist<br>Specialization: oral surgery, implantology, prosthetics",
+                image: "../Photos/Personalas/Azuolas%20Danielius.webp",
+                education: [
+                    "• 1996 graduated from Kaunas Medical Academy, Faculty of Dentistry, qualified as a dentist",
+                    "• 1996–1997 primary residency in dentistry",
+                    "• 2001–2002 secondary residency in prosthetic dentistry, qualified as a prosthodontist"
+                ],
+                experience: [
+                    "• 1997–2002 – general practice dentist",
+                    "• From 2002 – prosthodontist",
+                    "• License No. OPL-02391"
+                ],
+                specialties: ["Oral Surgery", "Implantology", "Prosthetics", "Prosthetic Dentistry", "Aesthetic Dentistry", "Trauma Restoration", "Pediatric Dentistry"],
+                specialtyColor: "blue"
+            },
+            {
+                name: "Agnė Kalinkaitė",
+                role: "Dentist",
+                description: "Dentist. Specialization: therapeutic dentistry, prosthetics",
+                image: "../Photos/Personalas/Agne%20Kalinkaite.webp",
+                education: [
+                    "• 2002 graduated from Kaunas Medical University, qualified as a dentist",
+                    "• 2002 - 2003 primary residency in dentistry",
+                    "• From 2003 - present general practice dentist",
+                    "• License No. OPL-02652"
+                ],
+                specialties: ["Therapeutic Dentistry", "Prosthetics", "General Practice", "Preventive Oral Hygiene", "Pediatric Dentistry"],
+                specialtyColor: "green"
+            },
+            {
+                name: "Anžela Bogdanovič",
+                role: "Dental Assistant",
+                description: "Anžela is a caring and warm dental assistant whose attention to detail and sincere communication helps patients feel comfortable during every visit. She assists the doctor during all procedures, takes care of order and sterility in the office, and ensures that the treatment process runs smoothly and professionally.",
+                image: "../Photos/Personalas/Anzela%20Bogdonovic_optimized.webp",
+                education: [
+                    "• Assists the doctor during dental procedures",
+                    "• Takes care of sterility and instrument preparation",
+                    "• Helps patients prepare for the visit and answers their questions",
+                    "• Constantly improves knowledge in the field of dentistry"
+                ],
+                specialties: ["Dental Assisting", "Patient Care", "Office Hygiene", "Instrument Sterilization"],
+                specialtyColor: "yellow",
+                imgCustomClass: "img-position-custom"
+            }
+        ];
+
+        // Initialize localStorage if empty (using different key for EN)
+        if (!localStorage.getItem('doctorsData_en_v2')) {
+            localStorage.setItem('doctorsData_en_v2', JSON.stringify(defaultDoctors));
+        }
+
+        let doctors = JSON.parse(localStorage.getItem('doctorsData_en_v2'));
+
+        // --- RENDER FUNCTIONS ---
+        function renderDoctors() {
+            const container = document.getElementById('doctors-container');
+            container.innerHTML = doctors.map(doctor => {
+                const eduList = doctor.education ? doctor.education.map(item => `<li>${item}</li>`).join('') : '';
+                const expList = doctor.experience ? `
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-500 mb-2">Professional Experience:</p>
+                        <ul class="text-sm text-gray-600 space-y-1">${doctor.experience.map(item => `<li>${item}</li>`).join('')}</ul>
+                    </div>` : '';
+
+                const color = doctor.specialtyColor || 'blue';
+                const specialties = doctor.specialties ? doctor.specialties.map(s =>
+                    `<span class="bg-${color}-100 text-${color}-600 px-3 py-1 rounded-full text-xs">${s}</span>`
+                ).join('') : '';
+
+                return `
+                <div class="doctor-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <img src="${doctor.image}" alt="${doctor.name}" class="w-full h-64 object-cover ${doctor.imgCustomClass || ''}">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1">${doctor.name}</h3>
+                        <p class="text-blue-500 font-semibold mb-3">${doctor.role}</p>
+                        <p class="text-gray-600 mb-4">${doctor.description}</p>
+                        
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">Education / Info:</p>
+                            <ul class="text-sm text-gray-600 space-y-1">${eduList}</ul>
+                        </div>
+                        
+                        ${expList}
+
+                        <div class="mb-4">
+                            <p class="text-sm text-gray-500 mb-2">Specializations:</p>
+                            <div class="flex flex-wrap gap-2">${specialties}</div>
+                        </div>
+
+                        <div class="flex justify-center space-x-4">
+                              <a href="#" class="text-gray-400 hover:text-blue-500 transition"><i class="fas fa-envelope text-xl"></i></a>
+                            <a href="booking.html" class="text-gray-400 hover:text-blue-500 transition"><i class="fas fa-calendar text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function renderAdminList() {
+            const list = document.getElementById('admin-doctors-list');
+            list.innerHTML = doctors.map((doctor, index) => `
+                <div class="border rounded-lg p-4 hover:shadow-md transition bg-gray-50 flex justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <img src="${doctor.image}" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-800">${doctor.name}</h4>
+                            <p class="text-sm text-gray-500">${doctor.role}</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button onclick="editDoctor(${index})" class="text-blue-500 hover:text-blue-700 bg-white p-2 rounded-full shadow-sm">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button onclick="deleteDoctor(${index})" class="text-red-500 hover:text-red-700 bg-white p-2 rounded-full shadow-sm">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- ADMIN LOGIC ---
+        const adminDashboard = document.getElementById('admin-dashboard');
+        const doctorForm = document.getElementById('doctor-form');
+        const resetBtn = document.getElementById('reset-btn');
+
+        // Listen for login event from shared script
+        document.addEventListener('adminLoggedIn', () => {
+            checkAuth();
+        });
+
+        // Listen for trigger click
+        document.addEventListener('adminTriggerClicked', () => {
+            adminDashboard.classList.remove('hidden');
+            adminDashboard.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function checkAuth() {
+            if (AdminShared.isLoggedIn()) {
+                adminDashboard.classList.remove('hidden');
+                renderAdminList();
+            } else {
+                adminDashboard.classList.add('hidden');
+            }
+        }
+
+        function saveDoctors() {
+            localStorage.setItem('doctorsData_en_v2', JSON.stringify(doctors));
+            renderDoctors();
+            renderAdminList();
+        }
+
+        doctorForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const id = document.getElementById('doctor-id').value;
+
+            const educationText = document.getElementById('form-education').value;
+            const education = educationText ? educationText.split('\n').filter(line => line.trim() !== '') : [];
+
+            const specialtiesText = document.getElementById('form-specialties').value;
+            const specialties = specialtiesText ? specialtiesText.split(',').map(s => s.trim()) : [];
+
+            const newDoctor = {
+                name: document.getElementById('form-name').value,
+                role: document.getElementById('form-role').value,
+                description: document.getElementById('form-description').value,
+                image: document.getElementById('form-image').value,
+                education: education,
+                specialties: specialties,
+                specialtyColor: "blue" // Default to blue for new ones
+            };
+
+            if (id) {
+                // Preserve existing fields not in form if any (like experience or custom class)
+                const existing = doctors[parseInt(id)];
+                newDoctor.experience = existing.experience;
+                newDoctor.imgCustomClass = existing.imgCustomClass;
+                newDoctor.specialtyColor = existing.specialtyColor;
+
+                doctors[parseInt(id)] = newDoctor;
+            } else {
+                doctors.push(newDoctor);
+            }
+
+            saveDoctors();
+            resetForm();
+        });
+
+        window.editDoctor = (index) => {
+            const doc = doctors[index];
+            document.getElementById('doctor-id').value = index;
+            document.getElementById('form-name').value = doc.name;
+            document.getElementById('form-role').value = doc.role;
+            document.getElementById('form-description').value = doc.description.replace(/<br>/g, '\n');
+            document.getElementById('form-image').value = doc.image;
+            document.getElementById('form-education').value = doc.education ? doc.education.join('\n') : '';
+            document.getElementById('form-specialties').value = doc.specialties ? doc.specialties.join(', ') : '';
+
+            document.getElementById('doctor-form').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        window.deleteDoctor = (index) => {
+            if (confirm('Are you sure you want to delete this doctor?')) {
+                doctors.splice(index, 1);
+                saveDoctors();
+            }
+        };
+
+        function resetForm() {
+            doctorForm.reset();
+            document.getElementById('doctor-id').value = '';
+        }
+
+        resetBtn.addEventListener('click', resetForm);
+
+        // Init
+        renderDoctors();
+        checkAuth();
+
+    </script>
+</body>
+
+</html>
