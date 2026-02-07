@@ -4,32 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- SEO Meta Tags -->
-    <title>Dantų Implantacijos Eiga | Žingsnis po Žingsnio | Švytintys Dantys</title>
+    <title>Dantų Implantacijos Eiga | Žingsnis po Žingsnio | LamaLocal</title>
     <meta name="description"
         content="Detalus dantų implantavimo eigos aprašymas. Sužinokite, kaip vyksta konsultacija, operacija, gijimas ir protezavimas. Viskas, ką reikia žinoti prieš procedūrą.">
     <meta name="keywords"
         content="implantacijos eiga, dantų implantavimo žingsniai, implantavimo procesas, po implantacijos, dantų gijimas, protezavimas ant implantų">
-    <meta name="author" content="Švytintys Dantys">
+    <meta name="author" content="LamaLocal">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Lithuanian">
     <meta name="geo.region" content="LT-VL">
     <meta name="geo.placename" content="Vilnius">
     <meta name="geo.position" content="54.7075388;25.3040408">
     <meta name="ICBM" content="54.7075388,25.3040408">
-
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Dantų Implantacijos Eiga | Švytintys Dantys">
+    <meta property="og:title" content="Dantų Implantacijos Eiga | LamaLocal">
     <meta property="og:description" content="Sužinokite viską apie dantų implantavimo procesą nuo A iki Z.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://svytintysdantys.lt/paslaugos/implantacijos-eiga">
     <meta property="og:image" content="https://picsum.photos/seed/implantacijos-eiga-og/1200/630">
-
     <!-- Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
@@ -52,14 +48,34 @@
         .step-item:last-child .step-connector {
             display: none;
         }
-    </style>
 
-    <!-- Hreflang Tags -->
-    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/paslaugos/implantacijos-eiga.html" />
-    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/paslaugos/implantacijos-eiga.html" />
-    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/services/implantation-process.html" />
-    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/uslugi/process-implantacii.html" />
-    </head>
+        .step-number {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+    </style>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": "Dantų Implantacija",
+        "description": "Chirurginė procedūra, kurios metu į sriegiamas danties implantas.",
+        "procedureType": "SurgicalProcedure",
+        "provider": {
+            "@type": "DentalClinic",
+            "name": "LamaLocal",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Arsenalo g. 1, Vilnius, 01143 Vilniaus m. sav., 09100",
+                "addressLocality": "Vilnius",
+                "addressCountry": "LT"
+            },
+            "telephone": "+37064195947",
+            "email": "info@lamalocal.com"
+        }
+    }
+    </script>
+</head>
 
 <body class="bg-gray-50 scroll-smooth">
     <!-- Navigation -->
@@ -67,10 +83,9 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
-                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
-                </a>
+                    <img src="../logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
 
+                </a>
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="../index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
@@ -79,22 +94,14 @@
                     <a href="../booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
                     <a href="../contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
 
-                    
-                    <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
-                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">LT</span>
-                        <a href="../en/services/implantation-process.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
-                        <a href="../ru/uslugi/process-implantacii.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
-                    </div>
-                    <a href="tel:+37069928622"
+                    <a href="tel:+37064195947"
                         class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">
-                        <i class="fas fa-phone mr-2"></i>+370 699 28622
+                        <i class="fas fa-phone mr-2"></i>+37064195947
                     </a>
                 </div>
-
                 <!-- Mobile Call & Menu Buttons -->
                 <div class="md:hidden flex items-center space-x-3">
-                    <a href="tel:+37069928622"
+                    <a href="tel:+37064195947"
                         class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
                         <i class="fas fa-phone"></i>
                         <span class="font-semibold">Skambinti</span>
@@ -112,20 +119,13 @@
                 <a href="../booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
                 <a href="../contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
 
-                <!-- Mobile Language Switcher -->
-                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
-                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">LT</span>
-                    <a href="../en/services/implantation-process.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
-                    <a href="../ru/uslugi/process-implantacii.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
-                </div>
-                <a href="tel:+37069928622"
+                <a href="tel:+37064195947"
                     class="mt-2 w-full bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 text-center">
-                    <i class="fas fa-phone mr-2"></i>+370 699 28622
+                    <i class="fas fa-phone mr-2"></i>+37064195947
                 </a>
             </div>
         </div>
     </nav>
-
     <div id="page-content">
         <!-- Breadcrumbs -->
         <nav class="bg-white border-b border-gray-200 pt-20 pb-4">
@@ -143,154 +143,199 @@
                 </ol>
             </div>
         </nav>
-
         <!-- Hero Section -->
-        <section class="gradient-bg pt-12 pb-20">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Dantų Implantacijos Eiga</h1>
-                <p class="text-xl text-indigo-100 max-w-2xl mx-auto mb-8">
-                    Aiškus ir suprantamas gidas apie tai, kaip atkursime jūsų šypseną.
-                    Nuo pirmos konsultacijos iki galutinio rezultato.
+        <section class="gradient-bg pt-12 pb-20 relative overflow-hidden">
+            <!-- Background elements -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white opacity-5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-60 h-60 bg-white opacity-5 rounded-full blur-3xl">
+            </div>
+
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Dantų Implantacijos Eiga: Žingsnis po
+                    Žingsnio</h1>
+                <p class="text-xl text-indigo-100 max-w-2xl mx-auto mb-8 leading-relaxed">
+                    Grąžiname Jums gyvenimo kokybę ir pasitikėjimą savimi. Sužinokite, kaip paprastai ir saugiai vyks
+                    Jūsų šypsenos atkūrimo kelionė.
                 </p>
-                <div class="flex justify-center gap-4">
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="../booking.html?service=implantacija"
-                        class="bg-white text-indigo-500 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition transform hover:scale-105">
+                        class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition transform hover:scale-105 shadow-xl">
                         <i class="fas fa-calendar-check mr-2"></i> Pradėti Kelionę
                     </a>
                 </div>
             </div>
         </section>
+        <!-- Introduction -->
+        <section class="py-12 bg-white border-b border-gray-100">
+            <div class="container mx-auto px-4 text-center max-w-3xl">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Kodėl verta žinoti eigą?</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Daugeliui pacientų nežinomybė kelia baimę. Tačiau šiuolaikinė implantacija yra rutininė, tiksliai
+                    planuojama ir visiškai neskausminga procedūra. Štai ką patirsite mūsų klinikoje:
+                </p>
+            </div>
+        </section>
 
         <!-- Timeline -->
-        <section class="py-16 bg-white">
+        <section class="py-16 bg-gray-50">
             <div class="container mx-auto px-4 max-w-4xl">
                 <div class="space-y-12">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-100 hidden md:block"
+                        style="z-index: 0;"></div>
                     <!-- Step 1 -->
-                    <div class="step-item relative flex gap-8">
-                        <div class="step-connector md:block hidden"></div>
-                        <div class="flex-shrink-0 z-10">
+                    <div class="step-item relative flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-shrink-0 z-10 mx-auto md:mx-0">
                             <div
-                                class="w-16 h-16 bg-indigo-500 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
+                                class="w-16 h-16 step-number text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
                                 1
                             </div>
                         </div>
-                        <div class="flex-grow pt-2">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Konsultacija ir Diagnostika</h3>
-                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                                <p class="text-gray-600 mb-4">
-                                    Pirmasis vizitas skirtas jūsų situacijos įvertinimui. Atliekama panoraminė nuotrauka
-                                    arba 3D kompiuterinė tomografija,
-                                    kad gydytojas matytų kaulo būklę.
-                                </p>
-                                <ul class="space-y-2 text-sm text-gray-700">
-                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                        Burnos
-                                        būklės įvertinimas</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                        Gydymo
-                                        plano sudarymas</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>
-                                        Tikslios
-                                        kainos paskaičiavimas</li>
-                                </ul>
+                        <div
+                            class="flex-grow pt-2 text-center md:text-left bg-white p-6 rounded-xl shadow-md z-10 w-full">
+                            <h3
+                                class="text-2xl font-bold text-gray-800 mb-3 flex items-center justify-center md:justify-start">
+                                <i class="fas fa-comments text-indigo-500 mr-3"></i> Konsultacija ir Planas
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Viskas prasideda nuo nuoširdaus pokalbio. Gydytojas išklausys Jūsų lūkesčius, atliks 3D
+                                kompiuterinę tomografiją (būtina tiksliam planavimui) ir įvertins kaulo būklę.
+                            </p>
+                            <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100 text-sm text-indigo-800">
+                                <strong>Rezultatas:</strong> Sudarytas tikslus gydymo planas, parinkti implantai, aiški
+                                kaina ir suplanuoti vizitai. Jokių paslėptų mokesčių.
                             </div>
                         </div>
                     </div>
-
                     <!-- Step 2 -->
-                    <div class="step-item relative flex gap-8">
-                        <div class="step-connector md:block hidden"></div>
-                        <div class="flex-shrink-0 z-10">
+                    <div class="step-item relative flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-shrink-0 z-10 mx-auto md:mx-0">
                             <div
-                                class="w-16 h-16 bg-indigo-500 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
+                                class="w-16 h-16 step-number text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
                                 2
                             </div>
                         </div>
-                        <div class="flex-grow pt-2">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Chirurginė Procedūra</h3>
-                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                                <p class="text-gray-600 mb-4">
-                                    Implanto sriegimas. Procedūra atliekama su vietine nejautra, todėl yra visiškai
-                                    neskausminga.
-                                    Trunka apie 30-60 minučių vienam implantui.
-                                </p>
-                                <div class="bg-yellow-50 p-3 rounded-lg text-sm text-yellow-800 mb-2">
-                                    <i class="fas fa-info-circle mr-2"></i> Jei reikia kaulo priauginimo, jis dažnai
-                                    atliekamas šio vizito metu.
-                                </div>
-                            </div>
+                        <div
+                            class="flex-grow pt-2 text-center md:text-left bg-white p-6 rounded-xl shadow-md z-10 w-full">
+                            <h3
+                                class="text-2xl font-bold text-gray-800 mb-3 flex items-center justify-center md:justify-start">
+                                <i class="fas fa-procedures text-indigo-500 mr-3"></i> Implantacija (Operacija)
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Tai dažniausiai užtrunka trumpiau nei danties plombavimas! Su vietine nejautra implantas
+                                įsriegiamas į kaulą. Jūs jausite tik lengvą spaudimą, jokio skausmo.
+                            </p>
+                            <ul class="text-left text-gray-600 text-sm space-y-2 mb-4">
+                                <li class="flex items-center"><i class="fas fa-clock text-green-500 mr-2"></i> Trukmė:
+                                    20-40 min. vienam implantui</li>
+                                <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Jei
+                                    reikia, iškart uždedamas laikinas dantis</li>
+                            </ul>
                         </div>
                     </div>
-
                     <!-- Step 3 -->
-                    <div class="step-item relative flex gap-8">
-                        <div class="step-connector md:block hidden"></div>
-                        <div class="flex-shrink-0 z-10">
+                    <div class="step-item relative flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-shrink-0 z-10 mx-auto md:mx-0">
                             <div
-                                class="w-16 h-16 bg-indigo-500 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
+                                class="w-16 h-16 step-number text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
                                 3
                             </div>
                         </div>
-                        <div class="flex-grow pt-2">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Gijimo Laikotarpis</h3>
-                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                                <p class="text-gray-600 mb-4">
-                                    Svarbiausias etapas – osteointegracija (implanto suaugimas su kaulu).
-                                    Tai trunka 3-4 mėnesius apatiniame žandikaulyje ir 4-6 mėnesius viršutiniame.
-                                </p>
-                                <p class="text-gray-600 text-sm">
-                                    Šiuo laikotarpiu galite nešioti laikiną dantį, kad nesijaustumėte nepatogiai dėl
-                                    estetinio vaizdo.
-                                </p>
+                        <div
+                            class="flex-grow pt-2 text-center md:text-left bg-white p-6 rounded-xl shadow-md z-10 w-full">
+                            <h3
+                                class="text-2xl font-bold text-gray-800 mb-3 flex items-center justify-center md:justify-start">
+                                <i class="fas fa-hourglass-half text-indigo-500 mr-3"></i> Prigijimas (Osteointegracija)
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Implantas turi "susidraugauti" su Jūsų organizmu. Tai biologinis procesas, kurio metu
+                                kaulas apauga implantą.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div class="bg-gray-100 p-3 rounded-lg text-center">
+                                    <span class="block font-bold text-gray-800">Apatinis žandikaulis</span>
+                                    <span class="text-gray-600">2-3 mėnesiai</span>
+                                </div>
+                                <div class="bg-gray-100 p-3 rounded-lg text-center">
+                                    <span class="block font-bold text-gray-800">Viršutinis žandikaulis</span>
+                                    <span class="text-gray-600">3-5 mėnesiai</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                     <!-- Step 4 -->
-                    <div class="step-item relative flex gap-8">
-                        <div class="step-connector md:block hidden"></div>
-                        <div class="flex-shrink-0 z-10">
+                    <div class="step-item relative flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-shrink-0 z-10 mx-auto md:mx-0">
                             <div
-                                class="w-16 h-16 bg-indigo-500 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
+                                class="w-16 h-16 step-number text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
                                 4
                             </div>
                         </div>
-                        <div class="flex-grow pt-2">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Gijimo Galvutės Formavimas</h3>
-                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                                <p class="text-gray-600 mb-4">
-                                    Trumpa procedūra, kurios metu atidengiama implanto viršūnė ir užsukama gijimo
-                                    galvutė.
-                                    Ji suformuoja gražų dantenų kontūrą aplink būsimą dantį. Trunka apie 2 savaites.
-                                </p>
+                        <div
+                            class="flex-grow pt-2 text-center md:text-left bg-white p-6 rounded-xl shadow-md z-10 w-full">
+                            <h3
+                                class="text-2xl font-bold text-gray-800 mb-3 flex items-center justify-center md:justify-start">
+                                <i class="fas fa-gum text-indigo-500 mr-3"></i> Gijimo Galvutė
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Maža tarpinė procedūra. Atidengiame implantą ir užsukame gijimo galvutę, kuri suformuos
+                                gražų, natūralų dantenų kontūrą aplink būsimą dantį.
+                            </p>
+                            <p class="text-gray-500 text-sm"><i>Trukmė: apie 2 savaites.</i></p>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="step-item relative flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-shrink-0 z-10 mx-auto md:mx-0">
+                            <div
+                                class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white transform scale-110">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-grow pt-2 text-center md:text-left bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl shadow-md border border-green-100 z-10 w-full">
+                            <h3
+                                class="text-2xl font-bold text-gray-800 mb-3 flex items-center justify-center md:justify-start">
+                                <i class="fas fa-crown text-green-600 mr-3"></i> Protezavimas (Karūnėlė)
+                            </h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Finalas! Nuimami atspaudai (arba skenuojama skaitmeniniu būdu) ir laboratorijoje
+                                pagaminamas individualus cirkonio keramikos dantis. Jis idealiai tinka Jūsų sąkandžiui
+                                ir spalvai.
+                            </p>
+                            <div class="text-center mt-4">
+                                <span
+                                    class="inline-block bg-white text-green-700 px-6 py-2 rounded-full font-bold text-sm shadow-sm border border-green-200">
+                                    Jūs vėl galite drąsiai šypsotis ir kramtyti! (Obuolys nebe bėda!)
+                                </span>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Step 5 -->
-                    <div class="step-item relative flex gap-8">
-                        <div class="flex-shrink-0 z-10">
-                            <div
-                                class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg border-4 border-white">
-                                5
-                            </div>
+        <!-- About Clinic / Why Us -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8">Kodėl rinktis LamaLocal?</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="p-6 bg-gray-50 rounded-xl">
+                            <i class="fas fa-user-md text-indigo-600 text-4xl mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2">Patirtis</h3>
+                            <p class="text-gray-600 text-sm">Mūsų chirurgai atliko tūkstančius sėkmingų implantacijų.
+                            </p>
                         </div>
-                        <div class="flex-grow pt-2">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Protezavimas</h3>
-                            <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                                <p class="text-gray-600 mb-4">
-                                    Finalinis etapas. Nuimami atspaudai, laboratorijoje pagaminamas individualus
-                                    vainikėlis
-                                    (dantis)
-                                    ir jis pritvirtinamas ant implanto.
-                                </p>
-                                <div class="text-center mt-4">
-                                    <span
-                                        class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full font-semibold text-sm">
-                                        <i class="fas fa-smile mr-2"></i> Rezultatas: Nauja, tobula šypsena!
-                                    </span>
-                                </div>
-                            </div>
+                        <div class="p-6 bg-gray-50 rounded-xl">
+                            <i class="fas fa-laptop-medical text-indigo-600 text-4xl mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2">3D Planavimas</h3>
+                            <p class="text-gray-600 text-sm">Naudojame skaitmenines technologijas, kad išvengtume
+                                netikėtumų.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-xl">
+                            <i class="fas fa-hand-holding-heart text-indigo-600 text-4xl mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2">Garantija</h3>
+                            <p class="text-gray-600 text-sm">Suteikiame garantiją implantams ir protezavimo darbams.</p>
                         </div>
                     </div>
                 </div>
@@ -300,49 +345,61 @@
         <!-- FAQ -->
         <section class="py-16 bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Klausimai apie eigą</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Klausimai apie implantaciją</h2>
                 <div class="max-w-3xl mx-auto space-y-4">
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
-                        <h3 class="font-bold text-gray-800 mb-2">Ar visu gijimo laikotarpiu būsiu be danties?</h3>
-                        <p class="text-gray-600">
-                            Tikrai ne. Jei implantas sriegiamas estetinėje zonoje (priekyje), visada pagaminamas
-                            laikinas
-                            dantis,
-                            kad galėtumėte drąsiai šypsotis gijimo metu.
+                    <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition">
+                        <button class="w-full text-left flex justify-between items-center group">
+                            <h3 class="font-bold text-gray-800 group-hover:text-indigo-600 transition">Ar implantas gali
+                                neprigyti?</h3>
+                        </button>
+                        <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                            Šiuolaikinėje medicinoje implantų prigijimo rodiklis siekia 98-99%. Tai viena sėkmingiausių
+                            procedūrų. Tačiau, rūkymas ar nekontroliuojamas diabetas gali padidinti riziką.
                         </p>
                     </div>
-                    <div class="bg-white rounded-lg p-6 shadow-sm">
-                        <h3 class="font-bold text-gray-800 mb-2">Ar reikia nedarbingumo po operacijos?</h3>
-                        <p class="text-gray-600">
-                            Dažniausiai pacientai į darbą grįžta jau kitą dieną. Po sudėtingesnių operacijų (pvz., viso
-                            žandikaulio)
-                            rekomenduojame 2-3 dienas pailsėti.
+                    <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition">
+                        <button class="w-full text-left flex justify-between items-center group">
+                            <h3 class="font-bold text-gray-800 group-hover:text-indigo-600 transition">Kiek laiko
+                                tarnauja implantai?</h3>
+                        </button>
+                        <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                            Tinkamai prižiūrimi (reguliari higiena, vizitai pas gydytoją), implantai gali tarnauti visą
+                            gyvenimą.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition">
+                        <button class="w-full text-left flex justify-between items-center group">
+                            <h3 class="font-bold text-gray-800 group-hover:text-indigo-600 transition">Ar tai
+                                skausminga?</h3>
+                        </button>
+                        <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                            Dauguma pacientų sako, kad danties rovimas buvo nemalonesnis nei implantacija. Po operacijos
+                            diskomfortas minimalus ir lengvai malšinamas įprastais vaistais.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- CTA -->
         <section class="py-16 bg-indigo-600 text-white text-center">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-4">Pasiruošę pirmajam žingsniui?</h2>
-                <p class="text-xl text-indigo-100 mb-8">Užsiregistruokite konsultacijai ir mes sudarysime jūsų asmeninį
-                    gydymo planą.</p>
+                <h2 class="text-3xl font-bold mb-4">Ženkite pirmą žingsnį šiandien</h2>
+                <p class="text-xl text-indigo-100 mb-8">Užsiregistruokite konsultacijai ir sužinokite savo galimybes.
+                </p>
                 <a href="../booking.html"
-                    class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition">
+                    class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition shadow-xl inline-block">
                     Registruotis Konsultacijai
                 </a>
             </div>
         </section>
     </div>
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h4 class="text-white text-lg font-bold mb-4">Švytintys Dantys</h4>
+                    <h4 class="text-white text-lg font-bold mb-4">LamaLocal</h4>
+                    <img src="../logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto mb-4 bg-white rounded p-1">
                     <p class="text-sm">Profesionali odontologijos klinika Vilniuje. Rūpinamės jūsų šypsena su meile ir
                         profesionalumu.</p>
                 </div>
@@ -360,9 +417,10 @@
                 <div>
                     <h4 class="text-white text-lg font-bold mb-4">Kontaktai</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, Vilnius</li>
-                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
-                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Arsenalo g. 1, Vilnius, 01143 Vilniaus m. sav.
+                        </li>
+                        <li><i class="fas fa-phone mr-2"></i> +37064195947</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@lamalocal.com</li>
                     </ul>
                 </div>
                 <div>
@@ -375,16 +433,14 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-                <p>&copy; 2024 Švytintys Dantys. Visos teisės saugomos.</p>
+                <p>&copy; 2024 LamaLocal. Visos teisės saugomos.</p>
             </div>
         </div>
     </footer>
-
     <script>
         // Mobile menu toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });

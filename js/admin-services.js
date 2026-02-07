@@ -1,10 +1,8 @@
 const ADMIN_PASSWORD = "admin";
-
 document.addEventListener('DOMContentLoaded', () => {
     injectAdminUI();
     loadContent();
 });
-
 function injectAdminUI() {
     // 1. Inject Login Modal
     const modalHtml = `
@@ -37,7 +35,6 @@ function injectAdminUI() {
         </div>
     </div>`;
     document.body.insertAdjacentHTML('beforeend', modalHtml);
-
     // 2. Inject Admin Toolbar (Hidden by default)
     const toolbarHtml = `
     <div id="admin-toolbar" class="fixed bottom-0 left-0 w-full bg-gray-900 text-white p-4 z-[99] hidden shadow-lg border-t-4 border-blue-500">
@@ -57,7 +54,6 @@ function injectAdminUI() {
         </div>
     </div>`;
     document.body.insertAdjacentHTML('beforeend', toolbarHtml);
-
     // 3. Inject Lock Icon in Footer
     // We look for the copyright text or just append to footer if found
     const footer = document.querySelector('footer');
@@ -67,7 +63,6 @@ function injectAdminUI() {
         lockBtn.className = 'fixed bottom-4 right-4 text-gray-400 hover:text-gray-600 bg-white p-2 rounded-full shadow-md z-50 opacity-50 hover:opacity-100 transition';
         lockBtn.innerHTML = '<i class="fas fa-lock"></i>';
         document.body.appendChild(lockBtn); // Append to body to be fixed position
-
         // Event Listeners
         const adminLoginModal = document.getElementById('admin-login-modal');
         const closeLoginBtn = document.getElementById('close-login-btn');
@@ -76,7 +71,6 @@ function injectAdminUI() {
         const adminToolbar = document.getElementById('admin-toolbar');
         const logoutBtn = document.getElementById('logout-btn');
         const saveContentBtn = document.getElementById('save-content-btn');
-
         lockBtn.addEventListener('click', () => {
             if (localStorage.getItem('isLoggedIn') === 'true') {
                 enableEditing();
@@ -85,12 +79,10 @@ function injectAdminUI() {
                 adminLoginModal.classList.add('flex');
             }
         });
-
         closeLoginBtn.addEventListener('click', () => {
             adminLoginModal.classList.add('hidden');
             adminLoginModal.classList.remove('flex');
         });
-
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const password = document.getElementById('password').value;
@@ -104,64 +96,52 @@ function injectAdminUI() {
                 loginError.classList.remove('hidden');
             }
         });
-
         logoutBtn.addEventListener('click', () => {
             localStorage.removeItem('isLoggedIn');
             disableEditing();
             window.location.reload();
         });
-
         saveContentBtn.addEventListener('click', () => {
             saveContent();
             alert('Pakeitimai išsaugoti!');
         });
-
         // Auto-login check
         if (localStorage.getItem('isLoggedIn') === 'true') {
             enableEditing();
         }
     }
 }
-
 function enableEditing() {
     const content = document.getElementById('page-content');
     const toolbar = document.getElementById('admin-toolbar');
-
     if (content) {
         content.contentEditable = "true";
         content.classList.add('outline-dashed', 'outline-2', 'outline-blue-500', 'p-1');
     }
-
     if (toolbar) {
         toolbar.classList.remove('hidden');
     }
 }
-
 function disableEditing() {
     const content = document.getElementById('page-content');
     const toolbar = document.getElementById('admin-toolbar');
-
     if (content) {
         content.contentEditable = "false";
         content.classList.remove('outline-dashed', 'outline-2', 'outline-blue-500', 'p-1');
     }
-
     if (toolbar) {
         toolbar.classList.add('hidden');
     }
 }
-
 function getKey() {
     return 'page_content_' + window.location.pathname;
 }
-
 function saveContent() {
     const content = document.getElementById('page-content');
     if (content) {
         localStorage.setItem(getKey(), content.innerHTML);
     }
 }
-
 function loadContent() {
     const savedContent = localStorage.getItem(getKey());
     const content = document.getElementById('page-content');

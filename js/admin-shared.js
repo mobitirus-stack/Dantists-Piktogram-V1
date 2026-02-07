@@ -1,5 +1,4 @@
 const ADMIN_PASSWORD = "admin";
-
 /**
  * Shared Admin Utilities
  */
@@ -8,7 +7,6 @@ const AdminShared = {
     isLoggedIn: function () {
         return localStorage.getItem('isLoggedIn') === 'true';
     },
-
     // Login function
     login: function (password) {
         if (password === ADMIN_PASSWORD) {
@@ -17,17 +15,14 @@ const AdminShared = {
         }
         return false;
     },
-
     // Logout function
     logout: function () {
         localStorage.removeItem('isLoggedIn');
         window.location.reload();
     },
-
     // Inject Login Modal into the DOM
     injectLoginModal: function () {
         if (document.getElementById('admin-login-modal')) return;
-
         const modalHtml = `
         <div id="admin-login-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[100]">
             <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md relative">
@@ -58,18 +53,15 @@ const AdminShared = {
             </div>
         </div>`;
         document.body.insertAdjacentHTML('beforeend', modalHtml);
-
         // Event Listeners for Modal
         const modal = document.getElementById('admin-login-modal');
         const closeBtn = document.getElementById('close-login-btn');
         const form = document.getElementById('login-form');
         const errorMsg = document.getElementById('login-error');
-
         closeBtn.addEventListener('click', () => {
             modal.classList.add('hidden');
             modal.classList.remove('flex');
         });
-
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const password = document.getElementById('password').value;
@@ -85,17 +77,14 @@ const AdminShared = {
             }
         });
     },
-
     // Inject Admin Trigger Button (Lock Icon)
     injectAdminTrigger: function () {
         if (document.getElementById('admin-trigger-btn')) return;
-
         const btn = document.createElement('button');
         btn.id = 'admin-trigger-btn';
         btn.className = 'fixed bottom-4 right-4 text-gray-400 hover:text-gray-600 bg-white p-2 rounded-full shadow-md z-50 opacity-50 hover:opacity-100 transition';
         btn.innerHTML = '<i class="fas fa-lock"></i>';
         document.body.appendChild(btn);
-
         btn.addEventListener('click', () => {
             if (this.isLoggedIn()) {
                 // If already logged in, maybe scroll to admin panel or show toolbar
@@ -108,14 +97,12 @@ const AdminShared = {
             }
         });
     },
-
     // Initialize
     init: function () {
         this.injectLoginModal();
         this.injectAdminTrigger();
     }
 };
-
 // Auto-init on load
 document.addEventListener('DOMContentLoaded', () => {
     AdminShared.init();

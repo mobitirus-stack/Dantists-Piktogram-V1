@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="lt">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seminarų Administravimas - Švytintys dantys</title>
+    <title>Seminarų Administravimas - LamaLocal</title>
     <meta name="robots" content="noindex, nofollow">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,9 +13,7 @@
         }
     </style>
 </head>
-
 <body class="bg-gray-100 min-h-screen">
-
     <!-- Login Section -->
     <div id="login-section" class="flex items-center justify-center min-h-screen">
         <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md">
@@ -43,14 +40,13 @@
             </form>
         </div>
     </div>
-
     <!-- Admin Dashboard -->
     <div id="admin-dashboard" class="hidden">
         <!-- Navbar -->
         <nav class="bg-white shadow-md mb-8">
             <div class="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
+                    <img src="logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
                     <span class="text-xl font-bold text-gray-800">Admin panelė</span>
                 </div>
                 <button id="logout-btn" class="text-red-500 hover:text-red-700 font-semibold">
@@ -58,7 +54,6 @@
                 </button>
             </div>
         </nav>
-
         <div class="container mx-auto px-4 pb-12">
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- Form Column -->
@@ -69,19 +64,16 @@
                         </h3>
                         <form id="seminar-form" class="space-y-4">
                             <input type="hidden" id="seminar-id">
-
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Pavadinimas</label>
                                 <input type="text" id="title" required
                                     class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                             </div>
-
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Aprašymas</label>
                                 <textarea id="description" rows="3" required
                                     class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
                             </div>
-
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Data</label>
@@ -94,19 +86,16 @@
                                         class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                                 </div>
                             </div>
-
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Vieta</label>
                                 <input type="text" id="location" placeholder="Pvz: Vilnius" required
                                     class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                             </div>
-
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Lektorius</label>
                                 <input type="text" id="lecturer" required
                                     class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                             </div>
-
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Kaina (€)</label>
@@ -120,7 +109,6 @@
                                         class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                                 </div>
                             </div>
-
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Statusas</label>
                                 <select id="status"
@@ -129,7 +117,6 @@
                                     <option value="past">Įvykęs</option>
                                 </select>
                             </div>
-
                             <div class="flex gap-2 pt-4">
                                 <button type="submit"
                                     class="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
@@ -143,7 +130,6 @@
                         </form>
                     </div>
                 </div>
-
                 <!-- List Column -->
                 <div class="lg:col-span-2">
                     <div class="bg-white rounded-xl shadow-lg p-6">
@@ -153,7 +139,6 @@
                             <span class="text-sm font-normal text-gray-500 bg-gray-100 px-3 py-1 rounded-full"
                                 id="seminar-count">0 seminarai</span>
                         </h3>
-
                         <div id="seminars-list" class="space-y-4">
                             <!-- Seminars will be injected here -->
                             <div class="text-center text-gray-500 py-8">
@@ -165,7 +150,6 @@
             </div>
         </div>
     </div>
-
     <script>
         // --- Auth Logic ---
         const loginSection = document.getElementById('login-section');
@@ -173,10 +157,8 @@
         const loginForm = document.getElementById('login-form');
         const loginError = document.getElementById('login-error');
         const logoutBtn = document.getElementById('logout-btn');
-
         // Simple hardcoded password for demo purposes
         const ADMIN_PASSWORD = "admin";
-
         function checkAuth() {
             if (localStorage.getItem('isLoggedIn') === 'true') {
                 loginSection.classList.add('hidden');
@@ -187,7 +169,6 @@
                 adminDashboard.classList.add('hidden');
             }
         }
-
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const password = document.getElementById('password').value;
@@ -199,17 +180,14 @@
                 loginError.classList.remove('hidden');
             }
         });
-
         logoutBtn.addEventListener('click', () => {
             localStorage.removeItem('isLoggedIn');
             checkAuth();
         });
-
         // --- CRUD Logic ---
         const seminarForm = document.getElementById('seminar-form');
         const seminarsList = document.getElementById('seminars-list');
         const resetBtn = document.getElementById('reset-btn');
-
         // Load seminars from localStorage or initialize with default data
         const defaultSeminars = [
             {
@@ -268,27 +246,21 @@
                 status: 'past'
             }
         ];
-
         if (!localStorage.getItem('seminarsData')) {
             localStorage.setItem('seminarsData', JSON.stringify(defaultSeminars));
         }
-
         let seminars = JSON.parse(localStorage.getItem('seminarsData'));
-
         function saveSeminars() {
             localStorage.setItem('seminarsData', JSON.stringify(seminars));
             renderSeminars();
         }
-
         function renderSeminars() {
             const countSpan = document.getElementById('seminar-count');
             countSpan.textContent = `${seminars.length} seminarai`;
-
             if (seminars.length === 0) {
                 seminarsList.innerHTML = '<div class="text-center text-gray-500 py-8">Nėra pridėtų seminarų.</div>';
                 return;
             }
-
             seminarsList.innerHTML = seminars.map((seminar, index) => `
                 <div class="border rounded-lg p-4 hover:shadow-md transition bg-gray-50 relative group">
                     <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition">
@@ -317,10 +289,8 @@
                 </div>
             `).join('');
         }
-
         seminarForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
             const id = document.getElementById('seminar-id').value;
             const newSeminar = {
                 title: document.getElementById('title').value,
@@ -333,7 +303,6 @@
                 certification: document.getElementById('certification').value,
                 status: document.getElementById('status').value
             };
-
             if (id) {
                 // Edit
                 seminars[parseInt(id)] = newSeminar;
@@ -341,11 +310,9 @@
                 // Add
                 seminars.unshift(newSeminar); // Add to top
             }
-
             saveSeminars();
             resetForm();
         });
-
         window.editSeminar = (index) => {
             const seminar = seminars[index];
             document.getElementById('seminar-id').value = index;
@@ -358,29 +325,22 @@
             document.getElementById('price').value = seminar.price;
             document.getElementById('certification').value = seminar.certification;
             document.getElementById('status').value = seminar.status;
-
             // Scroll to form
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
-
         window.deleteSeminar = (index) => {
             if (confirm('Ar tikrai norite ištrinti šį seminarą?')) {
                 seminars.splice(index, 1);
                 saveSeminars();
             }
         };
-
         function resetForm() {
             seminarForm.reset();
             document.getElementById('seminar-id').value = '';
         }
-
         resetBtn.addEventListener('click', resetForm);
-
         // Init
         checkAuth();
-
     </script>
 </body>
-
 </html>

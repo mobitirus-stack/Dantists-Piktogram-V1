@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="lt">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sveikatos Draudimas | Švytintys dantys</title>
+    <title>Sveikatos Draudimas | LamaLocal</title>
     <meta name="description"
-        content="Švytintys dantys - bendradarbiaujame su visomis pagrindinėmis draudimo kompanijomis (PZU, ERGO, Compensa, If). Gaukite kokybišką odontologijos priežiūrą pagal jūsų sveikatos draudimo sutartį. Registruokitės dabar!">
+        content="LamaLocal - bendradarbiaujame su visomis pagrindinėmis draudimo kompanijomis (PZU, ERGO, Compensa, If). Gaukite kokybišką odontologijos priežiūrą pagal jūsų sveikatos draudimo sutartį. Registruokitės dabar!">
     <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,59 +13,41 @@
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-
         .service-card {
             transition: all 0.3s ease;
         }
-
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
-
-    <!-- Hreflang Tags -->
-    <link rel="alternate" hreflang="x-default" href="https://svytintysdantys.lt/sveikatos-draudimas.html" />
-    <link rel="alternate" hreflang="lt" href="https://svytintysdantys.lt/sveikatos-draudimas.html" />
-    <link rel="alternate" hreflang="en" href="https://svytintysdantys.lt/en/sveikatos-draudimas.html" />
-    <link rel="alternate" hreflang="ru" href="https://svytintysdantys.lt/ru/strahovanie.html" />
-</head>
-
+    </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <i class="fas fa-tooth text-blue-500 text-2xl"></i>
-                    <span class="text-xl font-bold text-gray-800">Švytintys Dantys</span>
+                    <img src="logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
+                    
                 </a>
-
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
                     <a href="services.html" class="text-gray-700 hover:text-blue-500 transition">Paslaugos</a>
                     <a href="doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
-                    <a href="seminarai.html" class="text-gray-700 hover:text-blue-500 transition">Seminarai</a>
+                    
                     <a href="booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
                     <a href="contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
-
-                    <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden mx-4">
-                        <span class="px-3 py-1.5 text-sm font-semibold bg-blue-500 text-white cursor-default">LT</span>
-                        <a href="en/sveikatos-draudimas.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
-                        <a href="ru/strahovanie.html" class="px-3 py-1.5 text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
-                    </div>
-
+                    
                     <a href="contact.html"
                         class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
                         Susisiekite
                     </a>
                 </div>
-
                 <!-- Mobile Call & Menu Buttons -->
                 <div class="md:hidden flex items-center space-x-3">
-                    <a href="tel:+37069928622"
+                    <a href="tel:+37064195947"
                         class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
                         <i class="fas fa-phone"></i>
                         <span class="font-semibold">Skambinti</span>
@@ -76,23 +57,15 @@
                     </button>
                 </div>
             </div>
-
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-500">Pradžia</a>
                 <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-500">Paslaugos</a>
                 <a href="doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Gydytojai</a>
-                <a href="seminarai.html" class="block py-2 text-gray-700 hover:text-blue-500">Seminarai</a>
+                
                 <a href="booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
                 <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
-
-                <!-- Mobile Language Switcher -->
-                <div class="mt-4 mb-2 flex items-center space-x-1 border border-gray-300 rounded-lg overflow-hidden">
-                    <span class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-blue-500 text-white">LT</span>
-                    <a href="en/sveikatos-draudimas.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">EN</a>
-                    <a href="ru/strahovanie.html" class="flex-1 px-3 py-2 text-center text-sm font-semibold bg-white text-gray-600 hover:bg-gray-100 transition">RU</a>
-                </div>
-
+                
                 <a href="contact.html"
                     class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 block text-center">
                     Susisiekite
@@ -100,7 +73,6 @@
             </div>
         </div>
     </nav>
-
     <!-- Hero Section -->
     <section class="gradient-bg pt-20 pb-16">
         <div class="container mx-auto px-4">
@@ -117,7 +89,7 @@
                             class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
                             <i class="fas fa-calendar-alt mr-2"></i>Registruotis konsultacijai
                         </a>
-                        <a href="tel:+37069928622"
+                        <a href="tel:+37064195947"
                             class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
                             <i class="fas fa-phone mr-2"></i>Skambinti dabar
                         </a>
@@ -130,7 +102,6 @@
             </div>
         </div>
     </section>
-
     <!-- Supported Insurance Companies -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
@@ -139,47 +110,39 @@
                 </h2>
                 <p class="text-lg text-gray-600">Dirbame su pirmaujančiomis Lietuvos draudimo kompanijomis</p>
             </div>
-
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
                 <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
                     <img src="Photos/Draudimas logo/Ergo.webp" alt="ERGO" class="h-12 mx-auto mb-3 object-contain">
                     <h3 class="text-sm font-semibold mb-2">ERGO</h3>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
                     <img src="Photos/Draudimas logo/PZU.webp" alt="PZU" class="h-12 mx-auto mb-3 object-contain">
                     <h3 class="text-sm font-semibold mb-2">PZU</h3>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
                     <img src="Photos/Draudimas logo/Gjensidige_Main-Logo-Alternative_Digital_Blue.webp" alt="Gjensidige"
                         class="h-12 mx-auto mb-3 object-contain">
                     <h3 class="text-sm font-semibold mb-2">Gjensidige</h3>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
                     <img src="Photos/Draudimas logo/BTA draudimas.webp" alt="BTA"
                         class="h-12 mx-auto mb-3 object-contain">
                     <h3 class="text-sm font-semibold mb-2">BTA</h3>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
                     <img src="Photos/Draudimas logo/Seesam.webp" alt="Seesam" class="h-12 mx-auto mb-3 object-contain">
                     <h3 class="text-sm font-semibold mb-2">Seesam</h3>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
                     <img src="Photos/Draudimas logo/Lietuvos draudimas.webp" alt="Lietuvos draudimas"
                         class="h-12 mx-auto mb-3 object-contain">
                     <h3 class="text-sm font-semibold mb-2">Lietuvos draudimas</h3>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
                     <img src="Photos/Draudimas logo/compen.webp" alt="Compensa"
                         class="h-12 mx-auto mb-3 object-contain">
                     <h3 class="text-sm font-semibold mb-2">Compensa</h3>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-xl shadow-lg text-center">
                     <img src="Photos/Draudimas logo/if.webp" alt="If" class="h-12 mx-auto mb-3 object-contain">
                     <h3 class="text-sm font-semibold mb-2">If</h3>
@@ -187,8 +150,6 @@
             </div>
         </div>
     </section>
-
-
     <!-- Covered Services -->
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
@@ -196,7 +157,6 @@
                 <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Draudimu dengiamos paslaugos</h2>
                 <p class="text-base text-gray-600">Pagrindinės paslaugos, kurias gali padengti jūsų draudimas</p>
             </div>
-
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <div class="service-card bg-white p-4 rounded-lg shadow text-center">
                     <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
@@ -205,7 +165,6 @@
                     <h3 class="text-xl font-semibold mb-2">Profilaktinis tikrinimas</h3>
                     <p class="text-xs text-gray-600">Reguliarūs odontologo vizitai ir profesionali burnos higiena</p>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-lg shadow text-center">
                     <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
                         <i class="fas fa-tooth text-gray-600 text-lg"></i>
@@ -213,7 +172,6 @@
                     <h3 class="text-xl font-semibold mb-2">Terapinis gydymas</h3>
                     <p class="text-xs text-gray-600">Dantų gydymas, plombavimas ir endodontinis gydymas</p>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-lg shadow text-center">
                     <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
                         <i class="fas fa-child text-gray-600 text-lg"></i>
@@ -221,7 +179,6 @@
                     <h3 class="text-xl font-semibold mb-2">Vaikų odontologija</h3>
                     <p class="text-xs text-gray-600">Pilni vaikų dantų priežiūros ir gydymo sprendimai</p>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-lg shadow text-center">
                     <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
                         <i class="fas fa-x-ray text-gray-600 text-lg"></i>
@@ -229,7 +186,6 @@
                     <h3 class="text-sm font-semibold mb-2">Diagnostika</h3>
                     <p class="text-xs text-gray-600">Rentgeno tyrimai ir moderni diagnostinė įranga</p>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-lg shadow text-center">
                     <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
                         <i class="fas fa-cut text-gray-600 text-lg"></i>
@@ -237,7 +193,6 @@
                     <h3 class="text-xl font-semibold mb-2">Chirurginės paslaugos</h3>
                     <p class="text-xs text-gray-600">Dantų traumos chirurgija ir kitos chirurginės procedūros</p>
                 </div>
-
                 <div class="service-card bg-white p-4 rounded-lg shadow text-center">
                     <div class="bg-gray-100 w-12 h-12 rounded-full flex items-center justify-center mb-3 mx-auto">
                         <i class="fas fa-teeth text-gray-600 text-lg"></i>
@@ -248,7 +203,6 @@
             </div>
         </div>
     </section>
-
     <!-- Important Information -->
     <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
@@ -264,7 +218,6 @@
                         <p class="text-lg text-gray-700">Viskas, ką turite žinoti apie sveikatos draudimo paslaugas mūsų
                             klinikoje</p>
                     </div>
-
                     <div class="space-y-6 text-gray-800">
                         <div class="flex items-start space-x-4">
                             <div class="bg-gray-200 rounded-full p-3 mt-1">
@@ -281,7 +234,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="flex items-start space-x-4">
                             <div class="bg-gray-200 rounded-full p-3 mt-1">
                                 <i class="fas fa-briefcase-medical text-gray-700 text-lg"></i>
@@ -297,7 +249,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="flex items-start space-x-4">
                             <div class="bg-gray-200 rounded-full p-3 mt-1">
                                 <i class="fas fa-wallet text-gray-700 text-lg"></i>
@@ -311,12 +262,11 @@
                                     Rekomenduojame pasikonsultuoti su savo draudimo konsultantu, ar konkrečios Jums
                                     reikalingos paslaugos
                                     bus apmokėtos pagal Jūsų draudimo sutartį.
-                                    <strong class="text-gray-900">„Švytintys dantys" neatsako už draudimo bendrovių
+                                    <strong class="text-gray-900">„LamaLocal" neatsako už draudimo bendrovių
                                         sprendimus neapmokėti už suteiktas paslaugas.</strong>
                                 </p>
                             </div>
                         </div>
-
                         <div class="flex items-start space-x-4">
                             <div class="bg-gray-200 rounded-full p-3 mt-1">
                                 <i class="fas fa-handshake text-gray-700 text-lg"></i>
@@ -335,12 +285,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
@@ -348,7 +296,6 @@
                 <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Dažniausiai užduodami klausimai</h2>
                 <p class="text-lg text-gray-600">Atsakymai į populiariausius klausimus apie sveikatos draudimą</p>
             </div>
-
             <div class="max-w-3xl mx-auto">
                 <div class="space-y-4">
                     <div class="bg-white rounded-lg shadow-md">
@@ -363,7 +310,6 @@
                                 jums pasirinkti tinkamiausią variantą pagal jūsų poreikius ir biudžetą.</p>
                         </div>
                     </div>
-
                     <div class="bg-white rounded-lg shadow-md">
                         <button class="w-full text-left p-6 focus:outline-none focus:bg-gray-50">
                             <div class="flex justify-between items-center">
@@ -376,7 +322,6 @@
                                 paslaugas. Estetinės paslaugos gali būti apmokamos iš savo lėšų.</p>
                         </div>
                     </div>
-
                     <div class="bg-white rounded-lg shadow-md">
                         <button class="w-full text-left p-6 focus:outline-none focus:bg-gray-50">
                             <div class="flex justify-between items-center">
@@ -398,7 +343,6 @@
             </div>
         </div>
     </section>
-
     <!-- CTA Section -->
     <section class="py-16 gradient-bg">
         <div class="container mx-auto px-4 text-center">
@@ -407,34 +351,32 @@
                     class="bg-white text-blue-500 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition transform hover:scale-105">
                     <i class="fas fa-calendar-plus mr-2"></i> Registruotis konsultacijai
                 </a>
-                <a href="tel:+37069928622"
+                <a href="tel:+37064195947"
                     class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-500 transition">
                     <i class="fas fa-phone mr-2"></i> Skambinti dabar
                 </a>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <i class="fas fa-tooth text-2xl text-blue-400"></i>
-                        <span class="text-xl font-bold">Švytintys Dantys</span>
+                        <img src="logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold">LamaLocal</span>
                     </a>
                     <p class="text-gray-400">Teikiame kokybišką odontologijos priežiūrą daugiau nei 26 metus. Jūsų
                         šypsenos priežiūra nuo 1999.</p>
                     <div class="flex space-x-4 mt-4">
-                        <a href="https://www.facebook.com/klinika.svytintys.dantys"
+                        <a href="https://www.facebook.com/profile.php?id=61586058251633"
                             class="text-gray-400 hover:text-blue-400"><i class="fab fa-facebook text-xl"></i></a>
                         <a href="https://www.instagram.com/sveiki_dantys" class="text-gray-400 hover:text-blue-400"><i
                                 class="fab fa-instagram text-xl"></i></a>
                         <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
                     </div>
                 </div>
-
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
                     <ul class="space-y-1 text-gray-400 text-sm">
@@ -472,7 +414,6 @@
                                 lazeriu</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
                     <ul class="space-y-2 text-gray-400">
@@ -483,7 +424,6 @@
                         <li><a href="#" class="hover:text-blue-400">Privatumo politika</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
                     <ul class="space-y-2 text-gray-400 mb-4">
@@ -492,44 +432,32 @@
                         <li>VI: 8:00 - 14:00</li>
                         <li>VII: Nedirbame</li>
                         <li><strong>Tel. Nr.</strong></li>
-                        <li><i class="fas fa-phone mr-2"></i> +370 699 28622</li>
-                        <li><i class="fas fa-phone mr-2"></i> +370 5 2761858</li>
+                        <li><i class="fas fa-phone mr-2"></i> +37064195947</li>
                         <li><strong>Adresas</strong></li>
-                        <li><i class="fas fa-map-marker-alt mr-2"></i> Žirmūnų g. 60, 09100 Vilnius</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Arsenalo g. 1, Vilnius, 01143 Vilniaus m. sav.</li>
                         <li><strong>El. paštas</strong></li>
-                        <li><i class="fas fa-envelope mr-2"></i> info@svytintysdantys.lt</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@lamalocal.com</li>
                     </ul>
-                    <div class="mt-4">
-                        <a href="https://maps.app.goo.gl/A9YSHmbgoKihh6uQ7" target="_blank"
-                            class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
-                            <i class="fas fa-map-marked-alt mr-2"></i>
-                            <span class="text-sm">Peržiūrėti žemėlapyje</span>
-                        </a>
-                    </div>
+
                 </div>
             </div>
-
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Švytintys Dantys. Visos teisės saugomos.</p>
+                <p>&copy; 2024 LamaLocal. Visos teisės saugomos.</p>
             </div>
         </div>
     </footer>
-
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
         // FAQ Accordion
         document.querySelectorAll('.bg-white.rounded-lg.shadow-md button').forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
                 const icon = button.querySelector('i');
-
                 content.classList.toggle('hidden');
                 icon.classList.toggle('fa-chevron-down');
                 icon.classList.toggle('fa-chevron-up');
@@ -537,5 +465,4 @@
         });
     </script>
 </body>
-
 </html>
