@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="lt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mūsų Gydytojai - LamaLocal</title>
+    <title>Mūsų Gydytojai - Alfadenta</title>
     <meta name="description"
         content="Susipažinkite su mūsų patyrusia ir kvalifikuotais odontologų komanda. Daugiau nei 26 metų patirtis, modernios technologijos ir individualus požiūris į kiekvieną pacientą.">
     <meta name="robots" content="index, follow">
@@ -36,7 +36,7 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <img src="logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
+                    <img src="logo lama.png" alt="Alfadenta Logo" class="h-10 w-auto">
 
                 </a>
                 <!-- Desktop Menu -->
@@ -55,7 +55,7 @@
                 </div>
                 <!-- Mobile Call & Menu Buttons -->
                 <div class="md:hidden flex items-center space-x-3">
-                    <a href="tel:+37064195947"
+                    <a href="tel:+37037221566"
                         class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
                         <i class="fas fa-phone"></i>
                         <span class="font-semibold">Skambinti</span>
@@ -240,8 +240,8 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <img src="logo lama.png" alt="LamaLocal Logo" class="h-10 w-auto">
-                        <span class="text-xl font-bold">LamaLocal</span>
+                        <img src="logo lama.png" alt="Alfadenta Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold">Alfadenta</span>
                     </a>
                     <p class="text-gray-400">Teikiame kokybišką odontologijos priežiūrą daugiau nei 26 metų. Jūsų
                         šypsenos priežiūra nuo 1999. Mes kuriame šypsenas, kurios keičia gyvenimus.</p>
@@ -305,22 +305,22 @@
                     <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
                     <ul class="space-y-2 text-gray-400 mb-4">
                         <li><strong>Registratūra</strong></li>
-                        <li>I-V: 8:00 - 20:00</li>
-                        <li>VI: 8:00 - 14:00</li>
+                        <li>I-V: 9:00 - 16:00</li>
+                        <li>VI-VII: Nedirbame</li>
                         <li>VII: Nedirbame</li>
                         <li><strong>Tel. Nr.</strong></li>
-                        <li><i class="fas fa-phone mr-2"></i> +37064195947</li>
+                        <li><i class="fas fa-phone mr-2"></i> +37037221566</li>
                         <li><strong>Adresas</strong></li>
-                        <li><i class="fas fa-map-marker-alt mr-2"></i> Arsenalo g. 1, Vilnius, 01143 Vilniaus m. sav.
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Vytauto pr. 83-2, Kaunas
                         </li>
                         <li><strong>El. paštas</strong></li>
-                        <li><i class="fas fa-envelope mr-2"></i> info@lamalocal.com</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@Alfadenta.com</li>
                     </ul>
 
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 LamaLocal. Visos teisės saugomos.</p>
+                <p>&copy; 2024 Alfadenta. Visos teisės saugomos.</p>
             </div>
         </div>
     </footer>
@@ -334,62 +334,41 @@
         // --- DOCTORS DATA & MANAGEMENT ---
         const defaultDoctors = [
             {
-                name: "Jonas Jonas",
-                role: "Klinikos vadovas",
-                description: "Gydytojas odontologas, gydytojas odontologas ortopedas<br>Specializacija: burnos chirurgija, implantologija, protezavimas.<br><strong>30 metų klinikinė patirtis.</strong>",
+                name: "Klinikos vadovė",
+                role: "Gyd. odontologė",
+                description: "Gydytoja odontologė, specializuojasi dantų tiesinime kapomis.<br><strong>30 metų klinikinė patirtis.</strong>",
                 image: "Doktor.png",
                 education: [
-                    "• 1996 m. baigė KMA, įgijo odontologo kvalifikaciją",
-                    "• 2002 m. įgijo odontologo ortopedo kvalifikaciją",
-                    "• <strong>Nuolatinis tobulinimasis (2002–2025):</strong> seminarai Vokietijoje, Šveicarijoje, JAV."
+                    "• 1995 m. baigė KMA, įgijo odontologo kvalifikaciją",
+                    "• 2024 m. LSMU baigtas profesinės kvalifikacijos tobulinimo kursas 'Ortodontinių anomalijų gydymas'",
+                    "• <strong>Nuolatinis tobulinimasis (2000–2026):</strong> kursai, seminarai Amerika, Europa, Japonija, JAE, Kanada"
                 ],
                 experience: [
-                    "• Nuo 2002 m. – gydytojas odontologas ortopedas (24+ m.)",
-                    "• Aktyvus Lietuvos Odontologų Rūmų narys",
-                    "• Licencija Nr. 000000000"
+                    "• 30+ metų klinikinė patirtis",
+                    "• Aktyvi Lietuvos Odontologų Rūmų narė",
+                    "• Licencijos Nr. OPL-02852"
                 ],
-                specialties: ["Burnos Chirurgija", "Implantologija", "Protezavimas", "Ortopedinė Odontologija", "Estetinė Odontologija", "Dantų Atkūrimas Po Traumų", "Vaikų Odontologija"],
+                specialties: ["Gydymo planų sudarymas", "Dantų tiesinimas kapomis", "Estetinis plombavimas", "Terapinis gydymas"],
                 specialtyColor: "blue"
             },
             {
-                name: "Janina Janina",
-                role: "Gyd. odontologė",
-                description: "Gydytoja odontologė. Specializacija: terapinė odontologija, protezavimas.<br><strong>24 metų patirtis.</strong>",
+                name: "Agnė Širvinskaitė",
+                role: "Burnos higienistė",
+                description: "Profesionali burnos higienistė, užtikrinanti kokybišką burnos priežiūrą ir profilaktiką.",
                 image: "Doktor.png",
                 education: [
-                    "• 2002 m. baigė KMU, įgyjo odontologo kvalifikaciją",
-                    "• <strong>Kvalifikacijos kėlimas (2003–2025):</strong> estetinio plombavimo ir protezavimo kursai."
+                    "• Baigusi LSMU burnos higienisto studijas"
                 ],
                 experience: [
-                    "• Nuo 2003 m. – bendrosios praktikos gydytoja",
-                    "• Specializacija: sudėtingas terapinis gydymas",
-                    "• Licencija Nr. 000000000"
+                    "• Licencijos Nr. BPL-07871"
                 ],
-                specialties: ["Terapinė Odontologija", "Protezavimas", "Bendroji Praktika", "Profilaktinė Burnos Higiena", "Vaikų Odontologija"],
+                specialties: ["Profesionali burnos higiena", "Profilaktika", "Pacientų konsultavimas"],
                 specialtyColor: "green"
-            },
-            {
-                name: "Janina Janina",
-                role: "Odontologo asistentė",
-                description: "Janina – rūpestinga ir šilta odontologo asistentė, kurios dėmesys detalėms ir nuoširdus bendravimas padeda pacientams jaustis jaukiai kiekvieno vizito metu. Ji padeda gydytojui visų procedūrų metu, pasirūpina tvarka ir sterilumu kabinete bei užtikrina, kad gydymo procesas vyktų sklandžiai ir profesionaliai.",
-                image: "Doktor.png",
-                education: [
-                    "• Asistuoja gydytojui odontologinių procedūrų metu",
-                    "• Rūpinasi sterilumu ir instrumentų paruošimu",
-                    "• Padeda pacientams pasiruošti vizitui bei atsako į rūpimus klausimus",
-                    "• Nuolat tobulina žinias odontologijos srityje"
-                ],
-                experience: [
-                    "• Licencija Nr. 000000000"
-                ],
-                specialties: ["Odontologo Asistavimas", "Pacientų Priežiūra", "Kabineto Higiena", "Instrumentų Sterilizacija"],
-                specialtyColor: "yellow",
-                imgCustomClass: "img-position-custom"
             }
         ];
         // Initialize localStorage if empty or wrong version
         // Version check:
-        const CURRENT_VERSION = 'doctorsData_v9';
+        const CURRENT_VERSION = 'doctorsData_v10';
         // Clear old versions if they exist
         if (localStorage.getItem('doctorsData_v2')) {
             localStorage.removeItem('doctorsData_v2');
@@ -411,6 +390,9 @@
         }
         if (localStorage.getItem('doctorsData_v8')) {
             localStorage.removeItem('doctorsData_v8');
+        }
+        if (localStorage.getItem('doctorsData_v9')) {
+            localStorage.removeItem('doctorsData_v9');
         }
         if (!localStorage.getItem(CURRENT_VERSION)) {
             localStorage.setItem(CURRENT_VERSION, JSON.stringify(defaultDoctors));
