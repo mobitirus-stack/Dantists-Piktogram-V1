@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="lt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,32 +17,39 @@
         .gradient-bg {
             background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
         }
+
         .service-card {
             transition: all 0.3s ease;
             transform: translateY(0);
         }
+
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
         .scroll-smooth {
             scroll-behavior: smooth;
         }
+
         .shimmer {
             background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
             background-size: 200% 100%;
             animation: shimmer 2s ease-in-out infinite;
         }
+
         @keyframes shimmer {
             0% {
                 background-position: -200% 0;
             }
+
             100% {
                 background-position: 200% 0;
             }
         }
     </style>
-    </head>
+</head>
+
 <body class="bg-gray-50 scroll-smooth">
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
@@ -75,7 +83,7 @@
             <div class="flex justify-between items-center py-4">
                 <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
                     <img src="../logo lama.png" alt="Alfadenta Logo" class="h-10 w-auto">
-                    
+
                 </a>
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="../index.html" class="text-gray-700 hover:text-blue-500 transition">Pradžia</a>
@@ -83,7 +91,7 @@
                     <a href="../doctors.html" class="text-gray-700 hover:text-blue-500 transition">Gydytojai</a>
                     <a href="../booking.html" class="text-gray-700 hover:text-blue-500 transition">Registruotis</a>
                     <a href="../contact.html" class="text-gray-700 hover:text-blue-500 transition">Kontaktai</a>
-                    
+
                     <a href="tel:+37037221566"
                         class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">
                         <i class="fas fa-phone mr-2"></i>+37037221566
@@ -99,7 +107,7 @@
                 <a href="../doctors.html" class="block py-2 text-gray-700 hover:text-blue-500">Gydytojai</a>
                 <a href="../booking.html" class="block py-2 text-gray-700 hover:text-blue-500">Registruotis</a>
                 <a href="../contact.html" class="block py-2 text-gray-700 hover:text-blue-500">Kontaktai</a>
-                
+
                 <a href="tel:+37037221566"
                     class="mt-2 w-full bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 text-center">
                     <i class="fas fa-phone mr-2"></i>+37037221566
@@ -150,8 +158,8 @@
                             <div class="text-pink-100">Procesas</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-white">250€</div>
-                            <div class="text-pink-100">Nuo</div>
+                            <div class="text-3xl font-bold text-white">25+</div>
+                            <div class="text-pink-100">Metų patirtis</div>
                         </div>
                     </div>
                 </div>
@@ -187,7 +195,9 @@
                         <li><i class="fas fa-check text-green-500 mr-2"></i>Natūrali spalva</li>
                     </ul>
                     <div class="text-center mt-4">
-                        <div class="text-2xl font-bold text-pink-600">250-450€</div>
+                        <a href="../booking.html?service=dantu-laminates"
+                            class="text-pink-600 hover:text-pink-700 font-semibold"><i
+                                class="fas fa-calendar-check mr-1"></i> Registruotis</a>
                     </div>
                 </div>
                 <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl">
@@ -203,7 +213,9 @@
                         <li><i class="fas fa-check text-green-500 mr-2"></i>Geresnis atitikimas</li>
                     </ul>
                     <div class="text-center mt-4">
-                        <div class="text-2xl font-bold text-pink-600">120-200€</div>
+                        <a href="../booking.html?service=dantu-laminates"
+                            class="text-pink-600 hover:text-pink-700 font-semibold"><i
+                                class="fas fa-calendar-check mr-1"></i> Registruotis</a>
                     </div>
                 </div>
                 <div class="service-card bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl">
@@ -219,7 +231,9 @@
                         <li><i class="fas fa-check text-green-500 mr-2"></i>Minimalus ploninimas</li>
                     </ul>
                     <div class="text-center mt-4">
-                        <div class="text-2xl font-bold text-pink-600">350-500€</div>
+                        <a href="../booking.html?service=dantu-laminates"
+                            class="text-pink-600 hover:text-pink-700 font-semibold"><i
+                                class="fas fa-calendar-check mr-1"></i> Registruotis</a>
                     </div>
                 </div>
             </div>
@@ -506,4 +520,5 @@
         });
     </script>
 </body>
+
 </html>
