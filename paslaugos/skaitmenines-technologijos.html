@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Skaitmeninės Technologijos | iTero Lumina Skaneris | Alfadenta Kaunas</title>
+    <meta name="description"
+        content="Pažangios skaitmeninės odontologijos technologijos Alfadenta klinikoje. iTero Lumina 3D skaneris tiksliam gydymo planavimui.">
+    <meta name="keywords"
+        content="iTero Lumina, 3D skaneris, skaitmeninė odontologija, dantų skenavimas, Alfadenta Kaunas">
+    <meta name="author" content="Alfadenta">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Lithuanian">
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 scroll-smooth">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <img src="../logo lama.png" alt="Alfadenta Logo" class="h-10 w-auto">
+                </a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="text-gray-700 hover:text-indigo-500 transition">Pradžia</a>
+                    <a href="../services.html" class="text-gray-700 hover:text-indigo-500 transition">Paslaugos</a>
+                    <a href="../doctors.html" class="text-gray-700 hover:text-indigo-500 transition">Gydytojai</a>
+                    <a href="../booking.html" class="text-gray-700 hover:text-indigo-500 transition">Registruotis</a>
+                    <a href="../contact.html" class="text-gray-700 hover:text-indigo-500 transition">Kontaktai</a>
+                    <a href="tel:+37037221566"
+                        class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition">
+                        <i class="fas fa-phone mr-2"></i>+37037221566
+                    </a>
+                </div>
+                <!-- Mobile -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <a href="tel:+37037221566"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span class="font-semibold">Skambinti</span>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="../index.html" class="block py-2 text-gray-700 hover:text-indigo-500">Pradžia</a>
+                <a href="../services.html" class="block py-2 text-gray-700 hover:text-indigo-500">Paslaugos</a>
+                <a href="../doctors.html" class="block py-2 text-gray-700 hover:text-indigo-500">Gydytojai</a>
+                <a href="../booking.html" class="block py-2 text-gray-700 hover:text-indigo-500">Registruotis</a>
+                <a href="../contact.html" class="block py-2 text-gray-700 hover:text-indigo-500">Kontaktai</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Breadcrumbs -->
+    <nav class="bg-white border-b border-gray-200 pt-20 pb-4">
+        <div class="container mx-auto px-4">
+            <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                <li><a href="../index.html" class="hover:text-indigo-500 transition">Pradžia</a></li>
+                <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                <li><a href="../services.html" class="hover:text-indigo-500 transition">Paslaugos</a></li>
+                <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                <li class="font-semibold text-indigo-600">Skaitmeninės Technologijos</li>
+            </ol>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-8 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white space-y-6">
+                    <div
+                        class="inline-block bg-indigo-800/30 backdrop-blur-sm border border-indigo-400/30 px-4 py-1 rounded-full text-sm font-semibold text-indigo-100">
+                        <i class="fas fa-microchip mr-2"></i>Inovacijos Odontologijoje
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                        iTero Lumina –
+                        <span class="text-indigo-200">Ateities Technologijos Jau Šiandien</span>
+                    </h1>
+                    <p class="text-xl text-indigo-100 leading-relaxed">
+                        Naudojame pažangiausią iTero Lumina 3D skaitmeninį skanerį, kuris leidžia
+                        tiksliai suplanuoti gydymą ir matyti rezultatą dar prieš pradedant.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../booking.html?service=itero-skenavimas"
+                            class="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition transform hover:scale-105 shadow-xl text-center">
+                            <i class="fas fa-cube mr-2"></i> Užsisakyti 3D Nuskaitymą
+                        </a>
+                        <a href="tel:+37037221566"
+                            class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-indigo-600 transition transform hover:scale-105 text-center">
+                            <i class="fas fa-phone mr-2"></i> +37037221566
+                        </a>
+                    </div>
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-indigo-400/30 mt-8">
+                        <div>
+                            <div class="text-3xl font-bold">6000+</div>
+                            <div class="text-indigo-200 text-sm">Kadrų/sek</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold">20μm</div>
+                            <div class="text-indigo-200 text-sm">Tikslumas</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold">60s</div>
+                            <div class="text-indigo-200 text-sm">Viso žandikaulio skenavimas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+                    <div
+                        class="relative rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500 bg-gradient-to-br from-indigo-100 to-indigo-200 p-8">
+                        <div class="text-center">
+                            <i class="fas fa-cube text-indigo-600 text-8xl mb-4"></i>
+                            <h3 class="text-2xl font-bold text-indigo-800">iTero Lumina</h3>
+                            <p class="text-indigo-600">3D Skaitmeninis Skaneris</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- What is iTero -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Kas Yra iTero Lumina?</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        iTero Lumina yra naujausios kartos intraorinis 3D skaneris, sukurtas Align Technology –
+                        Invisalign sistemos kūrėjų. Jis leidžia sukurti itin tikslų Jūsų dantų 3D modelį
+                        vos per 60 sekundžių.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Skirtingai nuo tradicinių atspaudų, kurie gali sukelti diskomfortą, skenavimas yra
+                        greitas, tikslus ir visiškai komfortiškas. Jūs iškart pamatysite savo dantų 3D vaizdą ekrane.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-700 bg-indigo-50 p-3 rounded-lg">
+                            <i class="fas fa-check-circle text-indigo-500 mr-3 text-xl"></i>
+                            <span>Jokio diskomforto ar rykliosios masės</span>
+                        </li>
+                        <li class="flex items-center text-gray-700 bg-indigo-50 p-3 rounded-lg">
+                            <i class="fas fa-check-circle text-indigo-500 mr-3 text-xl"></i>
+                            <span>Itin tikslūs rezultatai</span>
+                        </li>
+                        <li class="flex items-center text-gray-700 bg-indigo-50 p-3 rounded-lg">
+                            <i class="fas fa-check-circle text-indigo-500 mr-3 text-xl"></i>
+                            <span>Momentinis 3D vizualizavimas</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gradient-to-br from-indigo-500 to-purple-600 p-8 rounded-3xl text-white">
+                        <h3 class="text-2xl font-bold mb-6">iTero Privalumai</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-clock text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Greitis</h4>
+                                    <p class="text-indigo-100 text-sm">Pilnas skenavimas per 60 sekundžių</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-bullseye text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Tikslumas</h4>
+                                    <p class="text-indigo-100 text-sm">20 mikronų tikslumas</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-eye text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Vizualizacija</h4>
+                                    <p class="text-indigo-100 text-sm">Matykite rezultatą prieš gydymą</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-white/20 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-smile text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Komfortas</h4>
+                                    <p class="text-indigo-100 text-sm">Jokios nemalonios masės</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Applications -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Kur Naudojamas iTero?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    iTero Lumina technologija pritaikoma įvairioms odontologijos sritims.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-teeth text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Dantų Tiesinimas</h3>
+                    <p class="text-gray-600 text-sm">Invisalign kapų planavimas ir simuliacija</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-layer-group text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Sąkandžio Pakėlimas</h3>
+                    <p class="text-gray-600 text-sm">Tikslus sąkandžio analizė ir planavimas</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-gem text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Laminatės</h3>
+                    <p class="text-gray-600 text-sm">Tikslus laminačių projektavimas</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tooth text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Protezavimas</h3>
+                    <p class="text-gray-600 text-sm">Vainikėlių ir tiltų gamyba</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Išbandykite ateities technologijas
+            </h2>
+            <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+                Užsiregistruokite nemokamam 3D skenavimui ir pamatykite, kaip atrodys Jūsų šypsena.
+            </p>
+            <a href="../booking.html?service=itero-skenavimas"
+                class="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition transform hover:scale-105 shadow-lg inline-block">
+                <i class="fas fa-cube mr-2"></i> Užsisakyti 3D Nuskaitymą
+            </a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="../logo lama.png" alt="Alfadenta Logo" class="h-10 w-auto">
+                        <span class="text-xl font-bold">Alfadenta</span>
+                    </div>
+                    <p class="text-gray-400">Estetinės odontologijos klinika Kauno centre nuo 1999.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Paslaugos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="dantu-tiesinimas.html" class="hover:text-indigo-400">Dantų tiesinimas</a></li>
+                        <li><a href="sakandzio-pakelimas.html" class="hover:text-indigo-400">Sąkandžio pakėlimas</a>
+                        </li>
+                        <li><a href="dantu-laminates.html" class="hover:text-indigo-400">Dantų laminatės</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Naudinga</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="../index.html" class="hover:text-indigo-400">Apie mus</a></li>
+                        <li><a href="../doctors.html" class="hover:text-indigo-400">Komanda</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontaktai</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i>+37037221566</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Vytauto pr. 83-2, Kaunas</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@alfadenta.lt</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Alfadenta. Visos teisės saugomos.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
